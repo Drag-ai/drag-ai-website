@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const useCases = [
+  {
+    title: 'Customer Support & Booking Chatbot',
+    icon: '💬',
+    problem: 'Phone lines overwhelmed, missed reservations, slow response to inquiries affecting customer satisfaction.',
+    solution: '24/7 AI chatbot handles reservations, FAQs, menu questions, special requests, and booking confirmations.',
+    benefits: [
+      'Significant reduction in phone volume',
+      '24/7 availability for customers',
+      'Improved booking conversion rates',
+      'Better customer satisfaction scores'
+    ],
+    timeline: '3-4 weeks',
+    investment: 'Starting at $35K',
+    roi: 'Typical savings: $40K+ annually'
+  },
+  {
+    title: 'Staff Scheduling Assistant',
+    icon: '📅',
+    problem: 'Creating schedules for 20-50 employees across shifts is time-consuming and often suboptimal.',
+    solution: 'AI suggests optimal schedules based on demand forecasts, labor laws, and employee preferences.',
+    benefits: [
+      'Significant time saved on scheduling',
+      'Reduced labor costs',
+      'Better shift optimization',
+      'Improved employee satisfaction'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $45K',
+    roi: 'Typical savings: $60K+ annually'
+  },
+  {
+    title: 'Review & Feedback Intelligence',
+    icon: '⭐',
+    problem: 'Hundreds of reviews across Yelp, Google, TripAdvisor—hard to track, respond, and act on feedback.',
+    solution: 'AI auto-summarizes reviews, identifies trends, suggests responses, and flags urgent issues.',
+    benefits: [
+      'Improved online ratings',
+      'Faster response time to reviews',
+      'Actionable insights from feedback',
+      'Increased bookings'
+    ],
+    timeline: '2-3 weeks',
+    investment: 'Starting at $25K',
+    roi: 'Revenue increase from higher ratings'
+  },
+  {
+    title: 'Procurement & Inventory Insights',
+    icon: '📦',
+    problem: 'Food waste, over-ordering, stockouts, and manual inventory tracking hurt margins.',
+    solution: 'AI demand forecasting, auto-generate orders, waste reduction recommendations, and inventory optimization.',
+    benefits: [
+      'Significant reduction in food waste',
+      'Lower procurement costs',
+      'Fewer stockouts',
+      'Better cash flow management'
+    ],
+    timeline: '6-8 weeks',
+    investment: 'Starting at $60K',
+    roi: 'Typical savings: $50K+ annually per location'
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Can\'t find enough staff, existing team overwhelmed',
+    impact: 'Service quality suffers, customer complaints increase',
+    solution: 'AI handles routine tasks, freeing staff for high-value interactions'
+  },
+  {
+    challenge: 'Losing reservations due to slow phone response',
+    impact: 'Missing out on revenue, customers book elsewhere',
+    solution: '24/7 AI chatbot captures bookings even when staff is busy'
+  },
+  {
+    challenge: 'Food waste killing razor-thin margins (3-6%)',
+    impact: 'Thousands in wasted inventory monthly',
+    solution: 'AI forecasting reduces waste by 25% while preventing stockouts'
+  },
+  {
+    challenge: 'Hundreds of reviews but no time to read or respond',
+    impact: 'Ratings decline, losing potential customers',
+    solution: 'AI summarizes feedback and suggests responses in minutes'
+  }
+];
+
+const testimonial = {
+  quote: "The AI chatbot handles 60% of our customer inquiries, freeing our staff to focus on in-person service. Our online ratings improved by half a star, which translated to a 10% increase in bookings. The ROI was immediate.",
+  author: "Restaurant Owner",
+  company: "Multi-Location Restaurant Chain",
+  results: [
+    "60% fewer phone calls",
+    "0.5 star rating improvement",
+    "10% increase in bookings"
+  ]
+};
+---
+
+<Layout
+  title="AI for Hospitality: Restaurants & Hotels | Drag-AI"
+  description="AI-powered customer service, scheduling, and inventory management. Reduce labor costs by 15-20% and boost margins for restaurants and hotels."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">🏨</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Serve More Guests. Waste Less Time.<br />
+          <span class="gradient-text">Boost Your Margins.</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          AI-powered operations for restaurants and hotels that want to reduce labor costs, improve guest satisfaction, and increase profitability.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="#use-cases" class="btn btn-secondary text-lg px-8 py-4">
+            See Solutions
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300 text-sm">
+          ✓ 15-20% Labor Cost Reduction &nbsp;&nbsp; ✓ $80K-$200K Annual Savings &nbsp;&nbsp; ✓ 60-Day ROI
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-slate-900/50 border-y border-blue-500/20">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">60%</div>
+          <div class="text-gray-400 font-medium">Fewer Phone Calls</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">25%</div>
+          <div class="text-gray-400 font-medium">Less Food Waste</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">15%</div>
+          <div class="text-gray-400 font-medium">Lower Labor Costs</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">$200K</div>
+          <div class="text-gray-400 font-medium">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Hospitality's <span class="text-blue-400">Biggest Challenges</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Razor-thin margins and labor shortages demand smarter operations
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {challenges.map((item) => (
+          <div class="card border-l-4 border-blue-500">
+            <h3 class="text-xl font-bold mb-2">❌ {item.challenge}</h3>
+            <p class="text-red-400 font-semibold mb-3">Impact: {item.impact}</p>
+            <p class="text-green-400 font-semibold">✓ {item.solution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          AI Solutions for <span class="text-blue-400">Hospitality</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Fast-win use cases with proven ROI in 60-90 days
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        {useCases.map((useCase, index) => (
+          <div class="card max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{useCase.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">{useCase.title}</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30">
+                        {useCase.timeline}
+                      </span>
+                      <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
+                        ROI: {useCase.roi}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">The Problem:</h4>
+                  <p>{useCase.problem}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Our Solution:</h4>
+                  <p>{useCase.solution}</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-2">Benefits:</h4>
+                  <ul class="space-y-2">
+                    {useCase.benefits.map((benefit) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-blue-500/30">
+                <h4 class="font-semibold mb-4">Investment</h4>
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-sm text-gray-400">Implementation</p>
+                    <p class="text-xl font-bold text-blue-400">{useCase.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{useCase.timeline}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-600">Annual ROI</p>
+                    <p class="text-xl font-bold text-green-600">{useCase.roi}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="section bg-gray-900 text-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-4">Success Story</h2>
+        </div>
+
+        <div class="card bg-white/10 backdrop-blur-sm border-2 border-white/20">
+          <blockquote class="text-xl italic mb-6 text-gray-100">
+            "{testimonial.quote}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-bold text-lg">{testimonial.author}</p>
+              <p class="text-gray-300">{testimonial.company}</p>
+            </div>
+            <div class="flex gap-4">
+              {testimonial.results.map((result) => (
+                <div class="text-center">
+                  <p class="text-sm text-gray-300">{result}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Reduce Costs and Improve Guest Satisfaction?
+        </h2>
+        <p class="text-xl mb-8 text-blue-100">
+          Get a free AI readiness assessment tailored to your hospitality business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="/industries" class="btn bg-white/10 border-2 border-white text-white hover:bg-white/20 text-lg px-8 py-4">
+            Explore Other Industries
+          </a>
+        </div>
+        <p class="mt-6 text-blue-200">
+          ✓ Free consultation ✓ Custom roadmap ✓ ROI projections ✓ No commitment
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

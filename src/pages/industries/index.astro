@@ -1,0 +1,345 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const industries = [
+  {
+    name: 'Construction & Specialty Trades',
+    slug: 'construction',
+    icon: '🏗️',
+    tagline: 'Win more bids with less manual work.',
+    description: 'Automate bid preparation, BOQs, site reports, and compliance documentation for general contractors, EPCs, and specialty trades.',
+    challenges: [
+      'Bid creation takes 60+ hours',
+      'PMs spend 50% time on paperwork',
+      'Change orders slow projects',
+      'Compliance documentation burden'
+    ],
+    solutions: [
+      'Automated bid & BOQ generation',
+      'Site report summarization',
+      'Invoice & PO matching',
+      'Safety & compliance assistant'
+    ],
+    savings: 'Typical savings: $150K+ annually',
+    roi: 'ROI in 3-6 months',
+    color: 'orange'
+  },
+  {
+    name: 'Hospitality',
+    slug: 'hospitality',
+    icon: '🏨',
+    tagline: 'Serve more guests with streamlined operations.',
+    description: 'AI-powered customer service, scheduling, and inventory management for restaurants, hotels, and food brands.',
+    challenges: [
+      'Overwhelmed phone lines',
+      'Complex staff scheduling',
+      'Food waste eating margins',
+      'Review management chaos'
+    ],
+    solutions: [
+      'Customer support chatbot',
+      'Staff scheduling assistant',
+      'Review & feedback intelligence',
+      'Procurement & inventory insights'
+    ],
+    savings: 'Typical savings: $120K+ annually',
+    roi: 'ROI in 3-6 months',
+    color: 'blue'
+  },
+  {
+    name: 'Transportation & Logistics',
+    slug: 'logistics',
+    icon: '🚚',
+    tagline: 'Optimize operations and reduce manual work.',
+    description: 'Automate invoice processing, claims triage, and customer communications for fleet operators, 3PLs, and warehouses.',
+    challenges: [
+      'Manual invoice processing',
+      'Exception handling overhead',
+      'Constant customer inquiries',
+      'Inefficient routes'
+    ],
+    solutions: [
+      'Invoice & BOL extraction',
+      'Claims & exception triage',
+      'Customer ETA automation',
+      'Route & maintenance analytics'
+    ],
+    savings: 'Typical savings: $180K+ annually',
+    roi: 'ROI in 3-6 months',
+    color: 'green'
+  },
+  {
+    name: 'Property Management',
+    slug: 'property-management',
+    icon: '🏢',
+    tagline: 'Improve tenant experience and operational efficiency.',
+    description: 'AI-powered tenant support and document automation for property managers and real estate operators.',
+    challenges: [
+      'High volume tenant requests',
+      'Lease agreement searches',
+      'Maintenance coordination',
+      'Vendor management'
+    ],
+    solutions: [
+      'Tenant support chatbot',
+      'Maintenance request triage',
+      'Lease abstraction & Q&A',
+      'Vendor & contract Q&A'
+    ],
+    savings: 'Typical savings: $140K+ annually',
+    roi: 'ROI in 3-6 months',
+    color: 'purple'
+  },
+  {
+    name: 'Insurance',
+    slug: 'insurance',
+    icon: '🛡️',
+    tagline: 'Accelerate quotes and claims while maintaining compliance.',
+    description: 'Compliant AI automation for insurance brokers, agencies, and TPAs. Maintain compliance while improving speed.',
+    challenges: [
+      'Slow quote generation',
+      'Policy document searches',
+      'Manual claims processing',
+      'Compliance concerns'
+    ],
+    solutions: [
+      'Intake automation',
+      'Policy document Q&A',
+      'Claims summarization',
+      'Call center augmentation'
+    ],
+    savings: 'Typical savings: $200K+ annually',
+    roi: 'ROI in 4-6 months',
+    color: 'indigo'
+  },
+  {
+    name: 'Professional Services',
+    slug: 'professional-services',
+    icon: '📄',
+    tagline: 'Increase billable capacity without compromising quality.',
+    description: 'Document automation for law firms, accounting firms, and consulting practices. Increase billable capacity.',
+    challenges: [
+      'Time-consuming drafting',
+      'Document review overhead',
+      'Knowledge base searches',
+      'Client email volume'
+    ],
+    solutions: [
+      'Drafting & review assist',
+      'Document intake & extraction',
+      'Client email automation',
+      'Knowledge base copilot'
+    ],
+    savings: 'Typical savings: $220K+ annually',
+    roi: 'ROI in 3-6 months',
+    color: 'pink'
+  },
+  {
+    name: 'Multi-Store Retail',
+    slug: 'retail',
+    icon: '🛒',
+    tagline: 'Enhance customer experience and operational efficiency.',
+    description: 'AI-powered customer service and merchandising for retail chains and e-commerce operators.',
+    challenges: [
+      'High support ticket volume',
+      'Product content creation',
+      'Inventory optimization',
+      'Returns processing'
+    ],
+    solutions: [
+      'Customer service automation',
+      'Product content operations',
+      'Merchandising support',
+      'Returns & complaints triage'
+    ],
+    savings: 'Typical savings: $250K+ annually',
+    roi: 'ROI in 3-6 months',
+    color: 'red'
+  }
+];
+
+const colorClasses = {
+  orange: 'from-orange-600 to-red-700 border-orange-500',
+  blue: 'from-blue-600 to-indigo-700 border-blue-500',
+  green: 'from-green-600 to-teal-700 border-green-500',
+  purple: 'from-purple-600 to-pink-700 border-purple-500',
+  indigo: 'from-indigo-600 to-purple-700 border-indigo-500',
+  pink: 'from-pink-600 to-rose-700 border-pink-500',
+  red: 'from-red-600 to-orange-700 border-red-500'
+};
+---
+
+<Layout 
+  title="Industries We Serve | AI Solutions by Drag-AI"
+  description="Specialized AI solutions for construction, hospitality, logistics, property management, insurance, professional services, and retail."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          AI Solutions for <span class="gradient-text">Every Industry</span>
+        </h1>
+        <p class="text-xl text-gray-300 mb-8">
+          We focus on industries where AI can deliver immediate, measurable value—even without in-house technical teams.
+          Choose your industry to see specific solutions and potential impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="space-y-12">
+        {industries.map((industry) => (
+          <div class={`card border-l-4 ${colorClasses[industry.color].split(' ')[1]} hover:border-cyan-500 transition-all`}>
+            <div class="grid md:grid-cols-3 gap-8">
+              <!-- Left Column: Overview -->
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-6xl">{industry.icon}</span>
+                  <div>
+                    <h2 class="text-3xl font-bold mb-2">{industry.name}</h2>
+                    <p class="text-xl text-cyan-400 italic mb-4">{industry.tagline}</p>
+                    <p class="leading-relaxed">{industry.description}</p>
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <!-- Challenges -->
+                  <div>
+                    <h3 class="font-semibold mb-3 flex items-center">
+                      <span class="text-red-400 mr-2">❌</span>
+                      Common Challenges
+                    </h3>
+                    <ul class="space-y-2">
+                      {industry.challenges.map((challenge) => (
+                        <li class="text-sm text-gray-400 flex items-start">
+                          <span class="mr-2">•</span>
+                          <span>{challenge}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <!-- Solutions -->
+                  <div>
+                    <h3 class="font-semibold mb-3 flex items-center">
+                      <span class="text-green-400 mr-2">✓</span>
+                      Our Solutions
+                    </h3>
+                    <ul class="space-y-2">
+                      {industry.solutions.map((solution) => (
+                        <li class="text-sm text-gray-400 flex items-start">
+                          <span class="mr-2">•</span>
+                          <span>{solution}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: CTA -->
+              <div class={`bg-gradient-to-br ${colorClasses[industry.color].split(' ')[0]} ${colorClasses[industry.color].split(' ')[1]} text-white p-6 rounded-lg flex flex-col justify-between border border-white/20`}>
+                <div>
+                  <h3 class="text-xl font-bold mb-4">Expected Impact</h3>
+                  <div class="space-y-4 mb-6">
+                    <div>
+                      <p class="text-sm opacity-90">Potential Savings</p>
+                      <p class="text-2xl font-bold">{industry.savings}</p>
+                    </div>
+                    <div>
+                      <p class="text-sm opacity-90">Expected ROI</p>
+                      <p class="text-xl font-semibold">{industry.roi}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <a
+                    href={`/industries/${industry.slug}`}
+                    class="btn bg-white/90 text-gray-900 hover:bg-white w-full text-center font-semibold"
+                  >
+                    View Details
+                  </a>
+                  <a
+                    href="/contact"
+                    class="btn bg-white/10 border-2 border-white text-white hover:bg-white/20 w-full text-center"
+                  >
+                    Get Assessment
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why These Industries Section -->
+  <section class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Why We Focus on <span class="gradient-text">These Industries</span>
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card text-center">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-bold mb-3">High Opportunity</h3>
+            <p>
+              These sectors have lower AI adoption rates, creating significant opportunities for early movers.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <div class="text-4xl mb-4">📄</div>
+            <h3 class="text-xl font-bold mb-3">Process-Heavy</h3>
+            <p>
+              High volume of documents, communications, and repetitive tasks perfect for AI automation.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <div class="text-4xl mb-4">💰</div>
+            <h3 class="text-xl font-bold mb-3">Measurable ROI</h3>
+            <p>
+              Clear cost savings and efficiency gains within 3-6 months, not years.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section hero-gradient">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Don't See Your Industry?
+        </h2>
+        <p class="text-xl mb-8 text-gray-300">
+          We work with many other sectors. Contact us to discuss your specific needs and how AI can help.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Schedule Consultation
+          </a>
+          <a href="/about" class="btn btn-secondary text-lg px-8 py-4">
+            Learn About Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

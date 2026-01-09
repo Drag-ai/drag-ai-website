@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const useCases = [
+  {
+    title: 'Invoice & BOL Data Extraction',
+    icon: '📄',
+    problem: 'Processing hundreds of invoices and bills of lading manually is time-consuming and error-prone, delaying payments and causing disputes.',
+    solution: 'AI automatically extracts data from invoices, BOLs, and shipping documents, validates against purchase orders, and routes for approval.',
+    benefits: [
+      'Significantly faster invoice processing',
+      'Reduced data entry errors',
+      'Improved vendor relationships',
+      'Better cash flow management'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $45K',
+    roi: 'Typical savings: $60K+ annually'
+  },
+  {
+    title: 'Claims & Exception Triage',
+    icon: '⚠️',
+    problem: 'Damage claims, delivery exceptions, and customer complaints require manual review and routing, slowing resolution times.',
+    solution: 'AI categorizes claims by severity, extracts key information, suggests resolutions, and routes to appropriate teams automatically.',
+    benefits: [
+      'Faster claim resolution',
+      'Improved customer satisfaction',
+      'Reduced manual triage time',
+      'Better exception tracking'
+    ],
+    timeline: '3-5 weeks',
+    investment: 'Starting at $40K',
+    roi: 'Typical savings: $50K+ annually'
+  },
+  {
+    title: 'Customer ETA & Status Automation',
+    icon: '📍',
+    problem: 'Constant customer inquiries about shipment status and ETAs overwhelm customer service teams and delay other work.',
+    solution: 'AI chatbot provides real-time shipment tracking, ETA updates, and answers common questions 24/7 without human intervention.',
+    benefits: [
+      'Reduced customer service volume',
+      '24/7 customer self-service',
+      'Improved customer experience',
+      'Lower support costs'
+    ],
+    timeline: '3-4 weeks',
+    investment: 'Starting at $35K',
+    roi: 'Typical savings: $45K+ annually'
+  },
+  {
+    title: 'Route & Maintenance Analytics',
+    icon: '🚛',
+    problem: 'Optimizing routes and predicting maintenance needs requires analyzing vast amounts of data that\'s difficult to process manually.',
+    solution: 'AI analyzes historical route data, traffic patterns, and vehicle telemetry to suggest optimal routes and predict maintenance needs.',
+    benefits: [
+      'Reduced fuel costs',
+      'Improved on-time delivery',
+      'Lower maintenance costs',
+      'Better fleet utilization'
+    ],
+    timeline: '6-8 weeks',
+    investment: 'Starting at $60K',
+    roi: 'Typical savings: $80K+ annually'
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Manual invoice and document processing',
+    impact: 'Significant time spent on data entry and validation',
+    solution: 'AI extracts and validates data automatically, reducing processing time'
+  },
+  {
+    challenge: 'High volume of customer status inquiries',
+    impact: 'Customer service teams overwhelmed with repetitive questions',
+    solution: '24/7 AI chatbot handles routine inquiries automatically'
+  },
+  {
+    challenge: 'Exception handling takes too long',
+    impact: 'Delayed resolutions hurt customer satisfaction',
+    solution: 'AI triages and routes exceptions to appropriate teams instantly'
+  },
+  {
+    challenge: 'Inefficient routes and unexpected breakdowns',
+    impact: 'Higher fuel costs and maintenance expenses',
+    solution: 'AI optimizes routes and predicts maintenance needs proactively'
+  }
+];
+
+const testimonial = {
+  quote: "The AI-powered invoice processing system significantly reduced our data entry workload. Our team can now focus on resolving exceptions rather than manual data entry. The ROI became clear within a few months.",
+  author: "Operations Manager",
+  company: "Regional 3PL Provider",
+  results: [
+    "Much faster processing",
+    "Fewer errors",
+    "Better cash flow"
+  ]
+};
+---
+
+<Layout 
+  title="AI for Transportation & Logistics | Drag-AI"
+  description="Automate invoice processing, claims triage, and customer communications. AI solutions for fleet operators, 3PLs, and warehouses."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">🚚</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Optimize Operations and Reduce Manual Work<br />
+          <span class="gradient-text">with AI Automation</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          AI-powered automation for logistics companies that want to reduce costs, improve efficiency, and enhance customer service.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="#use-cases" class="btn btn-secondary text-lg px-8 py-4">
+            See Solutions
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300 text-sm">
+          ✓ Faster Processing &nbsp;&nbsp; ✓ Typical Savings: $180K+ Annually &nbsp;&nbsp; ✓ ROI in 3-6 Months
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-slate-900/50 border-y border-green-500/20">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2">80%</div>
+          <div class="text-gray-400 font-medium">Faster Processing</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2">24/7</div>
+          <div class="text-gray-400 font-medium">Customer Service</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2">95%</div>
+          <div class="text-gray-400 font-medium">Accuracy Rate</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2">$180K+</div>
+          <div class="text-gray-400 font-medium">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Common <span class="text-green-400">Logistics Challenges</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Manual processes slow down operations and increase costs
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {challenges.map((item) => (
+          <div class="card border-l-4 border-green-500">
+            <h3 class="text-xl font-bold mb-2">❌ {item.challenge}</h3>
+            <p class="text-red-400 font-semibold mb-3">Impact: {item.impact}</p>
+            <p class="text-green-400 font-semibold">✓ {item.solution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          AI Solutions for <span class="text-green-400">Logistics</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Proven solutions with measurable ROI in 3-6 months
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        {useCases.map((useCase, index) => (
+          <div class="card max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{useCase.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">{useCase.title}</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
+                        {useCase.timeline}
+                      </span>
+                      <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold border border-cyan-500/30">
+                        ROI: {useCase.roi}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">The Problem:</h4>
+                  <p>{useCase.problem}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Our Solution:</h4>
+                  <p>{useCase.solution}</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-2">Benefits:</h4>
+                  <ul class="space-y-2">
+                    {useCase.benefits.map((benefit) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-green-500/30">
+                <h4 class="font-semibold mb-4">Investment</h4>
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-sm text-gray-400">Implementation</p>
+                    <p class="text-xl font-bold text-green-400">{useCase.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{useCase.timeline}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Expected ROI</p>
+                    <p class="text-xl font-bold text-cyan-400">{useCase.roi}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="section bg-slate-900/50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-4">Success Story</h2>
+        </div>
+
+        <div class="card border-2 border-green-500/30">
+          <blockquote class="text-xl italic mb-6">
+            "{testimonial.quote}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-bold text-lg">{testimonial.author}</p>
+              <p class="text-gray-300">{testimonial.company}</p>
+            </div>
+            <div class="flex gap-4">
+              {testimonial.results.map((result) => (
+                <div class="text-center px-4 py-2 bg-green-500/20 rounded-lg border border-green-500/30">
+                  <p class="text-sm text-green-300 font-semibold">{result}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section hero-gradient">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Optimize Your Logistics Operations?
+        </h2>
+        <p class="text-xl mb-8 text-gray-300">
+          Get a complimentary AI readiness assessment tailored to your logistics business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="/industries" class="btn btn-secondary text-lg px-8 py-4">
+            Explore Other Industries
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300">
+          ✓ Complimentary consultation ✓ Custom roadmap ✓ ROI projections ✓ No obligation
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

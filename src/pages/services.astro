@@ -1,0 +1,378 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  {
+    id: 'strategy',
+    icon: '🎯',
+    title: 'AI Strategy & Consulting',
+    tagline: 'From vision to roadmap',
+    description: 'We analyze your business processes, identify high-impact AI opportunities, and create a practical roadmap tailored to your goals and budget.',
+    includes: [
+      'Complimentary initial assessment (2 hours)',
+      'Business process analysis',
+      'AI opportunity identification',
+      'ROI projections and business case',
+      'Technology stack recommendations',
+      'Phased implementation roadmap',
+      'Risk assessment and mitigation plan'
+    ],
+    timeline: '2-4 weeks',
+    investment: 'Starting at $8K',
+    ideal: 'Companies exploring AI for the first time or planning their AI transformation'
+  },
+  {
+    id: 'implementation',
+    icon: '⚙️',
+    title: 'AI Implementation & Integration',
+    tagline: 'From pilot to production',
+    description: 'We build, test, and deploy AI solutions that integrate seamlessly with your existing systems and workflows.',
+    includes: [
+      'Focused pilot project development',
+      'Custom AI solution development',
+      'Integration with existing systems',
+      'API development and deployment',
+      'Data pipeline setup',
+      'Comprehensive testing and QA',
+      'Production deployment support',
+      'Performance monitoring setup'
+    ],
+    timeline: '6-16 weeks',
+    investment: 'Starting at $30K',
+    ideal: 'Companies ready to implement specific AI solutions with clear business value'
+  },
+  {
+    id: 'training',
+    icon: '📚',
+    title: 'Training & Change Management',
+    tagline: 'Empower your team',
+    description: 'We ensure your team can confidently use new AI tools through hands-on training and ongoing support during the transition.',
+    includes: [
+      'Role-specific training workshops',
+      'Hands-on practice sessions',
+      'Video tutorials and documentation',
+      'Searchable knowledge base',
+      'Change management guidance',
+      'User adoption tracking',
+      'Optional certification programs',
+      'Train-the-trainer sessions'
+    ],
+    timeline: '3-8 weeks',
+    investment: 'Starting at $12K',
+    ideal: 'Companies deploying AI solutions who need team adoption support'
+  },
+  {
+    id: 'support',
+    icon: '🛠️',
+    title: 'Ongoing Support & Optimization',
+    tagline: 'Continuous improvement',
+    description: 'We monitor performance, provide technical support, and continuously optimize your AI systems to maintain and improve results.',
+    includes: [
+      'Dedicated account manager',
+      'Priority technical support',
+      'Proactive performance monitoring',
+      'Monthly optimization reviews',
+      'Model updates and retraining',
+      'Feature enhancements',
+      'Strategic planning guidance',
+      'Quarterly business reviews'
+    ],
+    timeline: 'Ongoing',
+    investment: 'Starting at $6K/month',
+    ideal: 'Companies with deployed AI solutions seeking long-term partnership'
+  }
+];
+
+const process = [
+  {
+    phase: 'Discovery',
+    duration: '2 weeks',
+    activities: [
+      'Understand business goals',
+      'Analyze current processes',
+      'Identify AI opportunities',
+      'Assess technical readiness'
+    ],
+    deliverable: 'AI Readiness Report & Roadmap'
+  },
+  {
+    phase: 'Strategy',
+    duration: '2 weeks',
+    activities: [
+      'Define success metrics',
+      'Select optimal solutions',
+      'Plan system integration',
+      'Create implementation plan'
+    ],
+    deliverable: 'Detailed Implementation Plan'
+  },
+  {
+    phase: 'Pilot',
+    duration: '4-8 weeks',
+    activities: [
+      'Build proof of concept',
+      'Test with real users',
+      'Measure results',
+      'Refine based on feedback'
+    ],
+    deliverable: 'Working Pilot + ROI Report'
+  },
+  {
+    phase: 'Deployment',
+    duration: '8-16 weeks',
+    activities: [
+      'Scale successful pilots',
+      'Integrate with workflows',
+      'Train all users',
+      'Monitor performance'
+    ],
+    deliverable: 'Production System + Training'
+  },
+  {
+    phase: 'Optimization',
+    duration: 'Ongoing',
+    activities: [
+      'Continuous improvement',
+      'Performance monitoring',
+      'Regular updates',
+      'Strategic guidance'
+    ],
+    deliverable: 'Sustained ROI & Growth'
+  }
+];
+
+const pricing = [
+  {
+    tier: 'Starter',
+    price: 'From $8K',
+    description: 'Ideal for exploring AI opportunities',
+    includes: [
+      'AI readiness assessment',
+      'Custom roadmap',
+      'ROI projections',
+      'Technology recommendations'
+    ],
+    cta: 'Get Assessment',
+    popular: false
+  },
+  {
+    tier: 'Pilot',
+    price: 'From $30K',
+    description: 'Validate ROI with a focused pilot project',
+    includes: [
+      'Everything in Starter',
+      'Pilot project development',
+      'Integration with 1-2 systems',
+      'Basic training',
+      '60-day support'
+    ],
+    cta: 'Start Pilot',
+    popular: true
+  },
+  {
+    tier: 'Enterprise',
+    price: 'From $100K',
+    description: 'Comprehensive AI transformation',
+    includes: [
+      'Everything in Pilot',
+      'Multiple AI solutions',
+      'Full system integration',
+      'Comprehensive training',
+      'Ongoing support (6-12 months)'
+    ],
+    cta: 'Contact Us',
+    popular: false
+  }
+];
+---
+
+<Layout 
+  title="Our Services | AI Consulting & Implementation by Drag-AI"
+  description="From strategy to deployment and ongoing support. Comprehensive AI services for companies without in-house AI teams."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          End-to-End <span class="gradient-text">AI Services</span>
+        </h1>
+        <p class="text-xl text-gray-300">
+          From strategy to deployment and ongoing support—we're your complete AI partner.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="space-y-12">
+        {services.map((service) => (
+          <div id={service.id} class="card border-l-4 border-cyan-500 scroll-mt-24">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{service.icon}</span>
+                  <div>
+                    <h2 class="text-3xl font-bold mb-2">{service.title}</h2>
+                    <p class="text-xl text-cyan-400 italic mb-4">{service.tagline}</p>
+                    <p class="leading-relaxed mb-6">{service.description}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold mb-3">What's Included:</h3>
+                  <ul class="grid md:grid-cols-2 gap-2">
+                    {service.includes.map((item) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div class="mt-6 p-4 bg-slate-800/50 rounded-lg border border-cyan-500/20">
+                  <p class="text-sm text-gray-400 mb-1"><strong>Ideal for:</strong></p>
+                  <p>{service.ideal}</p>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-cyan-500/30">
+                <h3 class="font-semibold mb-4">Investment</h3>
+                <div class="space-y-4">
+                  <div>
+                    <p class="text-sm text-gray-400">Typical Cost</p>
+                    <p class="text-2xl font-bold text-cyan-400">{service.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{service.timeline}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section bg-slate-900/50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Our <span class="gradient-text">5-Phase Process</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          A structured approach that minimizes risk and delivers measurable results
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid md:grid-cols-5 gap-6">
+        {process.map((phase, index) => (
+          <div class="card border-2 border-cyan-500/30 text-center">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-lg shadow-cyan-500/50">
+              {index + 1}
+            </div>
+            <h3 class="text-xl font-bold mb-2">{phase.phase}</h3>
+            <p class="text-cyan-400 text-sm font-semibold mb-4">{phase.duration}</p>
+            <ul class="text-left space-y-2 mb-4">
+              {phase.activities.map((activity) => (
+                <li class="text-sm text-gray-300 flex items-start">
+                  <span class="mr-2">•</span>
+                  <span>{activity}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="pt-4 border-t border-cyan-500/20">
+              <p class="text-xs text-gray-400 mb-1">Deliverable:</p>
+              <p class="text-sm font-semibold">{phase.deliverable}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Transparent <span class="gradient-text">Pricing</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Fixed-price engagements with clear deliverables and timelines.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {pricing.map((tier) => (
+          <div class={`card ${tier.popular ? 'border-4 border-cyan-500 shadow-2xl shadow-cyan-500/20 scale-105' : 'border-2 border-slate-700'}`}>
+            {tier.popular && (
+              <div class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-2 -mx-6 -mt-6 mb-6 rounded-t-xl font-semibold">
+                Most Popular
+              </div>
+            )}
+            <h3 class="text-2xl font-bold mb-2">{tier.tier}</h3>
+            <p class="text-3xl font-bold text-cyan-400 mb-2">{tier.price}</p>
+            <p class="mb-6">{tier.description}</p>
+            <ul class="space-y-3 mb-8">
+              {tier.includes.map((item) => (
+                <li class="flex items-start">
+                  <span class="text-green-400 mr-2">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="/contact"
+              class={`btn w-full ${tier.popular ? 'btn-primary' : 'btn-secondary'}`}
+            >
+              {tier.cta}
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-gray-400 mt-12 max-w-2xl mx-auto">
+        Final pricing depends on your specific requirements, company size, and project scope.
+        Contact us for a detailed proposal with ROI projections.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section hero-gradient">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Get Started?
+        </h2>
+        <p class="text-xl mb-8 text-gray-300">
+          Schedule a free consultation to discuss your needs and get a custom proposal.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Consultation
+          </a>
+          <a href="/industries" class="btn btn-secondary text-lg px-8 py-4">
+            Explore Industries
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

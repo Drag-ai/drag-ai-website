@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const useCases = [
+  {
+    title: 'Automated Bid & BOQ Generation',
+    icon: '📋',
+    problem: 'Creating detailed bids takes 2-3 days per project, limiting your capacity to pursue new opportunities.',
+    solution: 'AI extracts specs from RFPs, auto-generates Bills of Quantities, and suggests pricing based on historical data.',
+    benefits: [
+      'Significantly faster bid creation',
+      'Capacity to submit more bids per month',
+      'Improved win rates',
+      'Increased revenue potential'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $60K',
+    roi: 'Typical savings: $100K+ annually'
+  },
+  {
+    title: 'Site Report Summarization',
+    icon: '📸',
+    problem: 'Daily site reports, safety logs, and progress updates are buried in emails and photos, making it hard to track project status.',
+    solution: 'AI auto-summarizes daily reports, flags issues, tracks progress vs. schedule, and generates executive summaries.',
+    benefits: [
+      '10 hours/week saved per project manager',
+      'Real-time project visibility',
+      'Faster issue identification',
+      'Better client communication'
+    ],
+    timeline: '3-4 weeks',
+    investment: 'Starting at $35K',
+    roi: 'Typical savings: $40K+ annually per PM'
+  },
+  {
+    title: 'Invoice & PO Matching Automation',
+    icon: '💰',
+    problem: 'Matching invoices to purchase orders and contracts is manual, time-consuming, and error-prone.',
+    solution: 'AI auto-extracts invoice data, matches to POs and contracts, flags discrepancies, and routes for approval.',
+    benefits: [
+      '80% faster AP processing',
+      '95% fewer payment errors',
+      'Improved vendor relationships',
+      'Better cash flow management'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $45K',
+    roi: 'Typical savings: $50K+ annually'
+  },
+  {
+    title: 'Safety & Compliance Assistant',
+    icon: '⚠️',
+    problem: 'OSHA compliance, safety training, and incident reporting is document-heavy and time-consuming.',
+    solution: 'AI chatbot for safety Q&A, auto-generates incident reports, maintains compliance checklists, and tracks certifications.',
+    benefits: [
+      '50% faster incident reporting',
+      'Improved compliance scores',
+      'Reduced violations',
+      'Lower insurance premiums'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $45K',
+    roi: 'Risk reduction + cost savings'
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Losing bids to faster competitors',
+    impact: 'Missing out on significant potential revenue annually',
+    solution: 'AI-powered bid automation helps you respond much faster'
+  },
+  {
+    challenge: 'Project managers drowning in paperwork',
+    impact: '50% of PM time spent on admin instead of managing sites',
+    solution: 'Automate reports, RFIs, and change orders to free up 20+ hours/week'
+  },
+  {
+    challenge: 'Razor-thin profit margins (2-5%)',
+    impact: 'Every inefficiency directly impacts profitability',
+    solution: 'Reduce administrative costs by 30-40% to improve margins'
+  },
+  {
+    challenge: 'Change orders and RFIs slow everything down',
+    impact: 'Delays cost $5K-$20K per day in lost productivity',
+    solution: 'Automate documentation and approval workflows'
+  }
+];
+
+const testimonial = {
+  quote: "We went from spending entire weeks on a single bid to knocking them out in 2-3 days. Our estimators can now focus on strategy instead of data entry. The ROI was clear within 60 days.",
+  author: "Construction Company Owner",
+  company: "Mid-Size General Contractor",
+  results: [
+    "70% faster bid creation",
+    "$2.3M in additional revenue",
+    "15% higher win rate"
+  ]
+};
+---
+
+<Layout 
+  title="AI for Construction & Specialty Trades | Drag-AI"
+  description="Automate bids, BOQs, and site reports. Save 70% on document processing time. AI solutions for contractors, EPCs, and specialty trades."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">🏗️</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Stop Drowning in Paperwork.<br />
+          <span class="gradient-text">Start Winning More Bids.</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          AI-powered document automation for contractors who want to spend less time on estimates and more time building.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="#use-cases" class="btn btn-secondary text-lg px-8 py-4">
+            See Solutions
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300 text-sm">
+          ✓ 70% Faster Bids &nbsp;&nbsp; ✓ $100K-$300K Annual Savings &nbsp;&nbsp; ✓ 60-Day ROI
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-slate-900/50 border-y border-orange-500/20">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-orange-400 mb-2">70%</div>
+          <div class="text-gray-400 font-medium">Faster Bid Creation</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-orange-400 mb-2">2x</div>
+          <div class="text-gray-400 font-medium">More Bids Submitted</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-orange-400 mb-2">60%</div>
+          <div class="text-gray-400 font-medium">Less Paperwork</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-orange-400 mb-2">$300K</div>
+          <div class="text-gray-400 font-medium">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          The Construction Industry's <span class="text-orange-400">Biggest Challenges</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Construction has one of the lowest AI adoption rates, yet it's drowning in paperwork
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {challenges.map((item) => (
+          <div class="card border-l-4 border-orange-500">
+            <h3 class="text-xl font-bold mb-2">❌ {item.challenge}</h3>
+            <p class="text-red-400 font-semibold mb-3">Impact: {item.impact}</p>
+            <p class="text-green-400 font-semibold">✓ {item.solution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          AI Solutions for <span class="text-orange-400">Construction</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Fast-win use cases with proven ROI in 60-90 days
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        {useCases.map((useCase, index) => (
+          <div class="card max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{useCase.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">{useCase.title}</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold border border-orange-500/30">
+                        {useCase.timeline}
+                      </span>
+                      <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
+                        ROI: {useCase.roi}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">The Problem:</h4>
+                  <p>{useCase.problem}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Our Solution:</h4>
+                  <p>{useCase.solution}</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-2">Benefits:</h4>
+                  <ul class="space-y-2">
+                    {useCase.benefits.map((benefit) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-orange-500/30">
+                <h4 class="font-semibold mb-4">Investment</h4>
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-sm text-gray-400">Implementation</p>
+                    <p class="text-xl font-bold text-orange-400">{useCase.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{useCase.timeline}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-600">Annual ROI</p>
+                    <p class="text-xl font-bold text-green-600">{useCase.roi}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="section bg-gray-900 text-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-4">Success Story</h2>
+        </div>
+
+        <div class="card bg-white/10 backdrop-blur-sm border-2 border-white/20">
+          <blockquote class="text-xl italic mb-6 text-gray-100">
+            "{testimonial.quote}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-bold text-lg">{testimonial.author}</p>
+              <p class="text-gray-300">{testimonial.company}</p>
+            </div>
+            <div class="flex gap-4">
+              {testimonial.results.map((result) => (
+                <div class="text-center">
+                  <p class="text-sm text-gray-300">{result}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-orange-600 to-red-600 text-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Win More Bids and Reduce Paperwork?
+        </h2>
+        <p class="text-xl mb-8 text-orange-100">
+          Get a free AI readiness assessment tailored to your construction business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="/industries" class="btn bg-white/10 border-2 border-white text-white hover:bg-white/20 text-lg px-8 py-4">
+            Explore Other Industries
+          </a>
+        </div>
+        <p class="mt-6 text-orange-200">
+          ✓ Free consultation ✓ Custom roadmap ✓ ROI projections ✓ No commitment
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,352 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const useCases = [
+  {
+    title: 'Customer Service Automation',
+    icon: '💬',
+    problem: 'High volume of customer inquiries about orders, products, returns, and shipping overwhelms support teams and increases response times.',
+    solution: 'AI chatbot handles common customer questions 24/7, provides order status, processes returns, and escalates complex issues to human agents.',
+    benefits: [
+      'Significantly reduced support ticket volume',
+      '24/7 customer self-service',
+      'Faster response times',
+      'Improved customer satisfaction'
+    ],
+    timeline: '3-5 weeks',
+    investment: 'Starting at $40K',
+    roi: 'Typical savings: $55K+ annually per location'
+  },
+  {
+    title: 'Product Content Operations',
+    icon: '📝',
+    problem: 'Creating and maintaining product descriptions, specifications, and marketing copy for thousands of SKUs is time-consuming and inconsistent.',
+    solution: 'AI generates product descriptions, optimizes for SEO, ensures brand consistency, and adapts content for different channels and audiences.',
+    benefits: [
+      'Significantly faster content creation',
+      'Improved SEO performance',
+      'Better brand consistency',
+      'Higher conversion rates'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $50K',
+    roi: 'Typical savings: $65K+ annually'
+  },
+  {
+    title: 'Merchandising & Inventory Support',
+    icon: '📊',
+    problem: 'Analyzing sales data, predicting demand, and optimizing inventory across multiple locations requires extensive manual analysis.',
+    solution: 'AI analyzes sales patterns, predicts demand, suggests optimal inventory levels, and identifies slow-moving products automatically.',
+    benefits: [
+      'Reduced stockouts and overstock',
+      'Better inventory turnover',
+      'Improved cash flow',
+      'Data-driven merchandising decisions'
+    ],
+    timeline: '6-8 weeks',
+    investment: 'Starting at $65K',
+    roi: 'Typical savings: $85K+ annually'
+  },
+  {
+    title: 'Returns & Complaints Triage',
+    icon: '↩️',
+    problem: 'Processing returns, handling complaints, and identifying patterns in customer issues requires manual review and categorization.',
+    solution: 'AI automatically categorizes returns and complaints, identifies root causes, suggests resolutions, and flags patterns for improvement.',
+    benefits: [
+      'Faster returns processing',
+      'Better issue identification',
+      'Improved product quality insights',
+      'Enhanced customer experience'
+    ],
+    timeline: '4-5 weeks',
+    investment: 'Starting at $45K',
+    roi: 'Typical savings: $60K+ annually'
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Overwhelmed customer support teams',
+    impact: 'Slow response times hurt customer satisfaction and sales',
+    solution: 'AI chatbot handles routine inquiries 24/7 automatically'
+  },
+  {
+    challenge: 'Product content creation is time-consuming',
+    impact: 'Slow time-to-market and inconsistent messaging',
+    solution: 'AI generates optimized product content at scale'
+  },
+  {
+    challenge: 'Inventory management is complex across locations',
+    impact: 'Stockouts lose sales, overstock ties up cash',
+    solution: 'AI predicts demand and optimizes inventory levels'
+  },
+  {
+    challenge: 'Returns and complaints processing is manual',
+    impact: 'Slow resolution and missed improvement opportunities',
+    solution: 'AI triages issues and identifies patterns automatically'
+  }
+];
+
+const testimonial = {
+  quote: "The AI customer service chatbot handles a significant portion of our routine inquiries, allowing our team to focus on complex customer issues. Our response times improved dramatically, and customer satisfaction scores increased. The ROI became clear within a few months.",
+  author: "E-Commerce Director",
+  company: "Multi-Store Retail Chain",
+  results: [
+    "Reduced support volume",
+    "Faster responses",
+    "Better satisfaction"
+  ]
+};
+---
+
+<Layout 
+  title="AI for Multi-Store Retail & E-Commerce | Drag-AI"
+  description="Enhance customer experience and operational efficiency. AI solutions for retail chains and e-commerce operators."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">🛒</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Enhance Customer Experience<br />
+          <span class="gradient-text">and Operational Efficiency</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          AI-powered solutions for retail businesses that want to improve customer service, streamline operations, and increase profitability.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="#use-cases" class="btn btn-secondary text-lg px-8 py-4">
+            See Solutions
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300 text-sm">
+          ✓ Better Customer Experience &nbsp;&nbsp; ✓ Typical Savings: $250K+ Annually &nbsp;&nbsp; ✓ ROI in 3-6 Months
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-slate-900/50 border-y border-red-500/20">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-red-400 mb-2">70%</div>
+          <div class="text-gray-400 font-medium">Fewer Support Tickets</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-red-400 mb-2">24/7</div>
+          <div class="text-gray-400 font-medium">Customer Service</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-red-400 mb-2">60%</div>
+          <div class="text-gray-400 font-medium">Faster Content</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-red-400 mb-2">$250K+</div>
+          <div class="text-gray-400 font-medium">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Common <span class="text-red-400">Retail Challenges</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Manual processes slow down operations and impact customer experience
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {challenges.map((item) => (
+          <div class="card border-l-4 border-red-500">
+            <h3 class="text-xl font-bold mb-2">❌ {item.challenge}</h3>
+            <p class="text-red-400 font-semibold mb-3">Impact: {item.impact}</p>
+            <p class="text-green-400 font-semibold">✓ {item.solution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          AI Solutions for <span class="text-red-400">Retail</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Proven solutions with measurable ROI in 3-6 months
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        {useCases.map((useCase, index) => (
+          <div class="card max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{useCase.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">{useCase.title}</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30">
+                        {useCase.timeline}
+                      </span>
+                      <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold border border-cyan-500/30">
+                        ROI: {useCase.roi}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">The Problem:</h4>
+                  <p>{useCase.problem}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Our Solution:</h4>
+                  <p>{useCase.solution}</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-2">Benefits:</h4>
+                  <ul class="space-y-2">
+                    {useCase.benefits.map((benefit) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-red-500/30">
+                <h4 class="font-semibold mb-4">Investment</h4>
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-sm text-gray-400">Implementation</p>
+                    <p class="text-xl font-bold text-red-400">{useCase.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{useCase.timeline}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Expected ROI</p>
+                    <p class="text-xl font-bold text-cyan-400">{useCase.roi}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Retail Types -->
+  <section class="section bg-red-900/20 border-y border-red-500/30">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">
+          Retail Businesses We Serve
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card border-red-500/30">
+            <div class="text-4xl mb-3">🏬</div>
+            <h3 class="font-bold mb-2">Multi-Store Chains</h3>
+            <p class="text-sm">Customer service, inventory management, operations across multiple locations</p>
+          </div>
+          <div class="card border-red-500/30">
+            <div class="text-4xl mb-3">🛍️</div>
+            <h3 class="font-bold mb-2">E-Commerce</h3>
+            <p class="text-sm">Product content, customer support, returns processing, merchandising analytics</p>
+          </div>
+          <div class="card border-red-500/30">
+            <div class="text-4xl mb-3">🏪</div>
+            <h3 class="font-bold mb-2">Specialty Retail</h3>
+            <p class="text-sm">Customer experience, product knowledge, inventory optimization, omnichannel support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="section bg-slate-900/50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-4">Success Story</h2>
+        </div>
+
+        <div class="card border-2 border-red-500/30">
+          <blockquote class="text-xl italic mb-6">
+            "{testimonial.quote}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-bold text-lg">{testimonial.author}</p>
+              <p class="text-gray-300">{testimonial.company}</p>
+            </div>
+            <div class="flex gap-4">
+              {testimonial.results.map((result) => (
+                <div class="text-center px-4 py-2 bg-red-500/20 rounded-lg border border-red-500/30">
+                  <p class="text-sm text-red-300 font-semibold">{result}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section hero-gradient">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Transform Your Retail Operations?
+        </h2>
+        <p class="text-xl mb-8 text-gray-300">
+          Get a complimentary AI readiness assessment tailored to your retail business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="/industries" class="btn btn-secondary text-lg px-8 py-4">
+            Explore Other Industries
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300">
+          ✓ Complimentary consultation ✓ Custom roadmap ✓ ROI projections ✓ No obligation
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

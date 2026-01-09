@@ -1,0 +1,117 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description = "Transform your business with AI—no tech team required. Drag-AI provides end-to-end AI consulting and implementation for growing companies.",
+  image = "/logo.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Drag-AI",
+        "alternateName": "Drag AI",
+        "url": "https://drag-ai.com",
+        "logo": "https://drag-ai.com/logo.jpg",
+        "description": "AI consulting and implementation services for companies without in-house AI teams. We help businesses adopt AI, Machine Learning, and Generative AI to automate operations and accelerate growth.",
+        "foundingDate": "2024",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Deepesh Agrawal",
+            "jobTitle": "Co-Founder & CTO"
+          },
+          {
+            "@type": "Person",
+            "name": "Nishit Gupta",
+            "jobTitle": "Co-Founder & CEO"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-8305020077",
+          "contactType": "Customer Service",
+          "email": "contact@drag-ai.com",
+          "availableLanguage": ["English"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/drag-ai/",
+          "https://x.com/drag_ai"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "serviceType": [
+          "AI Consulting",
+          "AI Implementation",
+          "Machine Learning Services",
+          "Generative AI Solutions",
+          "AI Training and Support"
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Generative AI",
+          "AI Automation",
+          "Business Process Automation"
+        ]
+      }
+    </script>
+    
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="antialiased">
+    <slot />
+  </body>
+</html>

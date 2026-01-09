@@ -1,0 +1,352 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const useCases = [
+  {
+    title: 'Document Drafting & Review Assistant',
+    icon: '📝',
+    problem: 'Creating contracts, briefs, reports, and other documents from scratch is time-consuming, and reviewing them for consistency is tedious.',
+    solution: 'AI assists with drafting documents using templates and past work, suggests language improvements, and flags inconsistencies or missing clauses.',
+    benefits: [
+      'Significantly faster document creation',
+      'Improved consistency and quality',
+      'Reduced review time',
+      'More billable hours'
+    ],
+    timeline: '5-7 weeks',
+    investment: 'Starting at $60K',
+    roi: 'Typical savings: $80K+ annually'
+  },
+  {
+    title: 'Document Intake & Data Extraction',
+    icon: '📄',
+    problem: 'Extracting key information from client documents, contracts, and forms requires manual review and data entry.',
+    solution: 'AI automatically extracts key data from documents, populates databases, identifies important clauses, and flags potential issues.',
+    benefits: [
+      'Faster document processing',
+      'Reduced data entry errors',
+      'Better information organization',
+      'Improved client service'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $50K',
+    roi: 'Typical savings: $65K+ annually'
+  },
+  {
+    title: 'Client Email Automation',
+    icon: '📧',
+    problem: 'High volume of routine client emails for status updates, document requests, and general questions takes time away from billable work.',
+    solution: 'AI drafts responses to common client inquiries, provides case status updates, and handles routine communications automatically.',
+    benefits: [
+      'Reduced email response time',
+      'More time for billable work',
+      'Improved client communication',
+      'Better work-life balance'
+    ],
+    timeline: '4-5 weeks',
+    investment: 'Starting at $45K',
+    roi: 'Typical savings: $60K+ annually'
+  },
+  {
+    title: 'Knowledge Base & Research Copilot',
+    icon: '🔍',
+    problem: 'Finding relevant precedents, past work, and internal knowledge across thousands of documents is time-consuming and inefficient.',
+    solution: 'AI indexes all firm documents and provides instant answers to questions, finds relevant precedents, and suggests similar past work.',
+    benefits: [
+      'Instant access to firm knowledge',
+      'Faster research and analysis',
+      'Better decision-making',
+      'Improved work quality'
+    ],
+    timeline: '6-8 weeks',
+    investment: 'Starting at $65K',
+    roi: 'Typical savings: $85K+ annually'
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Too much time on non-billable administrative work',
+    impact: 'Reduced billable capacity and profitability',
+    solution: 'AI automates routine tasks to free up billable hours'
+  },
+  {
+    challenge: 'Document creation and review is time-consuming',
+    impact: 'Slower turnaround times and client dissatisfaction',
+    solution: 'AI assists with drafting and reviewing for faster delivery'
+  },
+  {
+    challenge: 'Finding relevant precedents and past work is difficult',
+    impact: 'Wasted time searching and potential missed insights',
+    solution: 'AI provides instant access to firm knowledge and precedents'
+  },
+  {
+    challenge: 'High volume of routine client communications',
+    impact: 'Less time for high-value strategic work',
+    solution: 'AI handles routine communications automatically'
+  }
+];
+
+const testimonial = {
+  quote: "The AI document drafting assistant significantly reduced the time our associates spend on routine contracts. They can now focus on complex legal analysis and client strategy. Our turnaround times improved, and client satisfaction increased. The ROI became clear within a few months.",
+  author: "Managing Partner",
+  company: "Mid-Size Law Firm",
+  results: [
+    "More billable hours",
+    "Faster turnaround",
+    "Better quality"
+  ]
+};
+---
+
+<Layout 
+  title="AI for Professional Services | Drag-AI"
+  description="Increase billable capacity without compromising quality. AI solutions for law firms, accounting firms, and consulting practices."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">📄</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Increase Billable Capacity<br />
+          <span class="gradient-text">Without Compromising Quality</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          AI-powered document automation for professional services firms that want to deliver faster while maintaining high standards.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="#use-cases" class="btn btn-secondary text-lg px-8 py-4">
+            See Solutions
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300 text-sm">
+          ✓ More Billable Hours &nbsp;&nbsp; ✓ Typical Savings: $220K+ Annually &nbsp;&nbsp; ✓ ROI in 3-6 Months
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-slate-900/50 border-y border-pink-500/20">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-pink-400 mb-2">60%</div>
+          <div class="text-gray-400 font-medium">Faster Drafting</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-pink-400 mb-2">40%</div>
+          <div class="text-gray-400 font-medium">More Billable Time</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-pink-400 mb-2">80%</div>
+          <div class="text-gray-400 font-medium">Faster Research</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-pink-400 mb-2">$220K+</div>
+          <div class="text-gray-400 font-medium">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Common <span class="text-pink-400">Professional Services Challenges</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Administrative work reduces billable capacity and profitability
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {challenges.map((item) => (
+          <div class="card border-l-4 border-pink-500">
+            <h3 class="text-xl font-bold mb-2">❌ {item.challenge}</h3>
+            <p class="text-red-400 font-semibold mb-3">Impact: {item.impact}</p>
+            <p class="text-green-400 font-semibold">✓ {item.solution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          AI Solutions for <span class="text-pink-400">Professional Services</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Proven solutions with measurable ROI in 3-6 months
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        {useCases.map((useCase, index) => (
+          <div class="card max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{useCase.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">{useCase.title}</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm font-semibold border border-pink-500/30">
+                        {useCase.timeline}
+                      </span>
+                      <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold border border-cyan-500/30">
+                        ROI: {useCase.roi}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">The Problem:</h4>
+                  <p>{useCase.problem}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Our Solution:</h4>
+                  <p>{useCase.solution}</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-2">Benefits:</h4>
+                  <ul class="space-y-2">
+                    {useCase.benefits.map((benefit) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-pink-500/30">
+                <h4 class="font-semibold mb-4">Investment</h4>
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-sm text-gray-400">Implementation</p>
+                    <p class="text-xl font-bold text-pink-400">{useCase.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{useCase.timeline}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Expected ROI</p>
+                    <p class="text-xl font-bold text-cyan-400">{useCase.roi}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Served -->
+  <section class="section bg-pink-900/20 border-y border-pink-500/30">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">
+          Professional Services We Serve
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card border-pink-500/30">
+            <div class="text-4xl mb-3">⚖️</div>
+            <h3 class="font-bold mb-2">Law Firms</h3>
+            <p class="text-sm">Contract drafting, legal research, document review, client communications</p>
+          </div>
+          <div class="card border-pink-500/30">
+            <div class="text-4xl mb-3">💼</div>
+            <h3 class="font-bold mb-2">Accounting Firms</h3>
+            <p class="text-sm">Document processing, client communications, compliance tracking, report generation</p>
+          </div>
+          <div class="card border-pink-500/30">
+            <div class="text-4xl mb-3">📊</div>
+            <h3 class="font-bold mb-2">Consulting Firms</h3>
+            <p class="text-sm">Proposal writing, research, client reporting, knowledge management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="section bg-slate-900/50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-4">Success Story</h2>
+        </div>
+
+        <div class="card border-2 border-pink-500/30">
+          <blockquote class="text-xl italic mb-6">
+            "{testimonial.quote}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-bold text-lg">{testimonial.author}</p>
+              <p class="text-gray-300">{testimonial.company}</p>
+            </div>
+            <div class="flex gap-4">
+              {testimonial.results.map((result) => (
+                <div class="text-center px-4 py-2 bg-pink-500/20 rounded-lg border border-pink-500/30">
+                  <p class="text-sm text-pink-300 font-semibold">{result}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section hero-gradient">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Increase Your Billable Capacity?
+        </h2>
+        <p class="text-xl mb-8 text-gray-300">
+          Get a complimentary AI readiness assessment tailored to your professional services firm.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="/industries" class="btn btn-secondary text-lg px-8 py-4">
+            Explore Other Industries
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300">
+          ✓ Complimentary consultation ✓ Custom roadmap ✓ ROI projections ✓ No obligation
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

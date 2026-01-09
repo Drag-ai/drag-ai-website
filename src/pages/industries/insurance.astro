@@ -1,0 +1,353 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const useCases = [
+  {
+    title: 'Intake & Application Automation',
+    icon: '📋',
+    problem: 'Manual data entry from insurance applications and intake forms is time-consuming, error-prone, and slows down quote generation.',
+    solution: 'AI automatically extracts data from applications, validates information, pre-fills forms, and flags missing or inconsistent data.',
+    benefits: [
+      'Significantly faster intake processing',
+      'Reduced data entry errors',
+      'Improved quote turnaround time',
+      'Better customer experience'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $50K',
+    roi: 'Typical savings: $65K+ annually'
+  },
+  {
+    title: 'Policy Document Q&A',
+    icon: '📄',
+    problem: 'Finding specific policy terms, coverage details, and exclusions across thousands of documents requires extensive manual search.',
+    solution: 'AI indexes all policy documents and provides instant answers to questions about coverage, terms, exclusions, and endorsements.',
+    benefits: [
+      'Instant policy information retrieval',
+      'Faster customer service',
+      'Improved accuracy',
+      'Better compliance'
+    ],
+    timeline: '4-6 weeks',
+    investment: 'Starting at $55K',
+    roi: 'Typical savings: $70K+ annually'
+  },
+  {
+    title: 'Claims Summarization & Triage',
+    icon: '🔍',
+    problem: 'Reviewing and categorizing claims, extracting key information, and routing to appropriate adjusters is manual and time-consuming.',
+    solution: 'AI automatically summarizes claims, extracts key details, assesses severity, suggests initial reserves, and routes to appropriate teams.',
+    benefits: [
+      'Faster claims processing',
+      'Better prioritization',
+      'Improved accuracy',
+      'Enhanced fraud detection'
+    ],
+    timeline: '6-8 weeks',
+    investment: 'Starting at $65K',
+    roi: 'Typical savings: $85K+ annually'
+  },
+  {
+    title: 'Call Center Augmentation',
+    icon: '📞',
+    problem: 'High call volume for policy questions, claims status, and general inquiries overwhelms call center staff and increases wait times.',
+    solution: 'AI assistant provides real-time policy information, claims status, and answers to common questions, helping agents respond faster.',
+    benefits: [
+      'Reduced call handling time',
+      'Improved first-call resolution',
+      'Better customer satisfaction',
+      'Lower operational costs'
+    ],
+    timeline: '5-7 weeks',
+    investment: 'Starting at $60K',
+    roi: 'Typical savings: $80K+ annually'
+  }
+];
+
+const challenges = [
+  {
+    challenge: 'Slow quote generation and application processing',
+    impact: 'Lost business to faster competitors',
+    solution: 'AI automates data extraction and validation for faster quotes'
+  },
+  {
+    challenge: 'Policy information buried in thousands of documents',
+    impact: 'Slow customer service and potential errors',
+    solution: 'AI provides instant answers from your entire policy library'
+  },
+  {
+    challenge: 'Manual claims processing is time-consuming',
+    impact: 'Delayed settlements and customer frustration',
+    solution: 'AI summarizes and triages claims automatically'
+  },
+  {
+    challenge: 'Compliance and regulatory requirements are complex',
+    impact: 'Risk of violations and penalties',
+    solution: 'AI ensures consistent compliance with built-in guardrails'
+  }
+];
+
+const testimonial = {
+  quote: "The AI-powered intake automation significantly reduced our application processing time. Our team can now focus on complex underwriting decisions rather than data entry. Customer satisfaction improved, and our quote turnaround time decreased noticeably. The ROI became clear within a few months.",
+  author: "Operations Director",
+  company: "Regional Insurance Agency",
+  results: [
+    "Faster processing",
+    "Fewer errors",
+    "Better satisfaction"
+  ]
+};
+---
+
+<Layout 
+  title="AI for Insurance Brokers & Agencies | Drag-AI"
+  description="Accelerate quotes and claims while maintaining compliance. AI solutions for insurance brokers, agencies, and TPAs."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20">
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">🛡️</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Accelerate Quotes and Claims<br />
+          <span class="gradient-text">While Maintaining Compliance</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          Compliant AI automation for insurance professionals who want to improve speed and service without compromising regulatory requirements.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="#use-cases" class="btn btn-secondary text-lg px-8 py-4">
+            See Solutions
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300 text-sm">
+          ✓ Compliant AI &nbsp;&nbsp; ✓ Typical Savings: $200K+ Annually &nbsp;&nbsp; ✓ ROI in 4-6 Months
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-slate-900/50 border-y border-indigo-500/20">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-indigo-400 mb-2">70%</div>
+          <div class="text-gray-400 font-medium">Faster Intake</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-indigo-400 mb-2">50%</div>
+          <div class="text-gray-400 font-medium">Faster Claims</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-indigo-400 mb-2">95%</div>
+          <div class="text-gray-400 font-medium">Accuracy Rate</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-indigo-400 mb-2">$200K+</div>
+          <div class="text-gray-400 font-medium">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Common <span class="text-indigo-400">Insurance Industry Challenges</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Manual processes slow down operations while compliance requirements increase
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {challenges.map((item) => (
+          <div class="card border-l-4 border-indigo-500">
+            <h3 class="text-xl font-bold mb-2">❌ {item.challenge}</h3>
+            <p class="text-red-400 font-semibold mb-3">Impact: {item.impact}</p>
+            <p class="text-green-400 font-semibold">✓ {item.solution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section bg-slate-900/30">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          AI Solutions for <span class="text-indigo-400">Insurance</span>
+        </h2>
+        <p class="text-xl text-gray-300">
+          Compliant solutions with measurable ROI in 4-6 months
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        {useCases.map((useCase, index) => (
+          <div class="card max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="md:col-span-2">
+                <div class="flex items-start gap-4 mb-4">
+                  <span class="text-5xl">{useCase.icon}</span>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">{useCase.title}</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-semibold border border-indigo-500/30">
+                        {useCase.timeline}
+                      </span>
+                      <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold border border-cyan-500/30">
+                        ROI: {useCase.roi}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">The Problem:</h4>
+                  <p>{useCase.problem}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-semibold mb-2">Our Solution:</h4>
+                  <p>{useCase.solution}</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-2">Benefits:</h4>
+                  <ul class="space-y-2">
+                    {useCase.benefits.map((benefit) => (
+                      <li class="flex items-start">
+                        <span class="text-green-400 mr-2">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-indigo-500/30">
+                <h4 class="font-semibold mb-4">Investment</h4>
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-sm text-gray-400">Implementation</p>
+                    <p class="text-xl font-bold text-indigo-400">{useCase.investment}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Timeline</p>
+                    <p class="text-lg font-semibold">{useCase.timeline}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-400">Expected ROI</p>
+                    <p class="text-xl font-bold text-cyan-400">{useCase.roi}</p>
+                  </div>
+                  <a href="/contact" class="btn btn-primary w-full mt-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Note -->
+  <section class="section bg-indigo-900/20 border-y border-indigo-500/30">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-5xl mb-4">🔒</div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">
+          Compliance-First AI Solutions
+        </h2>
+        <p class="text-lg text-gray-300 mb-6">
+          We understand that insurance is a highly regulated industry. All our AI solutions are designed with compliance in mind, including audit trails, explainability, and regulatory guardrails.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card border-indigo-500/30">
+            <h3 class="font-bold mb-2">Audit Trails</h3>
+            <p class="text-sm">Complete logging of all AI decisions and actions</p>
+          </div>
+          <div class="card border-indigo-500/30">
+            <h3 class="font-bold mb-2">Explainability</h3>
+            <p class="text-sm">Clear reasoning for AI recommendations</p>
+          </div>
+          <div class="card border-indigo-500/30">
+            <h3 class="font-bold mb-2">Regulatory Guardrails</h3>
+            <p class="text-sm">Built-in compliance checks and validations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="section bg-slate-900/50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">💬</div>
+          <h2 class="text-3xl font-bold mb-4">Success Story</h2>
+        </div>
+
+        <div class="card border-2 border-indigo-500/30">
+          <blockquote class="text-xl italic mb-6">
+            "{testimonial.quote}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-bold text-lg">{testimonial.author}</p>
+              <p class="text-gray-300">{testimonial.company}</p>
+            </div>
+            <div class="flex gap-4">
+              {testimonial.results.map((result) => (
+                <div class="text-center px-4 py-2 bg-indigo-500/20 rounded-lg border border-indigo-500/30">
+                  <p class="text-sm text-indigo-300 font-semibold">{result}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section hero-gradient">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Accelerate Your Insurance Operations?
+        </h2>
+        <p class="text-xl mb-8 text-gray-300">
+          Get a complimentary AI readiness assessment tailored to your insurance business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-accent text-lg px-8 py-4">
+            Get Free Assessment
+          </a>
+          <a href="/industries" class="btn btn-secondary text-lg px-8 py-4">
+            Explore Other Industries
+          </a>
+        </div>
+        <p class="mt-6 text-cyan-300">
+          ✓ Complimentary consultation ✓ Custom roadmap ✓ ROI projections ✓ No obligation
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
