@@ -9,6 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  trailingSlash: "always",
   integrations: [sitemap()],
 });
 
