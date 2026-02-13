@@ -293,7 +293,7 @@ A professional, production-ready website with:
 - Cloudflare Pages: https://pages.cloudflare.com
 
 ### Contact:
-- Email: contact@drag-ai.com
+- Email: info@drag-ai.com
 - Phone: +91-8305020077
 
 ---

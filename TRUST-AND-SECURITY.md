@@ -326,7 +326,7 @@ Add links to review platforms:
 3. Add domain: drag-ai.com
 4. Verify domain (add DNS records)
 5. Create emails:
-   - contact@drag-ai.com
+   - info@drag-ai.com
    - info@drag-ai.com
    - support@drag-ai.com
    - deepesh@drag-ai.com
@@ -362,7 +362,7 @@ Replace generic emails with professional ones:
 
 ```astro
 <!-- Update all instances -->
-<a href="mailto:contact@drag-ai.com">contact@drag-ai.com</a>
+<a href="mailto:info@drag-ai.com">info@drag-ai.com</a>
 ```
 
 ---

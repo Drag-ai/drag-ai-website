@@ -453,7 +453,7 @@ npm run build
    - [Stack Overflow](https://stackoverflow.com/)
 
 4. **Contact Team:**
-   - Email: contact@drag-ai.com
+   - Email: info@drag-ai.com
    - Phone: +91-8305020077
 
 ---
@@ -582,7 +582,7 @@ You now have everything you need to manage, develop, and deploy the Drag-AI webs
 
 ### Need Help?
 
-- 📧 Email: contact@drag-ai.com
+- 📧 Email: info@drag-ai.com
 - 📞 Phone: +91-8305020077
 - 📚 Documentation: Review the .md files in this project
 - 💬 Community: Join Astro Discord or Cloudflare Community

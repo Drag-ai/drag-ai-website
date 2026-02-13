@@ -458,7 +458,7 @@ NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
 ### Need Help?
 
-- **Email**: contact@drag-ai.com
+- **Email**: info@drag-ai.com
 - **Phone**: +91-8305020077
 - **Documentation**: See README.md
 
@@ -511,4 +511,4 @@ NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
 Your Drag-AI website is now live at https://drag-ai.com
 
-For questions or issues, contact: contact@drag-ai.com
+For questions or issues, contact: info@drag-ai.com

@@ -443,13 +443,13 @@ npm install @tailwindcss/vite tailwindcss
 - **Astro Docs**: https://docs.astro.build
 - **Tailwind Docs**: https://tailwindcss.com/docs
 - **GitHub Issues**: Create issue in repository
-- **Email**: contact@drag-ai.com
+- **Email**: info@drag-ai.com
 
 ## 📞 Contact
 
 **Drag-AI**
 - **Website**: https://drag-ai.com
-- **Email**: contact@drag-ai.com
+- **Email**: info@drag-ai.com
 - **Phone**: +91-8305020077
 - **Location**: ULF, Bellandur, Bengaluru
 - **LinkedIn**: https://www.linkedin.com/company/drag-ai/
@@ -463,4 +463,4 @@ npm install @tailwindcss/vite tailwindcss
 
 **Built with ❤️ by Drag-AI Team**
 
-For questions or support, contact: contact@drag-ai.com
+For questions or support, contact: info@drag-ai.com

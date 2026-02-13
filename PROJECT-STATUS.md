@@ -285,7 +285,7 @@ For questions about completing the remaining work:
 - Review `industry-specific-messaging.md` for all content
 - Check `construction.astro` as the template
 - See `DEPLOYMENT.md` for deployment steps
-- Contact: contact@drag-ai.com
+- Contact: info@drag-ai.com
 
 ---
 
