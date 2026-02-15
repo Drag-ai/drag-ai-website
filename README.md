@@ -4,7 +4,7 @@ Professional AI consulting and services website built with Astro 4+, Tailwind CS
 
 ## 🚀 Live Site
 
-- **Production**: https://drag-ai.com
+- **Production**: https://drag-ai.com/
 - **Staging**: (To be configured)
 
 ## 📋 Table of Contents
@@ -448,7 +448,7 @@ npm install @tailwindcss/vite tailwindcss
 ## 📞 Contact
 
 **Drag-AI**
-- **Website**: https://drag-ai.com
+- **Website**: https://drag-ai.com/
 - **Email**: info@drag-ai.com
 - **Phone**: +91-8305020077
 - **Location**: ULF, Bellandur, Bengaluru

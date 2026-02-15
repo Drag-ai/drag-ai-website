@@ -31,7 +31,7 @@ When you deploy to Cloudflare Pages, you automatically get:
 
 ### Verify SSL is Working:
 
-1. Visit your website: `https://drag-ai.com`
+1. Visit your website: `https://drag-ai.com/`
 2. Look for **padlock icon** 🔒 in browser address bar
 3. Click padlock → Should show "Connection is secure"
 4. Certificate should be valid and issued by Let's Encrypt
@@ -349,7 +349,7 @@ Drag-AI
 
 📧 deepesh@drag-ai.com
 📞 +91-8305020077
-🌐 https://drag-ai.com
+🌐 https://drag-ai.com/
 📍 Bengaluru, India
 
 Transform your business with AI

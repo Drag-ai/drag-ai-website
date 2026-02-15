@@ -292,7 +292,7 @@ npm run preview
    - Takes 1-3 minutes
 
 3. **Verify Deployment:**
-   - Visit: https://drag-ai.com
+   - Visit: https://drag-ai.com/
    - Check all pages work
    - Test forms and links
 
@@ -528,7 +528,7 @@ public/                  # Static assets
 ### Important URLs:
 
 - **Local Dev**: http://localhost:4321
-- **Production**: https://drag-ai.com
+- **Production**: https://drag-ai.com/
 - **Cloudflare**: https://dash.cloudflare.com
 - **GitHub Repo**: https://github.com/YOUR_USERNAME/drag-ai-website
 

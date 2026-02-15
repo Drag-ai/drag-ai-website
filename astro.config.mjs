@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://drag-ai.com',
+  site: 'https://drag-ai.com/',
   vite: {
     plugins: [tailwindcss()]
   },

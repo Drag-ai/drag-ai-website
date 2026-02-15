@@ -160,14 +160,14 @@ Crawl-delay: 1
 
 ### 1. **Google Search Console**
 1. Go to: https://search.google.com/search-console
-2. Add property: `https://drag-ai.com`
+2. Add property: `https://drag-ai.com/`
 3. Verify ownership (DNS or HTML file)
 4. Submit sitemap: `https://drag-ai.com/sitemap-index.xml`
 5. Monitor indexing status
 
 ### 2. **Bing Webmaster Tools**
 1. Go to: https://www.bing.com/webmasters
-2. Add site: `https://drag-ai.com`
+2. Add site: `https://drag-ai.com/`
 3. Verify ownership
 4. Submit sitemap: `https://drag-ai.com/sitemap-index.xml`
 
@@ -178,7 +178,7 @@ Crawl-delay: 1
 
 ### 4. **Schema Validation**
 1. Go to: https://validator.schema.org/
-2. Enter: `https://drag-ai.com`
+2. Enter: `https://drag-ai.com/`
 3. Verify structured data is correct
 
 ### 5. **Social Media Preview Testing**

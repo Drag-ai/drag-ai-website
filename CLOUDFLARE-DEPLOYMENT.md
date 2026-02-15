@@ -185,7 +185,7 @@ If you want to keep your current nameservers:
 
 1. In Cloudflare Pages, check domain status
 2. Wait for **"Active"** status
-3. Visit `https://drag-ai.com`
+3. Visit `https://drag-ai.com/`
 4. Verify HTTPS works (automatic SSL)
 
 ### Step 4: Set Primary Domain
@@ -281,7 +281,7 @@ const apiKey = import.meta.env.API_KEY;
 // astro.config.mjs
 export default defineConfig({
   output: 'static',
-  site: 'https://drag-ai.com',
+  site: 'https://drag-ai.com/',
   integrations: [tailwind()],
   build: {
     inlineStylesheets: 'auto',
@@ -584,7 +584,7 @@ After deployment, verify:
 
 Your Drag-AI website is now live on Cloudflare Pages!
 
-**Production URL:** `https://drag-ai.com` (or `https://drag-ai-website.pages.dev`)
+**Production URL:** `https://drag-ai.com/` (or `https://drag-ai-website.pages.dev`)
 
 **Next steps:**
 1. Share with your team

@@ -295,8 +295,8 @@ Wait 5-10 minutes for SSL provisioning.
 ### 3. Verify Deployment
 
 Check these URLs:
-- [ ] https://drag-ai.com (loads correctly)
-- [ ] https://www.drag-ai.com (redirects to main domain)
+- [ ] https://drag-ai.com/ (loads correctly)
+- [ ] https://www.drag-ai.com/ (redirects to main domain)
 - [ ] https://drag-ai.com/about (About page works)
 - [ ] https://drag-ai.com/contact (Contact form works)
 - [ ] https://drag-ai.com/industries (Industries page works)
@@ -509,6 +509,6 @@ NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
 **Deployment Complete! 🎉**
 
-Your Drag-AI website is now live at https://drag-ai.com
+Your Drag-AI website is now live at https://drag-ai.com/
 
 For questions or issues, contact: info@drag-ai.com
