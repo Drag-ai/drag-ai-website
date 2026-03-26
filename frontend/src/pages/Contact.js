@@ -112,14 +112,14 @@ export default function Contact() {
 
                     <div className="space-y-6">
                       <div className="flex items-start gap-4 group">
-                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10">
-                          <Mail className="h-5 w-5 text-[hsl(var(--accent-cyan))]" />
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10">
+                          <Mail className="h-5 w-5 text-[hsl(var(--accent-indigo))]" />
                         </div>
                         <div>
                           <p className="font-semibold text-sm mb-1">Email</p>
                           <a
                             href="mailto:info@drag-ai.com"
-                            className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-cyan))] link-underline transition-colors"
+                            className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-indigo))] link-underline transition-colors"
                           >
                             info@drag-ai.com
                           </a>
@@ -127,8 +127,8 @@ export default function Contact() {
                       </div>
 
                       <div className="flex items-start gap-4 group">
-                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10">
-                          <MapPin className="h-5 w-5 text-[hsl(var(--accent-cyan))]" />
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10">
+                          <MapPin className="h-5 w-5 text-[hsl(var(--accent-indigo))]" />
                         </div>
                         <div>
                           <p className="font-semibold text-sm mb-1">Location</p>
@@ -137,8 +137,8 @@ export default function Contact() {
                       </div>
 
                       <div className="flex items-start gap-4 group">
-                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10">
-                          <Linkedin className="h-5 w-5 text-[hsl(var(--accent-cyan))]" />
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10">
+                          <Linkedin className="h-5 w-5 text-[hsl(var(--accent-indigo))]" />
                         </div>
                         <div>
                           <p className="font-semibold text-sm mb-1">LinkedIn</p>
@@ -146,7 +146,7 @@ export default function Contact() {
                             href="https://www.linkedin.com/company/drag-ai/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-cyan))] link-underline transition-colors"
+                            className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-indigo))] link-underline transition-colors"
                             data-testid="contact-linkedin-link"
                           >
                             Follow us on LinkedIn
@@ -273,7 +273,7 @@ export default function Contact() {
                         <Button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full bg-[hsl(var(--accent-cyan))] text-[hsl(var(--accent-cyan-foreground))] shadow-sm hover:brightness-95"
+                          className="w-full bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95"
                           data-testid="contact-form-submit-button"
                         >
                           {isSubmitting ? (

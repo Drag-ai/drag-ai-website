@@ -135,12 +135,12 @@ export default function About() {
             {principles.map((principle, idx) => (
               <Reveal key={idx} delay={0.1 * idx}>
                 <Card className="p-6 card-hover group">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10 flex items-center justify-center mb-4">
-                    <span className="text-xl font-semibold text-[hsl(var(--accent-cyan))]">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center mb-4">
+                    <span className="text-xl font-semibold text-[hsl(var(--accent-indigo))]">
                       {idx + 1}
                     </span>
                   </div>
-                  <h3 className="font-semibold text-lg mb-3 group-hover:text-[hsl(var(--accent-cyan))] transition-colors">{principle.title}</h3>
+                  <h3 className="font-semibold text-lg mb-3 group-hover:text-[hsl(var(--accent-indigo))] transition-colors">{principle.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {principle.description}
                   </p>
@@ -167,14 +167,14 @@ export default function About() {
               <Reveal key={idx} delay={0.1 * idx}>
                 <Card className="p-8 card-hover group border-2">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(var(--accent-cyan))]/20 to-[hsl(var(--accent-violet))]/15 flex items-center justify-center">
-                      <span className="text-lg font-semibold text-[hsl(var(--accent-cyan))]">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(var(--accent-indigo))]/20 to-[hsl(var(--accent-purple))]/15 flex items-center justify-center">
+                      <span className="text-lg font-semibold text-[hsl(var(--accent-indigo))]">
                         {founder.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-xl group-hover:text-[hsl(var(--accent-cyan))] transition-colors">{founder.name}</h3>
-                      <p className="text-sm text-[hsl(var(--accent-cyan))]">
+                      <h3 className="font-semibold text-xl group-hover:text-[hsl(var(--accent-indigo))] transition-colors">{founder.name}</h3>
+                      <p className="text-sm text-[hsl(var(--accent-indigo))]">
                         {founder.role}
                       </p>
                     </div>
@@ -261,7 +261,7 @@ export default function About() {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[hsl(var(--accent-cyan))] text-[hsl(var(--accent-cyan-foreground))] shadow-sm hover:brightness-95"
+                className="bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 h-4 w-4" />

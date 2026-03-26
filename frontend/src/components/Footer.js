@@ -19,7 +19,7 @@ export const Footer = () => {
                 href="https://www.linkedin.com/company/drag-ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-[hsl(var(--accent-cyan))] hover:underline"
+                className="inline-flex items-center gap-2 text-sm text-[hsl(var(--accent-indigo))] hover:underline"
                 data-testid="footer-linkedin-link"
               >
                 <Linkedin className="h-5 w-5" />

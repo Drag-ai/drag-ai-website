@@ -1,22 +1,14 @@
 [
   {
-    "content": "Add neural network animation to all pages (About, Services, Industries, Contact, Privacy, Terms)",
+    "content": "Update CSS color variables to Indigo theme",
     "status": "completed"
   },
   {
-    "content": "Enhance visual styling with better spacing, typography, and layouts",
+    "content": "Update gradient combinations throughout the site",
     "status": "completed"
   },
   {
-    "content": "Add subtle hover effects and transitions across all components",
-    "status": "completed"
-  },
-  {
-    "content": "Improve card designs and visual hierarchy",
-    "status": "completed"
-  },
-  {
-    "content": "Test enhanced design across all pages",
+    "content": "Test color changes across all pages",
     "status": "completed"
   }
 ]

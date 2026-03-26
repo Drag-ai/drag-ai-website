@@ -74,8 +74,8 @@ export default function Home() {
         data-testid="home-hero"
       >
         {/* Background Gradients */}
-        <div className="hero-gradient-cyan absolute inset-0" style={{ zIndex: 0 }} />
-        <div className="hero-gradient-violet absolute inset-0" style={{ zIndex: 0 }} />
+        <div className="hero-gradient-indigo absolute inset-0" style={{ zIndex: 0 }} />
+        <div className="hero-gradient-purple absolute inset-0" style={{ zIndex: 0 }} />
         
         {/* Neural Network Background */}
         <NeuralBackground />
@@ -88,7 +88,7 @@ export default function Home() {
               <Reveal>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
                   Production-Grade
-                  <span className="block text-[hsl(var(--accent-cyan))]">Agentic AI Systems</span>
+                  <span className="block text-[hsl(var(--accent-indigo))]">Agentic AI Systems</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.1}>
@@ -102,7 +102,7 @@ export default function Home() {
                   <Link to="/contact">
                     <Button
                       size="lg"
-                      className="bg-[hsl(var(--accent-cyan))] text-[hsl(var(--accent-cyan-foreground))] shadow-sm hover:brightness-95 hover:-translate-y-0.5 transition-all"
+                      className="bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95 hover:-translate-y-0.5 transition-all"
                       data-testid="home-hero-book-call"
                     >
                       Book a Discovery Call
@@ -132,12 +132,12 @@ export default function Home() {
                       {/* Status Header */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--accent-cyan))] animate-pulse" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--accent-indigo))] animate-pulse" />
                           <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60">
                             SYSTEM ACTIVE
                           </span>
                         </div>
-                        <span className="font-mono text-xs text-[hsl(var(--accent-cyan))]">
+                        <span className="font-mono text-xs text-[hsl(var(--accent-indigo))]">
                           v2.0.1
                         </span>
                       </div>
@@ -147,30 +147,30 @@ export default function Home() {
                         <div>
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-xs text-muted-foreground">Model Accuracy</span>
-                            <span className="text-xs font-semibold text-[hsl(var(--accent-cyan))]">98.4%</span>
+                            <span className="text-xs font-semibold text-[hsl(var(--accent-indigo))]">98.4%</span>
                           </div>
                           <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-cyan))] to-[hsl(var(--accent-violet))] w-[98%] rounded-full" />
+                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-indigo))] to-[hsl(var(--accent-purple))] w-[98%] rounded-full" />
                           </div>
                         </div>
 
                         <div>
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-xs text-muted-foreground">Processing Speed</span>
-                            <span className="text-xs font-semibold text-[hsl(var(--accent-cyan))]">2.1s</span>
+                            <span className="text-xs font-semibold text-[hsl(var(--accent-indigo))]">2.1s</span>
                           </div>
                           <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-cyan))] to-[hsl(var(--accent-violet))] w-[85%] rounded-full" />
+                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-indigo))] to-[hsl(var(--accent-purple))] w-[85%] rounded-full" />
                           </div>
                         </div>
 
                         <div>
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-xs text-muted-foreground">System Load</span>
-                            <span className="text-xs font-semibold text-[hsl(var(--accent-cyan))]">24%</span>
+                            <span className="text-xs font-semibold text-[hsl(var(--accent-indigo))]">24%</span>
                           </div>
                           <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-cyan))] to-[hsl(var(--accent-violet))] w-[24%] rounded-full" />
+                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-indigo))] to-[hsl(var(--accent-purple))] w-[24%] rounded-full" />
                           </div>
                         </div>
                       </div>
@@ -181,13 +181,13 @@ export default function Home() {
                           CAPABILITIES
                         </span>
                         <div className="flex flex-wrap gap-2">
-                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-cyan))]/30 bg-[hsl(var(--accent-cyan))]/5">
+                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-indigo))]/30 bg-[hsl(var(--accent-indigo))]/5">
                             RAG
                           </Badge>
-                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-cyan))]/30 bg-[hsl(var(--accent-cyan))]/5">
+                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-indigo))]/30 bg-[hsl(var(--accent-indigo))]/5">
                             Multi-Agent
                           </Badge>
-                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-cyan))]/30 bg-[hsl(var(--accent-cyan))]/5">
+                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-indigo))]/30 bg-[hsl(var(--accent-indigo))]/5">
                             LLM
                           </Badge>
                         </div>
@@ -267,14 +267,14 @@ export default function Home() {
                   data-testid="capability-card"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10 text-[hsl(var(--accent-cyan))] icon-glow">
+                    <div className="p-2 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10 text-[hsl(var(--accent-indigo))] icon-glow">
                       {cap.icon}
                     </div>
                     <div>
-                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-[hsl(var(--accent-cyan))]/80 mb-1">
+                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-[hsl(var(--accent-indigo))]/80 mb-1">
                         {cap.label}
                       </p>
-                      <h3 className="font-semibold text-lg mb-2 group-hover:text-[hsl(var(--accent-cyan))] transition-colors">{cap.title}</h3>
+                      <h3 className="font-semibold text-lg mb-2 group-hover:text-[hsl(var(--accent-indigo))] transition-colors">{cap.title}</h3>
                       <p className="text-sm text-muted-foreground">
                         {cap.description}
                       </p>
@@ -310,7 +310,7 @@ export default function Home() {
             ].map((item, idx) => (
               <Reveal key={idx} delay={0.1 * idx}>
                 <Card className="p-6">
-                  <p className="font-mono text-2xl font-semibold text-[hsl(var(--accent-cyan))] mb-2">
+                  <p className="font-mono text-2xl font-semibold text-[hsl(var(--accent-indigo))] mb-2">
                     {item.step}
                   </p>
                   <h3 className="font-semibold mb-2">{item.title}</h3>
@@ -342,7 +342,7 @@ export default function Home() {
                 <Badge
                   key={idx}
                   variant="outline"
-                  className="px-4 py-2 text-sm border-[hsl(var(--accent-violet))]/25 bg-[hsl(var(--accent-violet))]/10"
+                  className="px-4 py-2 text-sm border-[hsl(var(--accent-purple))]/25 bg-[hsl(var(--accent-purple))]/10"
                 >
                   {industry}
                 </Badge>
@@ -353,7 +353,7 @@ export default function Home() {
           <Reveal delay={0.2}>
             <div className="mt-8 text-center">
               <Link to="/industries">
-                <Button variant="ghost" className="text-[hsl(var(--accent-cyan))]">
+                <Button variant="ghost" className="text-[hsl(var(--accent-indigo))]">
                   View Industry Solutions
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -419,7 +419,7 @@ export default function Home() {
               <Reveal key={idx} delay={0.1 * idx}>
                 <Card className="p-8">
                   <h3 className="font-semibold text-xl mb-1">{founder.name}</h3>
-                  <p className="text-sm text-[hsl(var(--accent-cyan))] mb-4">
+                  <p className="text-sm text-[hsl(var(--accent-indigo))] mb-4">
                     {founder.role}
                   </p>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -452,7 +452,7 @@ export default function Home() {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[hsl(var(--accent-cyan))] text-[hsl(var(--accent-cyan-foreground))] shadow-sm hover:brightness-95"
+                className="bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95"
               >
                 Schedule a Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />

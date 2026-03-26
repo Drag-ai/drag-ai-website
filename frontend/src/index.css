@@ -19,13 +19,13 @@
     --primary: 222 47% 11%; /* ink */
     --primary-foreground: 210 40% 98%;
 
-    /* Cyan action */
-    --accent-cyan: 190 95% 40%; /* #06B6D4-ish */
-    --accent-cyan-foreground: 210 40% 98%;
+    /* Indigo action */
+    --accent-indigo: 239 84% 67%; /* #6366F1 */
+    --accent-indigo-foreground: 210 40% 98%;
 
-    /* Violet trace (restrained) */
-    --accent-violet: 238 83% 66%; /* #818CF8-ish */
-    --accent-violet-foreground: 222 47% 11%;
+    /* Purple trace */
+    --accent-purple: 258 90% 66%; /* #8B5CF6 */
+    --accent-purple-foreground: 210 40% 98%;
 
     /* UI */
     --secondary: 210 40% 96%;
@@ -36,7 +36,7 @@
     --accent-foreground: 222 47% 11%;
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 190 95% 40%;
+    --ring: 239 84% 67%;
 
     /* States */
     --destructive: 0 84% 60%;
@@ -48,7 +48,7 @@
     /* Shadows (custom) */
     --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
     --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
-    --shadow-glow-cyan: 0 0 0 6px rgba(34, 211, 238, 0.14);
+    --shadow-glow-indigo: 0 0 0 6px rgba(99, 102, 241, 0.14);
 
     /* Typography */
     --font-display: 'Space Grotesk', ui-sans-serif, system-ui;
@@ -85,7 +85,7 @@
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.22);
+  background: rgba(99, 102, 241, 0.22);
 }
 
 /* Reduced motion */
