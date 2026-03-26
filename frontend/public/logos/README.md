@@ -4,7 +4,68 @@ This directory contains high-quality logo files for Drag AI in various formats a
 
 ## 📁 Available Files
 
-### 1. **logo-white-bg.svg**
+### Logos with Company Name
+
+#### Horizontal Layouts (800×200)
+
+### 1. **logo-horizontal-white.svg**
+- **Background:** White (#FFFFFF)
+- **Layout:** Icon + "Drag AI" text (horizontal)
+- **Size:** 800×200 pixels (scalable)
+- **Best for:** Website headers, email signatures, letterheads, business cards
+- **Download:** Right-click and "Save As" or use the web gallery
+
+### 2. **logo-horizontal-transparent.svg**
+- **Background:** Transparent
+- **Layout:** Icon + "Drag AI" text (horizontal)
+- **Size:** 800×200 pixels (scalable)
+- **Best for:** Presentations, social media covers, overlays on any background
+- **Download:** Right-click and "Save As" or use the web gallery
+
+### 3. **logo-horizontal-dark.svg**
+- **Background:** Dark navy (#1a1a2e)
+- **Layout:** Icon + "Drag AI" text (horizontal)
+- **Size:** 800×200 pixels (scalable)
+- **Best for:** Dark mode websites, video intros, night theme materials
+- **Download:** Right-click and "Save As" or use the web gallery
+
+#### Stacked/Vertical Layouts (400×500)
+
+### 4. **logo-stacked-white.svg**
+- **Background:** White
+- **Layout:** Icon above "Drag AI" text (vertical)
+- **Size:** 400×500 pixels (scalable)
+- **Best for:** App icons, Instagram posts, square social media graphics, mobile apps
+- **Download:** Right-click and "Save As" or use the web gallery
+
+### 5. **logo-stacked-transparent.svg**
+- **Background:** Transparent
+- **Layout:** Icon above "Drag AI" text (vertical)
+- **Size:** 400×500 pixels (scalable)
+- **Best for:** Profile pictures, app store listings, vertical banners
+- **Download:** Right-click and "Save As" or use the web gallery
+
+### 6. **logo-stacked-dark.svg**
+- **Background:** Dark navy (#1a1a2e)
+- **Layout:** Icon above "Drag AI" text (vertical)
+- **Size:** 400×500 pixels (scalable)
+- **Best for:** Dark mode apps, night theme materials, dark backgrounds
+- **Download:** Right-click and "Save As" or use the web gallery
+
+#### Wide Banner Format (1200×300)
+
+### 7. **logo-banner-transparent.svg**
+- **Background:** Transparent
+- **Layout:** Icon + large "Drag AI" text (extra wide)
+- **Size:** 1200×300 pixels (scalable)
+- **Best for:** Website hero sections, YouTube channel art, LinkedIn covers, Twitter headers
+- **Download:** Right-click and "Save As" or use the web gallery
+
+---
+
+### Icon Only Versions
+
+### 8. **logo-white-bg.svg**
 - **Background:** White (#FFFFFF)
 - **Size:** 400×400 pixels (scalable)
 - **Best for:** Light-themed websites, documents, presentations, business cards

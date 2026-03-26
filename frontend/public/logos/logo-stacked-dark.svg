@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Dark background with rounded corners -->
+  <rect width="400" height="500" fill="#1a1a2e" rx="40"/>
+  
+  <!-- Neural network icon (centered at x=200, y=150) -->
+  <g transform="translate(200, 150)">
+    <circle cx="0" cy="-60" r="15" fill="url(#logoGradient)" opacity="0.9" />
+    <circle cx="-50" cy="0" r="15" fill="url(#logoGradient)" opacity="0.9" />
+    <circle cx="50" cy="0" r="15" fill="url(#logoGradient)" opacity="0.9" />
+    <circle cx="0" cy="60" r="15" fill="url(#logoGradient)" opacity="0.9" />
+    <circle cx="0" cy="0" r="20" fill="url(#logoGradient)" />
+    
+    <line x1="0" y1="-60" x2="0" y2="-20" stroke="url(#logoGradient)" stroke-width="6" opacity="0.8" />
+    <line x1="0" y1="20" x2="0" y2="45" stroke="url(#logoGradient)" stroke-width="6" opacity="0.8" />
+    <line x1="-15" y1="-10" x2="-35" y2="0" stroke="url(#logoGradient)" stroke-width="6" opacity="0.8" />
+    <line x1="15" y1="-10" x2="35" y2="0" stroke="url(#logoGradient)" stroke-width="6" opacity="0.8" />
+    <line x1="-15" y1="10" x2="-35" y2="0" stroke="url(#logoGradient)" stroke-width="6" opacity="0.8" />
+    <line x1="15" y1="10" x2="35" y2="0" stroke="url(#logoGradient)" stroke-width="6" opacity="0.8" />
+  </g>
+  
+  <!-- Company name "Drag AI" centered below icon -->
+  <text x="200" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="white" text-anchor="middle">
+    Drag AI
+  </text>
+</svg>
