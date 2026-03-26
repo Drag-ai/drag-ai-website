@@ -4,6 +4,10 @@
       <stop offset="0%" stop-color="#8B5CF6" />
       <stop offset="100%" stop-color="#EC4899" />
     </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
   </defs>
   
   <!-- Neural network icon (centered vertically at x=100) -->
@@ -22,8 +26,8 @@
     <line x1="12" y1="8" x2="28" y2="0" stroke="url(#logoGradient)" stroke-width="5" opacity="0.6" />
   </g>
   
-  <!-- Company name "Drag AI" -->
-  <text x="250" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="#1a1a2e">
+  <!-- Company name "Drag AI" with gradient -->
+  <text x="250" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="url(#textGradient)">
     Drag AI
   </text>
 </svg>
