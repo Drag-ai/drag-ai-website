@@ -8,7 +8,7 @@ import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
 import { toast } from 'sonner';
-import { Mail, MapPin, Linkedin, Send } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Facebook, Instagram, Send } from 'lucide-react';
 
 export default function Contact() {
   useSEO({
@@ -150,6 +150,43 @@ export default function Contact() {
                             data-testid="contact-linkedin-link"
                           >
                             Follow us on LinkedIn
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* Social Media Section */}
+                      <div className="pt-4 border-t">
+                        <p className="font-semibold text-sm mb-4">Connect With Us</p>
+                        <div className="flex items-center gap-4">
+                          <a
+                            href="https://www.linkedin.com/company/drag-ai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit our LinkedIn page"
+                            className="p-3 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/10 to-[hsl(var(--accent-purple))]/5 hover:from-[hsl(var(--accent-purple))]/20 hover:to-[hsl(var(--accent-purple))]/10 transition-all"
+                            data-testid="contact-social-linkedin"
+                          >
+                            <Linkedin className="h-5 w-5 text-[hsl(var(--accent-purple))]" />
+                          </a>
+                          <a
+                            href="https://www.facebook.com/share/18cr5FMcj4/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit our Facebook page"
+                            className="p-3 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/10 to-[hsl(var(--accent-purple))]/5 hover:from-[hsl(var(--accent-purple))]/20 hover:to-[hsl(var(--accent-purple))]/10 transition-all"
+                            data-testid="contact-social-facebook"
+                          >
+                            <Facebook className="h-5 w-5 text-[hsl(var(--accent-purple))]" />
+                          </a>
+                          <a
+                            href="https://www.instagram.com/dragai.tech"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit our Instagram page"
+                            className="p-3 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/10 to-[hsl(var(--accent-purple))]/5 hover:from-[hsl(var(--accent-purple))]/20 hover:to-[hsl(var(--accent-purple))]/10 transition-all"
+                            data-testid="contact-social-instagram"
+                          >
+                            <Instagram className="h-5 w-5 text-[hsl(var(--accent-purple))]" />
                           </a>
                         </div>
                       </div>

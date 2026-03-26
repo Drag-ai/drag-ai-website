@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Facebook, Instagram } from 'lucide-react';
 import { Logo } from './Logo';
 
 export const Footer = () => {
@@ -16,17 +16,44 @@ export const Footer = () => {
             <p className="mt-4 text-sm text-muted-foreground">
               Production-grade Agentic AI consulting
             </p>
-            <div className="mt-4">
-              <a
-                href="https://www.linkedin.com/company/drag-ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-[hsl(var(--accent-purple))] hover:underline"
-                data-testid="footer-linkedin-link"
-              >
-                <Linkedin className="h-5 w-5" />
-                LinkedIn
-              </a>
+            
+            {/* Social Links */}
+            <div className="mt-6">
+              <p className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3">
+                Follow Us
+              </p>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.linkedin.com/company/drag-ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our LinkedIn page"
+                  className="text-muted-foreground hover:text-[hsl(var(--accent-purple))] transition-colors"
+                  data-testid="footer-linkedin-link"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/share/18cr5FMcj4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Facebook page"
+                  className="text-muted-foreground hover:text-[hsl(var(--accent-purple))] transition-colors"
+                  data-testid="footer-facebook-link"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/dragai.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Instagram page"
+                  className="text-muted-foreground hover:text-[hsl(var(--accent-purple))] transition-colors"
+                  data-testid="footer-instagram-link"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
 
