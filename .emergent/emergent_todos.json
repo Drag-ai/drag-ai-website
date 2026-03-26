@@ -1,26 +1,34 @@
 [
   {
-    "content": "Enhance About page hero and layout",
+    "content": "Audit and improve Homepage - content, structure, layout, animations",
     "status": "completed"
   },
   {
-    "content": "Improve Services page with better visuals",
-    "status": "completed"
+    "content": "Audit and improve About page - content, founder bios, principles",
+    "status": "in_progress"
   },
   {
-    "content": "Upgrade Industries page layout",
-    "status": "completed"
+    "content": "Audit and improve Services page - service descriptions, layout",
+    "status": "pending"
   },
   {
-    "content": "Polish Contact page further",
-    "status": "completed"
+    "content": "Audit and improve Industries page - use cases, visual hierarchy",
+    "status": "pending"
   },
   {
-    "content": "Add visual interest to Privacy and Terms pages",
-    "status": "completed"
+    "content": "Audit and improve Contact page - form UX, copy",
+    "status": "pending"
   },
   {
-    "content": "Test all enhanced pages",
-    "status": "completed"
+    "content": "Audit and improve Privacy & Terms pages - readability, formatting",
+    "status": "pending"
+  },
+  {
+    "content": "Review navigation and CTAs across all pages",
+    "status": "pending"
+  },
+  {
+    "content": "Final testing - animations, responsiveness, performance",
+    "status": "pending"
   }
 ]
