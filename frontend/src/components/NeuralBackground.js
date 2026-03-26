@@ -1,10 +1,16 @@
-import { useCallback, useMemo } from 'react';
-import Particles from '@tsparticles/react';
+import React, { useEffect, useMemo } from 'react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 export const NeuralBackground = () => {
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+  const [init, setInit] = React.useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
   const options = useMemo(
@@ -26,7 +32,7 @@ export const NeuralBackground = () => {
           grab: {
             distance: 140,
             links: {
-              opacity: 0.4,
+              opacity: 0.5,
             },
           },
         },
@@ -39,7 +45,7 @@ export const NeuralBackground = () => {
           color: '#818CF8',
           distance: 150,
           enable: true,
-          opacity: 0.25,
+          opacity: 0.4,
           width: 1,
         },
         move: {
@@ -49,7 +55,7 @@ export const NeuralBackground = () => {
             default: 'bounce',
           },
           random: false,
-          speed: 0.5,
+          speed: 0.8,
           straight: false,
         },
         number: {
@@ -57,10 +63,10 @@ export const NeuralBackground = () => {
             enable: true,
             area: 800,
           },
-          value: window.innerWidth < 768 ? 30 : 60,
+          value: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
         },
         opacity: {
-          value: 0.3,
+          value: 0.5,
         },
         shape: {
           type: 'circle',
@@ -70,19 +76,25 @@ export const NeuralBackground = () => {
         },
       },
       detectRetina: true,
-      reduceDuplicates: true,
     }),
     []
   );
 
+  if (!init) {
+    return null;
+  }
+
   return (
-    <div className="nn-bg" data-testid="neural-background">
+    <div 
+      className="absolute inset-0 pointer-events-none" 
+      data-testid="neural-background"
+      style={{ zIndex: 1 }}
+    >
       <Particles
         id="tsparticles"
-        init={particlesInit}
         options={options}
-        className="absolute inset-0"
       />
     </div>
   );
 };
+

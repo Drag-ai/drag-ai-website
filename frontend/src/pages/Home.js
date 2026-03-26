@@ -6,6 +6,7 @@ import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
 import { ArrowRight, Zap, Shield, Code, Gauge } from 'lucide-react';
+import React from 'react';
 
 export default function Home() {
   useSEO({
@@ -73,15 +74,14 @@ export default function Home() {
         data-testid="home-hero"
       >
         {/* Background Gradients */}
-        <div className="hero-gradient-cyan absolute inset-0" />
-        <div className="hero-gradient-violet absolute inset-0" />
-        <div className="noise-overlay" />
+        <div className="hero-gradient-cyan absolute inset-0" style={{ zIndex: 0 }} />
+        <div className="hero-gradient-violet absolute inset-0" style={{ zIndex: 0 }} />
         
         {/* Neural Network Background */}
         <NeuralBackground />
 
         {/* Content */}
-        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Copy */}
             <div>
