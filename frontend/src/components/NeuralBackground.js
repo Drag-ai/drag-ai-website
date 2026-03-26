@@ -86,9 +86,8 @@ export const NeuralBackground = () => {
 
   return (
     <div 
-      className="absolute inset-0 pointer-events-none" 
+      className="fixed inset-0 pointer-events-none -z-10" 
       data-testid="neural-background"
-      style={{ zIndex: 1 }}
     >
       <Particles
         id="tsparticles"
