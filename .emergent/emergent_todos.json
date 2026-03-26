@@ -9,15 +9,15 @@
   },
   {
     "content": "Phase 1: Test contact form submission in Cloudflare-compatible environment",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Phase 1: All user stories covered in POC and testing",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: Setup Next.js project with TypeScript and Tailwind",
-    "status": "pending"
+    "status": "in_progress"
   },
   {
     "content": "Phase 2: Build design system and global layout",
