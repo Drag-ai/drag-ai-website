@@ -75,10 +75,7 @@ Test the following on your live site:
 ## Troubleshooting
 
 ### Issue: 404 on Page Refresh
-**Solution**: The `_redirects` file should already be in `frontend/public/`. Verify it contains:
-```
-/*    /index.html   200
-```
+**Solution**: This site uses HashRouter, so all URLs include a hash (e.g., `/#/careers`). Page refreshes work automatically without server configuration.
 
 ### Issue: Build Fails
 **Common causes**:

@@ -119,10 +119,12 @@ drag-ai-website/
 ## 🎯 Expected Result
 
 After deployment, your site will be:
-- **Live URL**: `https://drag-ai-xxx.pages.dev` (Cloudflare provides this)
+- **Live URL**: `https://drag-ai-xxx.pages.dev`
+- **Page URLs**: Use hash-based routing (e.g., `/#/about`, `/#/careers`)
 - **Automatic deployments**: Every Git push triggers rebuild
 - **Preview deployments**: PRs get preview URLs
 - **Free hosting**: Unlimited bandwidth & requests
+- **No server config needed**: HashRouter works on static hosting
 
 ---
 

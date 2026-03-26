@@ -121,7 +121,7 @@ MONGO_URL=your-mongodb-connection-string
 
 ## 📝 Important Notes
 
-- **SPA Routing**: Configure Cloudflare Pages to redirect all routes to `index.html` for proper React Router behavior
+- **HashRouter URLs**: This site uses hash-based routing for perfect static hosting compatibility (URLs like `/#/about`, `/#/careers`)
 - **Web3Forms Key**: Get your free access key at [web3forms.com](https://web3forms.com)
 - **No Fake Metrics**: This site maintains credibility by avoiding fake client logos or testimonials
 
