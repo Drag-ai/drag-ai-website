@@ -37,8 +37,8 @@ export default function Home() {
     {
       icon: <Shield className="h-5 w-5" />,
       label: 'PRODUCTION SYSTEMS',
-      title: 'Enterprise-Grade Deployment',
-      description: 'Production-ready agentic systems with monitoring, human-in-the-loop controls, and reliability guarantees.',
+      title: 'Production-Ready Deployment',
+      description: 'Agentic systems designed with monitoring, human-in-the-loop controls, and operational observability.',
     },
   ];
 
@@ -62,8 +62,8 @@ export default function Home() {
     {
       name: 'Nishit Gupta',
       role: 'Business Founder',
-      bio: 'Leads strategy, partnerships, and client success. Focused on delivering measurable business outcomes.',
-      expertise: ['Business Strategy', 'AI Consulting', 'Client Success'],
+      bio: 'Leads strategy, business development, and partnerships. Focused on practical AI implementation and business value.',
+      expertise: ['Business Strategy', 'AI Implementation', 'Business Development'],
     },
   ];
 
@@ -89,7 +89,7 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-prose leading-relaxed">
-                  We build autonomous AI agents that transform how businesses operate. From intelligent workflow automation to multi-agent orchestration—production-ready systems that deliver measurable results.
+                  We design and build autonomous AI agents for business operations. From intelligent workflow automation to multi-agent orchestration—focused on practical, production-ready agentic systems.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
@@ -118,61 +118,66 @@ export default function Home() {
               </Reveal>
             </div>
 
+            {/* Right: What We Focus On */}
             <div className="hidden lg:block">
               <Reveal delay={0.3}>
                 <Card className="p-8 card-hover border-2">
                   <div className="space-y-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--accent-purple))] animate-pulse" />
-                        <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60">
-                          LIVE METRICS
-                        </span>
-                      </div>
-                      <span className="font-mono text-xs text-[hsl(var(--accent-purple))]">
-                        v2.1.0
+                    <div className="mb-4">
+                      <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60">
+                        WHAT WE BUILD
                       </span>
                     </div>
 
                     <div className="space-y-4">
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs text-muted-foreground">Model Accuracy</span>
-                          <span className="text-xs font-semibold text-[hsl(var(--accent-purple))]">98.7%</span>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1">
+                          <CheckCircle2 className="h-4 w-4 text-[hsl(var(--accent-purple))]" />
                         </div>
-                        <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                          <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink))] w-[98.7%] rounded-full" />
-                        </div>
-                      </div>
-
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs text-muted-foreground">Avg Response Time</span>
-                          <span className="text-xs font-semibold text-[hsl(var(--accent-purple))]">1.8s</span>
-                        </div>
-                        <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                          <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink))] w-[92%] rounded-full" />
+                        <div>
+                          <p className="text-sm font-medium mb-1">Custom AI Agents</p>
+                          <p className="text-xs text-muted-foreground">Domain-specific autonomous agents for business workflows</p>
                         </div>
                       </div>
 
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs text-muted-foreground">System Uptime</span>
-                          <span className="text-xs font-semibold text-[hsl(var(--accent-purple))]">99.9%</span>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1">
+                          <CheckCircle2 className="h-4 w-4 text-[hsl(var(--accent-purple))]" />
                         </div>
-                        <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                          <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink))] w-[99.9%] rounded-full" />
+                        <div>
+                          <p className="text-sm font-medium mb-1">Autonomous Workflows</p>
+                          <p className="text-xs text-muted-foreground">Multi-agent systems that orchestrate complex processes</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1">
+                          <CheckCircle2 className="h-4 w-4 text-[hsl(var(--accent-purple))]" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium mb-1">Agent Orchestration</p>
+                          <p className="text-xs text-muted-foreground">Coordinated multi-agent architectures for complex problems</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1">
+                          <CheckCircle2 className="h-4 w-4 text-[hsl(var(--accent-purple))]" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium mb-1">Production Systems</p>
+                          <p className="text-xs text-muted-foreground">Deployed agents with monitoring and human-in-the-loop controls</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t border-border">
                       <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60 block mb-3">
-                        CAPABILITIES
+                        TECHNICAL FOCUS
                       </span>
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="outline" className="text-xs border-[hsl(var(--accent-purple))]/30 bg-[hsl(var(--accent-purple))]/5">
-                          RAG
+                          LLM Agents
                         </Badge>
                         <Badge variant="outline" className="text-xs border-[hsl(var(--accent-purple))]/30 bg-[hsl(var(--accent-purple))]/5">
                           Multi-Agent

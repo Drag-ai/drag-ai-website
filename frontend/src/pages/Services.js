@@ -25,7 +25,7 @@ export default function Services() {
         'Operations tasks requiring judgment and context',
       ],
       businessImpact:
-        'Reduces manual workload by 60-80%, enables 24/7 operations, and scales expertise across your organization.',
+        'Designed to reduce manual workload, enable continuous operation, and help scale operational capabilities across teams.',
       testId: 'services-custom-agents-card',
     },
     {
@@ -40,7 +40,7 @@ export default function Services() {
         'High-volume operations needing intelligent routing',
       ],
       businessImpact:
-        'Achieves 70-90% faster processing times, eliminates bottlenecks, and ensures consistent execution quality.',
+        'Built to accelerate processing times, reduce bottlenecks, and improve execution consistency.',
       testId: 'services-workflow-automation-card',
     },
     {
@@ -55,7 +55,7 @@ export default function Services() {
         'Systems needing specialist agents for different domains',
       ],
       businessImpact:
-        'Solves problems no single AI can handle, reduces time-to-resolution, and enables sophisticated automation strategies.',
+        'Designed to handle complex problems that require multiple specialized capabilities, reducing time-to-resolution through coordinated agent collaboration.',
       testId: 'services-multi-agent-card',
     },
     {
@@ -70,7 +70,7 @@ export default function Services() {
         'Compliance and policy interpretation',
       ],
       businessImpact:
-        'Unlocks institutional knowledge at scale, reduces onboarding time, and ensures consistent information delivery.',
+        'Helps unlock institutional knowledge at scale, supports faster onboarding, and provides consistent information access.',
       testId: 'services-rag-card',
     },
     {
@@ -85,7 +85,7 @@ export default function Services() {
         'Compliance document review and categorization',
       ],
       businessImpact:
-        'Accelerates document processing by 10x, reduces errors to near-zero, and enables instant data availability.',
+        'Designed to significantly accelerate document processing, improve accuracy, and enable faster data availability.',
       testId: 'services-document-agents-card',
     },
     {
@@ -100,7 +100,7 @@ export default function Services() {
         'Intake automation for sales and support',
       ],
       businessImpact:
-        'Handles 80% of routine inquiries autonomously, improves response times, and reduces support costs significantly.',
+        'Built to handle high volumes of routine inquiries autonomously, improve response times, and help reduce support costs.',
       testId: 'services-conversational-agents-card',
     },
   ];
@@ -317,9 +317,9 @@ export default function Services() {
 
             <Reveal delay={0.5}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">How do you ensure ROI from agentic AI projects?</h3>
+                <h3 className="font-semibold mb-2 text-lg">How do you ensure value from agentic AI projects?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We start with clear success metrics: time saved, cost reduced, accuracy improved, or throughput increased. Our pilot-first approach validates ROI before full deployment. Most clients see 10-30x ROI within 6-12 months through reduced labor costs, faster processing, and fewer errors.
+                  We start with clear success metrics: time saved, cost reduced, accuracy improved, or throughput increased. Our pilot-first approach helps validate potential value before full deployment. We focus on measurable business outcomes and transparent project scoping.
                 </p>
               </Card>
             </Reveal>
