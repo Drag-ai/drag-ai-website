@@ -127,23 +127,70 @@ export default function Home() {
             <div className="hidden lg:block">
               <Reveal delay={0.3}>
                 <div className="relative">
-                  <Card className="p-8 card-hover">
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full bg-[hsl(var(--accent-cyan))] animate-pulse" />
-                        <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60">
-                          SYSTEM ACTIVE
+                  <Card className="p-8 card-hover border-2">
+                    <div className="space-y-6">
+                      {/* Status Header */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--accent-cyan))] animate-pulse" />
+                          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60">
+                            SYSTEM ACTIVE
+                          </span>
+                        </div>
+                        <span className="font-mono text-xs text-[hsl(var(--accent-cyan))]">
+                          v2.0.1
                         </span>
                       </div>
-                      <div className="space-y-2">
-                        <div className="h-2 bg-secondary rounded-full w-3/4" />
-                        <div className="h-2 bg-secondary rounded-full w-full" />
-                        <div className="h-2 bg-secondary rounded-full w-5/6" />
+
+                      {/* Metrics */}
+                      <div className="space-y-4">
+                        <div>
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-xs text-muted-foreground">Model Accuracy</span>
+                            <span className="text-xs font-semibold text-[hsl(var(--accent-cyan))]">98.4%</span>
+                          </div>
+                          <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
+                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-cyan))] to-[hsl(var(--accent-violet))] w-[98%] rounded-full" />
+                          </div>
+                        </div>
+
+                        <div>
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-xs text-muted-foreground">Processing Speed</span>
+                            <span className="text-xs font-semibold text-[hsl(var(--accent-cyan))]">2.1s</span>
+                          </div>
+                          <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
+                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-cyan))] to-[hsl(var(--accent-violet))] w-[85%] rounded-full" />
+                          </div>
+                        </div>
+
+                        <div>
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-xs text-muted-foreground">System Load</span>
+                            <span className="text-xs font-semibold text-[hsl(var(--accent-cyan))]">24%</span>
+                          </div>
+                          <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
+                            <div className="h-full bg-gradient-to-r from-[hsl(var(--accent-cyan))] to-[hsl(var(--accent-violet))] w-[24%] rounded-full" />
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex gap-2 pt-4">
-                        <Badge variant="outline">RAG</Badge>
-                        <Badge variant="outline">Multi-Agent</Badge>
-                        <Badge variant="outline">LLM</Badge>
+
+                      {/* Capabilities */}
+                      <div className="pt-4 border-t border-border">
+                        <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60 block mb-3">
+                          CAPABILITIES
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-cyan))]/30 bg-[hsl(var(--accent-cyan))]/5">
+                            RAG
+                          </Badge>
+                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-cyan))]/30 bg-[hsl(var(--accent-cyan))]/5">
+                            Multi-Agent
+                          </Badge>
+                          <Badge variant="outline" className="text-xs border-[hsl(var(--accent-cyan))]/30 bg-[hsl(var(--accent-cyan))]/5">
+                            LLM
+                          </Badge>
+                        </div>
                       </div>
                     </div>
                   </Card>
