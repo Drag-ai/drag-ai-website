@@ -71,27 +71,32 @@ cd /app
 
 ## 📦 What's Included
 
-✅ **7 Complete Pages**
-- Home (Hero + capabilities overview)
+✅ **8 Complete Pages**
+- Home (Agentic AI systems hero + capabilities)
 - About (Company story + founders)
-- Services (5 core offerings)
-- Industries (Target sectors)
-- Careers (3 job listings + benefits)
-- Contact (Working form via Web3Forms)
+- Services (6 Agentic AI services)
+- Industries (Industry-specific agentic AI solutions)
+- Resources (Internal prototypes + hypothetical examples + methodology)
+- Careers (Job listings + benefits)
+- Contact (Working form via Web3Forms + social media)
 - Privacy & Terms (Legal pages)
 
 ✅ **Premium Features**
 - Purple/pink gradient theme
 - Neural network background animation
 - Responsive mobile design
-- SEO optimized (sitemap, robots.txt)
+- SEO optimized (Agentic AI positioning)
 - Accessible UI (keyboard navigation, ARIA labels)
+- Social media integration (LinkedIn, Facebook, Instagram)
+- Clean URLs with BrowserRouter
+- No fake metrics or false claims
 
 ✅ **Production Ready**
 - Working contact form
 - Proper error handling
-- SPA routing configuration
+- Clean URL routing with _redirects
 - Environment variable setup
+- Honest, credible positioning
 
 ---
 
@@ -120,11 +125,11 @@ drag-ai-website/
 
 After deployment, your site will be:
 - **Live URL**: `https://drag-ai-xxx.pages.dev`
-- **Page URLs**: Use hash-based routing (e.g., `/#/about`, `/#/careers`)
+- **Clean URLs**: `/about`, `/services`, `/resources` (BrowserRouter with _redirects)
 - **Automatic deployments**: Every Git push triggers rebuild
 - **Preview deployments**: PRs get preview URLs
 - **Free hosting**: Unlimited bandwidth & requests
-- **No server config needed**: HashRouter works on static hosting
+- **No server config needed**: _redirects handles SPA routing
 
 ---
 
