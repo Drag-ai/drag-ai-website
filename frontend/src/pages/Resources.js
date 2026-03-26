@@ -11,8 +11,7 @@ import {
   FlaskConical, 
   Lightbulb, 
   Map,
-  CheckCircle2,
-  AlertCircle
+  CheckCircle2
 } from 'lucide-react';
 
 export default function Resources() {
@@ -121,18 +120,9 @@ export default function Resources() {
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-6">
                 Resources
               </h1>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-                We share internal prototypes, educational examples, and practical implementation thinking with clear labeling. These resources help you understand our technical approach and evaluation methodology.
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Internal prototypes, educational examples, and practical implementation thinking. These resources help you understand our technical approach and evaluation methodology.
               </p>
-              <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg border">
-                <AlertCircle className="h-5 w-5 text-[hsl(var(--accent-purple))] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-sm font-medium mb-1">Transparency Note</p>
-                  <p className="text-sm text-muted-foreground">
-                    All examples below are clearly labeled as internal prototypes, hypothetical scenarios, or methodology descriptions. We do not present these as client case studies or proven production outcomes.
-                  </p>
-                </div>
-              </div>
             </div>
           </Reveal>
         </div>
