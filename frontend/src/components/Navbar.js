@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from './ui/sheet';
 import { Menu } from 'lucide-react';
 
 export const Navbar = () => {
@@ -72,7 +72,11 @@ export const Navbar = () => {
               className="w-[300px] sm:w-[400px]"
               data-testid="mobile-nav-sheet"
             >
-              <div className="flex flex-col gap-6 pt-8">
+              <SheetTitle className="text-lg font-semibold mb-2">Navigation Menu</SheetTitle>
+              <SheetDescription className="text-sm text-muted-foreground mb-4">
+                Navigate to different sections of the website
+              </SheetDescription>
+              <div className="flex flex-col gap-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.to}

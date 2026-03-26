@@ -5,10 +5,16 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { Reveal } from '../components/Reveal';
+import { useSEO } from '../hooks/useSEO';
 import { toast } from 'sonner';
 import { Mail, MapPin, Linkedin, Send } from 'lucide-react';
 
 export default function Contact() {
+  useSEO({
+    title: 'Contact',
+    description: 'Get in touch with Drag AI to discuss your AI transformation goals. Based in Bengaluru, India. Email: info@drag-ai.com',
+    canonical: '/contact',
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',

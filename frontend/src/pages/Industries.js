@@ -2,9 +2,15 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Reveal } from '../components/Reveal';
+import { useSEO } from '../hooks/useSEO';
 import { ArrowRight } from 'lucide-react';
 
 export default function Industries() {
+  useSEO({
+    title: 'Industries',
+    description: 'AI solutions for Logistics, Construction, Hospitality, Retail, Insurance, Property Management, and Professional Services. Tailored workflows for your industry.',
+    canonical: '/industries',
+  });
   const industries = [
     {
       name: 'Logistics',

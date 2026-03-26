@@ -4,9 +4,15 @@ import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
+import { useSEO } from '../hooks/useSEO';
 import { ArrowRight, Zap, Shield, Code, Gauge } from 'lucide-react';
 
 export default function Home() {
+  useSEO({
+    title: 'Home',
+    description: 'Drag AI builds production-grade Agentic AI systems for enterprises. Specializing in RAG pipelines, multi-agent workflows, and AI automation. Engineering-first, no demos.',
+    canonical: '/',
+  });
   const capabilities = [
     {
       icon: <Zap className="h-5 w-5" />,

@@ -3,9 +3,15 @@ import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Reveal } from '../components/Reveal';
+import { useSEO } from '../hooks/useSEO';
 import { ArrowRight } from 'lucide-react';
 
 export default function About() {
+  useSEO({
+    title: 'About',
+    description: 'Learn about Drag AI, our engineering-first approach to AI consulting, and meet our founders. We build production-ready AI systems, not demos.',
+    canonical: '/about',
+  });
   const founders = [
     {
       name: 'Deepesh Agrawal',

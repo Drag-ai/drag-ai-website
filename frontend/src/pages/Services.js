@@ -2,9 +2,15 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Reveal } from '../components/Reveal';
+import { useSEO } from '../hooks/useSEO';
 import { ArrowRight, Bot, Database, Cog, FileText, MessageSquare } from 'lucide-react';
 
 export default function Services() {
+  useSEO({
+    title: 'Services',
+    description: 'AI consulting and development services: Agentic AI Systems, RAG, AI Automation, Document Intelligence, and Conversational AI. Production-grade solutions for enterprises.',
+    canonical: '/services',
+  });
   const services = [
     {
       icon: <Bot className="h-6 w-6" />,
