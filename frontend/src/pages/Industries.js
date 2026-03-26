@@ -63,17 +63,47 @@ export default function Industries() {
       <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
         <NeuralBackground />
         <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
-          <Reveal>
-            <div className="max-w-3xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                Industries We Serve
-              </h1>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Tailored AI solutions across diverse sectors. We understand industry-specific
-                workflows and translate them into production-ready AI systems.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div>
+              <Reveal>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
+                  Industries <span className="text-[hsl(var(--accent-purple))]">We Transform</span>
+                </h1>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Tailored AI solutions across diverse sectors. We understand industry-specific
+                  workflows and translate them into production-ready AI systems.
+                </p>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* Right: Industry Count Widget */}
+            <div className="hidden lg:block">
+              <Reveal delay={0.2}>
+                <Card className="p-8 card-hover border-2">
+                  <div className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/20 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center">
+                      <span className="text-5xl font-bold text-[hsl(var(--accent-purple))]">
+                        7
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Industries Served</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      From logistics to professional services
+                    </p>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <Badge variant="outline" className="text-xs border-[hsl(var(--accent-purple))]/30 bg-[hsl(var(--accent-purple))]/5">
+                        AI-Powered
+                      </Badge>
+                      <Badge variant="outline" className="text-xs border-[hsl(var(--accent-purple))]/30 bg-[hsl(var(--accent-purple))]/5">
+                        Scalable
+                      </Badge>
+                    </div>
+                  </div>
+                </Card>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 

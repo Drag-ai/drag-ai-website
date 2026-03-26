@@ -1,5 +1,6 @@
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
+import { Card } from '../components/ui/card';
 
 export default function Privacy() {
   return (
@@ -8,13 +9,19 @@ export default function Privacy() {
         <NeuralBackground />
         <div className="relative mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
-            <div className="prose prose-sm sm:prose max-w-none">
-              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-8">
-                Privacy Policy
+            {/* Hero */}
+            <div className="text-center mb-12">
+              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-4">
+                Privacy <span className="text-[hsl(var(--accent-purple))]">Policy</span>
               </h1>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground">
                 <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
               </p>
+            </div>
+
+            {/* Content Card */}
+            <Card className="p-8 md:p-12">
+              <div className="prose prose-sm sm:prose max-w-none">
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
@@ -142,9 +149,10 @@ export default function Privacy() {
                 </p>
               </section>
             </div>
-          </Reveal>
-        </div>
-      </section>
-    </div>
-  );
+          </Card>
+        </Reveal>
+      </div>
+    </section>
+  </div>
+);
 }

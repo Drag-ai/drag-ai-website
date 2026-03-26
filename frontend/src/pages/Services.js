@@ -96,17 +96,51 @@ export default function Services() {
       <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
         <NeuralBackground />
         <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
-          <Reveal>
-            <div className="max-w-3xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                Services
-              </h1>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Production-grade AI capabilities tailored to your business needs. From agentic
-                systems to document intelligence, we build solutions that scale.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div>
+              <Reveal>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
+                  <span className="text-[hsl(var(--accent-purple))]">AI Services</span> That Scale
+                </h1>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Production-grade AI capabilities tailored to your business needs. From agentic
+                  systems to document intelligence, we build solutions that scale.
+                </p>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* Right: Service Quick Stats */}
+            <div className="hidden lg:block">
+              <Reveal delay={0.2}>
+                <Card className="p-6 card-hover border-2">
+                  <div className="space-y-4">
+                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60 block">
+                      OUR SERVICES
+                    </span>
+                    <div className="space-y-3">
+                      {[
+                        { icon: '🤖', name: 'Agentic AI Systems', color: 'purple' },
+                        { icon: '🗄️', name: 'RAG Systems', color: 'purple' },
+                        { icon: '⚡', name: 'AI Automation', color: 'purple' },
+                        { icon: '📄', name: 'Document Intelligence', color: 'purple' },
+                        { icon: '💬', name: 'Conversational AI', color: 'purple' },
+                      ].map((service, idx) => (
+                        <div key={idx} className="flex items-center gap-3 group">
+                          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center text-sm group-hover:scale-110 transition-transform">
+                            {service.icon}
+                          </div>
+                          <span className="text-sm font-medium group-hover:text-[hsl(var(--accent-purple))] transition-colors">
+                            {service.name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 

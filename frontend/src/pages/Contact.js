@@ -81,13 +81,13 @@ export default function Contact() {
         <NeuralBackground />
         <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
-            <div className="max-w-3xl">
+            <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                Get in Touch
+                Let's <span className="text-[hsl(var(--accent-purple))]">Build Together</span>
               </h1>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Ready to explore how Drag AI can support your AI initiatives? Let's start a
-                conversation.
+                conversation about your goals and how we can help achieve them.
               </p>
             </div>
           </Reveal>

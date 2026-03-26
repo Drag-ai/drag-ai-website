@@ -1,18 +1,26 @@
 [
   {
-    "content": "Update CSS variables to Purple + Pink theme",
+    "content": "Enhance About page hero and layout",
     "status": "completed"
   },
   {
-    "content": "Update neural network particles to purple/pink",
+    "content": "Improve Services page with better visuals",
     "status": "completed"
   },
   {
-    "content": "Update all component colors and gradients",
+    "content": "Upgrade Industries page layout",
     "status": "completed"
   },
   {
-    "content": "Test purple theme across all pages",
+    "content": "Polish Contact page further",
+    "status": "completed"
+  },
+  {
+    "content": "Add visual interest to Privacy and Terms pages",
+    "status": "completed"
+  },
+  {
+    "content": "Test all enhanced pages",
     "status": "completed"
   }
 ]
