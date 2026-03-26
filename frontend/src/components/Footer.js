@@ -49,6 +49,11 @@ export const Footer = () => {
                   Industries
                 </Link>
               </li>
+              <li>
+                <Link to="/careers" className="text-muted-foreground hover:text-foreground">
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
 
