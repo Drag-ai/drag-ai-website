@@ -1,34 +1,26 @@
 [
   {
-    "content": "Audit and improve Homepage - content, structure, layout, animations",
+    "content": "Update 'Book a Discovery Call' buttons to scroll to contact form",
     "status": "completed"
   },
   {
-    "content": "Audit and improve About page - content, founder bios, principles",
+    "content": "Create individual industry page components (7 pages)",
     "status": "completed"
   },
   {
-    "content": "Audit and improve Services page - service descriptions, layout",
+    "content": "Add routing for industry pages",
     "status": "completed"
   },
   {
-    "content": "Audit and improve Industries page - use cases, visual hierarchy",
+    "content": "Update Industries overview page with links to individual pages",
     "status": "completed"
   },
   {
-    "content": "Audit and improve Contact page - form UX, copy",
+    "content": "Add scroll-to-form functionality in Contact page",
     "status": "completed"
   },
   {
-    "content": "Audit and improve Privacy & Terms pages - readability, formatting",
-    "status": "completed"
-  },
-  {
-    "content": "Review navigation and CTAs across all pages",
-    "status": "completed"
-  },
-  {
-    "content": "Final testing - animations, responsiveness, performance",
+    "content": "Test all navigation and scrolling",
     "status": "completed"
   }
 ]

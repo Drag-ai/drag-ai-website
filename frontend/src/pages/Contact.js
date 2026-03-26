@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -16,6 +17,10 @@ export default function Contact() {
     description: 'Contact Drag AI to discuss agentic AI solutions for your business. Schedule a discovery call to explore custom AI agents, autonomous workflows, and intelligent automation for your operations.',
     canonical: '/contact',
   });
+  
+  const location = useLocation();
+  const formRef = useRef(null);
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,6 +29,15 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  // Auto-scroll to form if hash is present
+  useEffect(() => {
+    if (location.hash === '#form' && formRef.current) {
+      setTimeout(() => {
+        formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -197,7 +211,7 @@ export default function Contact() {
             </div>
 
             {/* Right: Form */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3" ref={formRef} id="form">
               <Reveal delay={0.2}>
                 <Card className="p-8 border-2 card-hover">
                   {isSuccess ? (

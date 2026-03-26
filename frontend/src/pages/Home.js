@@ -94,7 +94,7 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.2}>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/contact">
+                  <Link to="/contact#form">
                     <Button
                       size="lg"
                       className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 transition-all shadow-lg hover:shadow-xl"

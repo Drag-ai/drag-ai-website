@@ -52,7 +52,7 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/contact#form">
               <Button
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
                 data-testid="nav-book-discovery-call"
@@ -93,7 +93,7 @@ export const Navbar = () => {
                     {link.label}
                   </Link>
                 ))}
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Link to="/contact#form" onClick={() => setIsOpen(false)}>
                   <Button
                     className="w-full bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))]"
                     data-testid="mobile-nav-book-discovery-call"

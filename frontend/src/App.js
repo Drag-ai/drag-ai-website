@@ -11,6 +11,16 @@ import Careers from './pages/Careers';
 import Resources from './pages/Resources';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+
+// Industry pages
+import Logistics from './pages/industries/Logistics';
+import Construction from './pages/industries/Construction';
+import Hospitality from './pages/industries/Hospitality';
+import Retail from './pages/industries/Retail';
+import Insurance from './pages/industries/Insurance';
+import PropertyManagement from './pages/industries/PropertyManagement';
+import ProfessionalServices from './pages/industries/ProfessionalServices';
+
 import './App.css';
 
 function App() {
@@ -24,6 +34,13 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/industries" element={<Industries />} />
+            <Route path="/industries/logistics" element={<Logistics />} />
+            <Route path="/industries/construction" element={<Construction />} />
+            <Route path="/industries/hospitality" element={<Hospitality />} />
+            <Route path="/industries/retail" element={<Retail />} />
+            <Route path="/industries/insurance" element={<Insurance />} />
+            <Route path="/industries/property-management" element={<PropertyManagement />} />
+            <Route path="/industries/professional-services" element={<ProfessionalServices />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/resources" element={<Resources />} />
