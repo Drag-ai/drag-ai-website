@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3Forms POC - Browser Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1a202c;
+        }
+        
+        .subtitle {
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 14px;
+        }
+        
+        label .optional {
+            color: #a0aec0;
+            font-weight: 400;
+            font-size: 12px;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .message {
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .message.success {
+            background: #c6f6d5;
+            border: 2px solid #9ae6b4;
+            color: #22543d;
+            display: block;
+        }
+        
+        .message.error {
+            background: #fed7d7;
+            border: 2px solid #fc8181;
+            color: #742a2a;
+            display: block;
+        }
+        
+        .test-info {
+            background: #ebf8ff;
+            border: 2px solid #90cdf4;
+            color: #2c5282;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .test-info strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        /* Hidden honeypot field */
+        .honeypot {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Web3Forms POC Test</h1>
+        <p class="subtitle">Testing browser-based form submission for Drag AI contact form</p>
+        
+        <div class="test-info">
+            <strong>POC Test Information:</strong>
+            This form tests the Web3Forms integration from the browser (client-side).
+            A successful submission will send a test email to info@drag-ai.com.
+        </div>
+        
+        <div id="message" class="message"></div>
+        
+        <form id="contactForm">
+            <!-- Honeypot for bot protection -->
+            <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+            
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="John Doe" 
+                    required
+                    minlength="2"
+                    maxlength="100"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="[email protected]" 
+                    required
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="company">
+                    Company 
+                    <span class="optional">(Optional)</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="company" 
+                    name="company" 
+                    placeholder="Your Company"
+                    maxlength="100"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Your message here..." 
+                    required
+                    minlength="10"
+                    maxlength="5000"
+                ></textarea>
+            </div>
+            
+            <button type="submit" id="submitBtn">
+                <span id="btnText">Send Test Message</span>
+            </button>
+        </form>
+    </div>
+    
+    <script>
+        const WEB3FORMS_ACCESS_KEY = 'af781fa2-7ab3-4154-8aee-f123f4ae54c5';
+        const WEB3FORMS_API_URL = 'https://api.web3forms.com/submit';
+        
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const messageDiv = document.getElementById('message');
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Submitting...';
+            messageDiv.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Prepare payload
+            const payload = {
+                access_key: WEB3FORMS_ACCESS_KEY,
+                subject: `POC Test - Contact Form Submission from ${formData.get('name')}`,
+                from_name: 'Drag AI Contact Form POC',
+                email: formData.get('email'),
+                reply_to: formData.get('email'),
+                name: formData.get('name'),
+                company: formData.get('company') || '',
+                message: formData.get('message'),
+                botcheck: formData.get('botcheck') === 'on',
+            };
+            
+            try {
+                console.log('Submitting to Web3Forms:', payload);
+                
+                const response = await fetch(WEB3FORMS_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                });
+                
+                const result = await response.json();
+                console.log('Web3Forms Response:', result);
+                
+                if (response.ok && result.success) {
+                    // Success
+                    messageDiv.className = 'message success';
+                    messageDiv.innerHTML = `
+                        <strong>✅ POC Test Successful!</strong><br>
+                        Your test message has been submitted successfully. 
+                        Check info@drag-ai.com for the email.
+                    `;
+                    messageDiv.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                } else {
+                    // Error
+                    messageDiv.className = 'message error';
+                    messageDiv.innerHTML = `
+                        <strong>❌ Submission Failed</strong><br>
+                        ${result.message || 'Please try again later.'}
+                    `;
+                    messageDiv.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                messageDiv.className = 'message error';
+                messageDiv.innerHTML = `
+                    <strong>❌ Network Error</strong><br>
+                    ${error.message || 'An unexpected error occurred.'}
+                `;
+                messageDiv.style.display = 'block';
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Test Message';
+            }
+        });
+        
+        // Log ready state
+        console.log('Web3Forms POC Test Ready');
+        console.log('Access Key:', WEB3FORMS_ACCESS_KEY);
+        console.log('API URL:', WEB3FORMS_API_URL);
+    </script>
+</body>
+</html>

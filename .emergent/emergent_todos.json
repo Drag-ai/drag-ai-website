@@ -5,11 +5,11 @@
   },
   {
     "content": "Phase 1: Create contact form POC with Web3Forms",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Phase 1: Test contact form submission in Cloudflare-compatible environment",
-    "status": "pending"
+    "status": "in_progress"
   },
   {
     "content": "Phase 1: All user stories covered in POC and testing",
