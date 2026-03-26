@@ -10,35 +10,35 @@ import React from 'react';
 
 export default function Home() {
   useSEO({
-    title: 'AI Consulting & Implementation Services in Bengaluru, India',
-    description: 'Drag AI provides production-ready AI consulting and implementation services for businesses. Specializing in RAG systems, AI automation, and custom AI development. Based in Bengaluru, India.',
+    title: 'Agentic AI Systems for Business | Production-Grade AI Agents',
+    description: 'Build production-grade agentic AI systems with Drag AI. Custom AI agents, autonomous workflows, and multi-agent orchestration for enterprise operations. Transform business processes with intelligent automation.',
     canonical: '/',
   });
 
   const capabilities = [
     {
-      icon: <Zap className="h-5 w-5" />,
-      label: 'RAG SYSTEMS',
-      title: 'Retrieval-Augmented Generation',
-      description: 'Enterprise-grade RAG pipelines with long-context support and semantic search.',
-    },
-    {
       icon: <Code className="h-5 w-5" />,
       label: 'AGENTIC AI',
-      title: 'Multi-Agent Workflows',
-      description: 'Autonomous AI systems that plan, reason, and execute complex tasks.',
+      title: 'Custom AI Agents',
+      description: 'Build autonomous AI agents tailored to your business workflows—from customer support to operations automation.',
+    },
+    {
+      icon: <Zap className="h-5 w-5" />,
+      label: 'WORKFLOW AUTOMATION',
+      title: 'Autonomous Workflows',
+      description: 'Multi-agent systems that orchestrate complex business processes without manual intervention.',
     },
     {
       icon: <Gauge className="h-5 w-5" />,
-      label: 'AUTOMATION',
-      title: 'Enterprise AI Automation',
-      description: 'Intelligent process automation that reduces costs and scales effortlessly.',
+      label: 'ORCHESTRATION',
+      title: 'Agent Orchestration',
+      description: 'Coordinate multiple AI agents to solve complex problems with intelligent task routing and handoffs.',
     },
     {
       icon: <Shield className="h-5 w-5" />,
-      label: 'DOCUMENT AI',
-      title: 'Document Intelligence',
-      description: 'Automated document processing with extraction, classification, and analysis.',
+      label: 'PRODUCTION SYSTEMS',
+      title: 'Enterprise-Grade Deployment',
+      description: 'Production-ready agentic systems with monitoring, human-in-the-loop controls, and reliability guarantees.',
     },
   ];
 
@@ -83,13 +83,13 @@ export default function Home() {
             <div>
               <Reveal>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                  AI Consulting &amp; Implementation
-                  <span className="block text-[hsl(var(--accent-purple))] mt-2">Services in Bengaluru</span>
+                  Production-Grade
+                  <span className="block text-[hsl(var(--accent-purple))] mt-2">Agentic AI Systems</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-prose leading-relaxed">
-                  Production-grade AI systems for growing businesses. From RAG pipelines to AI automation—we deliver practical, scalable AI solutions without requiring an in-house AI team.
+                  We build autonomous AI agents that transform how businesses operate. From intelligent workflow automation to multi-agent orchestration—production-ready systems that deliver measurable results.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
@@ -232,10 +232,10 @@ export default function Home() {
           <Reveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
-                Core Capabilities
+                What We Build
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Deep expertise across the modern AI stack
+                Agentic AI systems that transform how businesses operate
               </p>
             </div>
           </Reveal>

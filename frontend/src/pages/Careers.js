@@ -7,8 +7,8 @@ import { useSEO } from '../hooks/useSEO';
 
 const Careers = () => {
   useSEO({
-    title: 'Careers at Drag AI | Join Our AI Consulting Team in Bengaluru',
-    description: 'Join Drag AI\'s team in Bengaluru, India. Open positions for AI engineers, ML consultants, and product managers. Build production-grade AI systems with us.',
+    title: 'Careers at Drag AI | Join Our Agentic AI Team',
+    description: 'Join Drag AI and help build the future of agentic AI systems. Open positions for AI engineers, ML researchers, and product developers working on autonomous agents and intelligent workflows.',
     canonical: '/careers',
   });
 

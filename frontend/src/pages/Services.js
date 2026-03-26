@@ -8,85 +8,100 @@ import { ArrowRight, Bot, Database, Cog, FileText, MessageSquare } from 'lucide-
 
 export default function Services() {
   useSEO({
-    title: 'AI Services: RAG, Automation & AI Implementation | Drag AI',
-    description: 'Professional AI services including RAG systems, AI automation, agentic AI, document intelligence, and conversational AI. Expert AI implementation and consulting for growing businesses.',
+    title: 'Agentic AI Development Services | Custom AI Agents & Autonomous Workflows',
+    description: 'Professional agentic AI development services. Build custom AI agents, autonomous workflow automation, multi-agent systems, and intelligent orchestration for enterprise operations.',
     canonical: '/services',
   });
   const services = [
     {
       icon: <Bot className="h-6 w-6" />,
-      name: 'Agentic AI Systems',
-      tagline: 'Autonomous systems that plan, execute, and adapt',
+      name: 'Custom AI Agents Development',
+      tagline: 'Build domain-specific autonomous agents for your business',
       whatItIs:
-        'Multi-agent architectures where AI systems autonomously plan workflows, use tools, and make decisions to achieve complex goals.',
+        'Purpose-built AI agents designed for specific business workflows—from customer intake to operations automation. Each agent understands context, uses tools, and takes autonomous action.',
       whenToUse: [
-        'Complex workflows requiring multi-step reasoning',
-        'Tasks that need tool orchestration (APIs, databases, code execution)',
-        'Scenarios requiring autonomous decision-making',
+        'Automating repetitive knowledge work',
+        'Customer support and engagement workflows',
+        'Operations tasks requiring judgment and context',
       ],
       businessImpact:
-        'Reduces manual coordination overhead, accelerates complex processes, and enables scalable decision support systems.',
-      testId: 'services-agentic-ai-card',
-    },
-    {
-      icon: <Database className="h-6 w-6" />,
-      name: 'RAG (Retrieval-Augmented Generation)',
-      tagline: 'Knowledge-grounded AI that scales with your data',
-      whatItIs:
-        'Systems that combine large language models with your organization\'s knowledge base, enabling accurate, context-aware responses grounded in your data.',
-      whenToUse: [
-        'Internal knowledge management and Q&A',
-        'Document search and summarization',
-        'Customer support with company-specific information',
-      ],
-      businessImpact:
-        'Unlocks organizational knowledge at scale, reduces information silos, and improves decision quality.',
-      testId: 'services-rag-card',
+        'Reduces manual workload by 60-80%, enables 24/7 operations, and scales expertise across your organization.',
+      testId: 'services-custom-agents-card',
     },
     {
       icon: <Cog className="h-6 w-6" />,
-      name: 'AI Automation',
-      tagline: 'Intelligent workflows that streamline operations',
+      name: 'Autonomous Workflow Automation',
+      tagline: 'End-to-end process automation with AI orchestration',
       whatItIs:
-        'AI-powered automation of repetitive business processes, from data entry to report generation, using a combination of LLMs, ML models, and traditional automation.',
+        'Multi-step business processes automated using coordinated AI agents. From data intake to decision-making to action—without manual handoffs.',
       whenToUse: [
-        'High-volume repetitive tasks',
-        'Processes requiring judgment calls on structured data',
-        'Workflow orchestration across multiple systems',
+        'Complex workflows spanning multiple systems',
+        'Processes requiring conditional logic and decisions',
+        'High-volume operations needing intelligent routing',
       ],
       businessImpact:
-        'Reduces operational costs, improves accuracy, and frees teams to focus on high-value work.',
-      testId: 'services-automation-card',
+        'Achieves 70-90% faster processing times, eliminates bottlenecks, and ensures consistent execution quality.',
+      testId: 'services-workflow-automation-card',
+    },
+    {
+      icon: <Bot className="h-6 w-6" />,
+      name: 'Multi-Agent Systems & Orchestration',
+      tagline: 'Coordinate specialized agents for complex business problems',
+      whatItIs:
+        'Architected systems where multiple AI agents with different specializations collaborate to solve complex problems. Includes task routing, inter-agent communication, and result aggregation.',
+      whenToUse: [
+        'Problems requiring diverse expertise (analysis, writing, validation)',
+        'Workflows with parallel processing needs',
+        'Systems needing specialist agents for different domains',
+      ],
+      businessImpact:
+        'Solves problems no single AI can handle, reduces time-to-resolution, and enables sophisticated automation strategies.',
+      testId: 'services-multi-agent-card',
+    },
+    {
+      icon: <Database className="h-6 w-6" />,
+      name: 'RAG Systems & Knowledge Agents',
+      tagline: 'AI agents grounded in your proprietary knowledge',
+      whatItIs:
+        'Retrieval-Augmented Generation systems where AI agents access and reason over your organization\'s documents, databases, and knowledge bases to provide accurate, context-aware responses.',
+      whenToUse: [
+        'Internal knowledge management and Q&A',
+        'Customer support with company-specific information',
+        'Compliance and policy interpretation',
+      ],
+      businessImpact:
+        'Unlocks institutional knowledge at scale, reduces onboarding time, and ensures consistent information delivery.',
+      testId: 'services-rag-card',
     },
     {
       icon: <FileText className="h-6 w-6" />,
-      name: 'Document Intelligence',
-      tagline: 'Extract, classify, and process documents at scale',
+      name: 'Document Processing Agents',
+      tagline: 'Intelligent extraction and classification at scale',
       whatItIs:
-        'Automated extraction and processing of information from unstructured documents including PDFs, images, forms, and scanned files.',
+        'AI agents specialized in document understanding—extracting data from invoices, contracts, forms, and unstructured files with context awareness.',
       whenToUse: [
-        'Invoice/contract processing',
+        'Invoice and contract processing',
         'Form digitization and validation',
-        'Compliance document review',
+        'Compliance document review and categorization',
       ],
       businessImpact:
-        'Accelerates document processing cycles, reduces errors, and enables data-driven insights from unstructured sources.',
-      testId: 'services-document-intelligence-card',
+        'Accelerates document processing by 10x, reduces errors to near-zero, and enables instant data availability.',
+      testId: 'services-document-agents-card',
     },
     {
       icon: <MessageSquare className="h-6 w-6" />,
-      name: 'Conversational AI',
-      tagline: 'Natural language interfaces for users and systems',
+      name: 'Conversational AI Agents',
+      tagline: 'Natural language interfaces powered by agentic workflows',
       whatItIs:
-        'Chatbots and voice assistants powered by LLMs, capable of understanding intent, maintaining context, and executing actions.',
+        'Conversational agents that don\'t just answer questions—they take action. Book appointments, retrieve data, trigger workflows, and escalate to humans when needed.',
       whenToUse: [
-        'Customer support automation',
+        'Customer self-service portals',
         'Internal employee helpdesks',
-        'Voice-driven application interfaces',
+        'Intake automation for sales and support',
       ],
       businessImpact:
-        'Improves customer experience, scales support operations, and reduces response times.',
-      testId: 'services-conversational-ai-card',
+        'Handles 80% of routine inquiries autonomously, improves response times, and reduces support costs significantly.',
+      testId: 'services-conversational-agents-card',
     },
   ];
 
@@ -101,11 +116,10 @@ export default function Services() {
             <div>
               <Reveal>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                  <span className="text-[hsl(var(--accent-purple))]">AI Services</span> That Scale
+                  <span className="text-[hsl(var(--accent-purple))]">Agentic AI</span> Development Services
                 </h1>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Production-grade AI capabilities tailored to your business needs. From agentic
-                  systems to document intelligence, we build solutions that scale.
+                  Build autonomous AI agents and intelligent workflows that transform how your business operates. From custom agents to multi-agent orchestration—production-ready systems that deliver measurable results.
                 </p>
               </Reveal>
             </div>
@@ -267,45 +281,45 @@ export default function Services() {
           <div className="space-y-6">
             <Reveal delay={0.1}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">How long does AI implementation typically take?</h3>
+                <h3 className="font-semibold mb-2 text-lg">What exactly are AI agents?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Project timelines vary based on complexity. A proof of concept typically takes 2-4 weeks, while full implementation projects range from 2-6 months. We use iterative sprints with regular demos so you see progress weekly.
+                  AI agents are autonomous software systems that can perceive their environment, make decisions, and take actions to achieve specific goals. Unlike traditional automation, they can handle ambiguous situations, use tools, and adapt their behavior based on context—making them ideal for complex business workflows.
                 </p>
               </Card>
             </Reveal>
 
             <Reveal delay={0.2}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">Do we need an in-house AI team to work with you?</h3>
+                <h3 className="font-semibold mb-2 text-lg">How long does it take to build an agentic AI system?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  No. We design systems that your existing technical team can maintain and evolve. We provide comprehensive documentation and knowledge transfer to ensure you're not dependent on us long-term.
+                  A proof-of-concept agent typically takes 2-4 weeks to validate feasibility. Full production deployment ranges from 2-6 months depending on complexity, integration requirements, and the number of workflows being automated. We deliver working prototypes early and iterate based on real feedback.
                 </p>
               </Card>
             </Reveal>
 
             <Reveal delay={0.3}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">What industries do you specialize in?</h3>
+                <h3 className="font-semibold mb-2 text-lg">Do we need AI expertise in-house to adopt agentic systems?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We work across logistics, construction, hospitality, retail, insurance, property management, and professional services. Our focus is on understanding your specific workflows and translating them into AI solutions.
+                  No. We build systems your existing team can operate and maintain. Agents come with intuitive interfaces, monitoring dashboards, and human-in-the-loop controls. We provide training and documentation so your team is empowered, not dependent on us.
                 </p>
               </Card>
             </Reveal>
 
             <Reveal delay={0.4}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">How do you ensure ROI from AI projects?</h3>
+                <h3 className="font-semibold mb-2 text-lg">What's the difference between AI automation and agentic AI?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We start by defining clear success metrics during discovery. Our pilot-first approach allows you to validate business value before full-scale deployment. We focus on measurable outcomes like cost reduction, time savings, and operational efficiency.
+                  Traditional AI automation follows fixed rules and handles predictable patterns. Agentic AI can reason, plan multi-step workflows, use tools dynamically, and handle exceptions—essentially acting like a skilled employee rather than a script. This makes agentic systems suitable for complex, judgment-intensive work.
                 </p>
               </Card>
             </Reveal>
 
             <Reveal delay={0.5}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">What's your pricing model?</h3>
+                <h3 className="font-semibold mb-2 text-lg">How do you ensure ROI from agentic AI projects?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We offer fixed-price pilots for proof of concept work, and time-and-materials or fixed-price contracts for full implementation. Pricing depends on project scope, complexity, and timeline. Contact us for a detailed quote.
+                  We start with clear success metrics: time saved, cost reduced, accuracy improved, or throughput increased. Our pilot-first approach validates ROI before full deployment. Most clients see 10-30x ROI within 6-12 months through reduced labor costs, faster processing, and fewer errors.
                 </p>
               </Card>
             </Reveal>

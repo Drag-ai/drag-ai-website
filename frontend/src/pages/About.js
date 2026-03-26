@@ -9,27 +9,27 @@ import { ArrowRight, Target, Users, Award, TrendingUp, Globe } from 'lucide-reac
 
 export default function About() {
   useSEO({
-    title: 'About Drag AI | AI Consulting Company in Bengaluru',
-    description: 'Learn about Drag AI, a Bengaluru-based AI consulting company. Meet our founders and discover our engineering-first approach to AI implementation and business transformation.',
+    title: 'About Drag AI | Agentic AI Company Building Production Systems',
+    description: 'Drag AI builds production-grade agentic AI systems for businesses. Learn about our engineering-first approach, our founders, and our mission to make autonomous AI accessible to every organization.',
     canonical: '/about',
   });
 
   const founders = [
     {
       name: 'Deepesh Agrawal',
-      role: 'Technical Founder',
-      bio: 'AI Architect specializing in production-ready GenAI systems, RAG architectures, and agentic workflows. Builds scalable, reliable AI infrastructure.',
-      expertise: ['LLM Systems', 'RAG Architecture', 'Agentic AI', 'MLOps'],
+      role: 'Technical Founder & AI Architect',
+      bio: 'Specializes in production-ready agentic AI systems, multi-agent orchestration, and autonomous workflow automation. Builds scalable, reliable AI infrastructure that businesses can depend on.',
+      expertise: ['Agentic AI', 'Multi-Agent Systems', 'LLM Automation', 'Production AI'],
       responsibilities: [
         'Technical architecture & system design',
-        'AI implementation & optimization',
+        'AI agent development & orchestration',
       ],
     },
     {
       name: 'Nishit Gupta',
       role: 'Business Founder',
-      bio: 'Leads strategy, partnerships, and client success. Translates business challenges into AI solutions with measurable ROI.',
-      expertise: ['Business Strategy', 'AI Consulting', 'Client Success'],
+      bio: 'Leads strategy, partnerships, and client success. Translates business challenges into agentic AI solutions with measurable operational impact and ROI.',
+      expertise: ['Business Strategy', 'AI Transformation', 'Client Success'],
       responsibilities: [
         'Client partnerships & engagement',
         'Business strategy & growth',
