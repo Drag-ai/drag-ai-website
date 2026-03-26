@@ -5,30 +5,30 @@
   },
   {
     "content": "Audit and improve About page - content, founder bios, principles",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Audit and improve Services page - service descriptions, layout",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Audit and improve Industries page - use cases, visual hierarchy",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Audit and improve Contact page - form UX, copy",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Audit and improve Privacy & Terms pages - readability, formatting",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Review navigation and CTAs across all pages",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Final testing - animations, responsiveness, performance",
-    "status": "pending"
+    "status": "completed"
   }
 ]

@@ -5,7 +5,7 @@ import { Badge } from '../components/ui/badge';
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Target, Users, Award, TrendingUp, Globe } from 'lucide-react';
 
 export default function About() {
   useSEO({
@@ -13,89 +13,86 @@ export default function About() {
     description: 'Learn about Drag AI, our engineering-first approach to AI consulting, and meet our founders. We build production-ready AI systems, not demos.',
     canonical: '/about',
   });
+
   const founders = [
     {
       name: 'Deepesh Agrawal',
       role: 'Technical Founder',
-      bio: 'AI Architect and ML Engineer with experience in building production-ready GenAI systems including long-context RAG, document intelligence pipelines, and agentic workflows. Focused on scalable, reliable AI systems.',
-      expertise: ['LLM Systems', 'RAG Architecture', 'Agentic AI', 'MLOps', 'NLP'],
+      bio: 'AI Architect specializing in production-ready GenAI systems, RAG architectures, and agentic workflows. Builds scalable, reliable AI infrastructure.',
+      expertise: ['LLM Systems', 'RAG Architecture', 'Agentic AI', 'MLOps'],
       responsibilities: [
-        'Leads technical architecture',
-        'Owns AI system design and implementation',
+        'Technical architecture & system design',
+        'AI implementation & optimization',
       ],
     },
     {
       name: 'Nishit Gupta',
-      role: 'Marketing & Sales Founder',
-      bio: 'Leads business strategy, client engagement, and go-to-market. Focused on aligning AI solutions with real business outcomes.',
-      expertise: ['Business Strategy', 'AI Consulting', 'Market Positioning', 'Client Success'],
+      role: 'Business Founder',
+      bio: 'Leads strategy, partnerships, and client success. Translates business challenges into AI solutions with measurable ROI.',
+      expertise: ['Business Strategy', 'AI Consulting', 'Client Success'],
       responsibilities: [
-        'Leads sales and partnerships',
-        'Owns client engagement and positioning',
+        'Client partnerships & engagement',
+        'Business strategy & growth',
       ],
     },
   ];
 
   const principles = [
     {
-      title: 'Engineering-First Approach',
-      description:
-        'We prioritize robust architecture, clean code, and maintainable systems. Every solution is built with production in mind from day one.',
+      icon: <Target className="h-5 w-5" />,
+      title: 'Engineering Excellence',
+      description: 'Robust architecture, clean code, and maintainable systems built for long-term success.',
     },
     {
-      title: 'Production-Ready Systems',
-      description:
-        'No demos or prototypes marketed as products. We build systems designed to scale, handle edge cases, and evolve with your business.',
+      icon: <Award className="h-5 w-5" />,
+      title: 'Production-First',
+      description: 'Every solution is designed to handle edge cases, scale effectively, and evolve with your business.',
     },
     {
-      title: 'Honest Communication',
-      description:
-        'Clear, transparent dialogue about what\'s possible, what\'s feasible, and what will deliver real value for your organization.',
+      icon: <Users className="h-5 w-5" />,
+      title: 'Transparent Partnership',
+      description: 'Honest communication about feasibility, timelines, and what will truly deliver business value.',
     },
     {
-      title: 'Deep Technical Expertise',
-      description:
-        'Hands-on experience with LLMs, RAG architectures, agentic workflows, and enterprise AI deployment at scale.',
+      icon: <TrendingUp className="h-5 w-5" />,
+      title: 'Deep Expertise',
+      description: 'Hands-on experience with LLMs, RAG, agentic workflows, and enterprise AI deployment.',
     },
     {
-      title: 'Business Outcome Focus',
-      description:
-        'Technology is a means, not an end. We align AI capabilities with measurable business objectives and ROI.',
+      icon: <Globe className="h-5 w-5" />,
+      title: 'Business Outcomes',
+      description: 'Technology serves business goals. We align AI capabilities with measurable objectives and ROI.',
     },
   ];
 
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16">
         <NeuralBackground />
         <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
             <div>
               <Reveal>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
                   About <span className="text-[hsl(var(--accent-purple))]">Drag AI</span>
                 </h1>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Drag AI is an Agentic AI consulting company focused on building
-                  production-grade AI systems, including RAG pipelines, multi-agent workflows,
-                  and enterprise automation solutions.
+                  We're an AI consulting company focused on building production-grade systems that deliver real business value—from RAG pipelines to multi-agent workflows.
                 </p>
               </Reveal>
             </div>
 
-            {/* Right: Stats Widget */}
             <div className="hidden lg:block">
               <Reveal delay={0.2}>
                 <Card className="p-8 card-hover border-2">
                   <div className="space-y-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/60">
-                        COMPANY OVERVIEW
+                        COMPANY SNAPSHOT
                       </span>
                       <span className="text-xs font-semibold text-[hsl(var(--accent-purple))]">
-                        2024
+                        Est. 2024
                       </span>
                     </div>
 
@@ -129,10 +126,10 @@ export default function About() {
 
                       <div className="p-4 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/10 to-[hsl(var(--accent-pink))]/5">
                         <div className="text-2xl font-bold text-[hsl(var(--accent-purple))] mb-1">
-                          2
+                          Global
                         </div>
                         <div className="text-xs text-muted-foreground">
-                          Expert Founders
+                          Reach
                         </div>
                       </div>
                     </div>
@@ -141,7 +138,7 @@ export default function About() {
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-2 rounded-full bg-[hsl(var(--accent-purple))] animate-pulse" />
                         <span className="text-xs text-muted-foreground">
-                          Based in Bengaluru, India • Global Reach
+                          Based in Bengaluru, India
                         </span>
                       </div>
                     </div>
@@ -153,31 +150,20 @@ export default function About() {
         </div>
       </section>
 
-      {/* Company Summary */}
-      <section className="py-14 sm:py-18 lg:py-24 bg-secondary/40">
+      {/* Mission */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-secondary/30">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="max-w-prose mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">
                 Our Mission
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
+              <div className="space-y-4 text-base text-foreground/90 leading-relaxed">
                 <p>
-                  We exist to bridge the gap between AI capabilities and real-world business
-                  applications. Too often, organizations are sold on the promise of AI without
-                  understanding the engineering rigor required to make it work reliably in
-                  production.
+                  We bridge the gap between AI capabilities and real-world business applications. Organizations need production-ready systems, not just promising demos.
                 </p>
                 <p>
-                  Our approach is different: we start with your business problem, design
-                  architectures that address it directly, and build systems that your team can
-                  maintain and evolve. No vendor lock-in, no proprietary black boxes — just
-                  clean, documented, production-grade AI systems.
-                </p>
-                <p>
-                  We specialize in agentic AI systems that combine planning, reasoning, and
-                  tool use; RAG architectures for knowledge-intensive applications; and
-                  intelligent automation that streamlines enterprise workflows.
+                  Our approach: understand your problem, design the right architecture, and build systems your team can maintain and evolve. No vendor lock-in, no black boxes—just clean, documented AI infrastructure.
                 </p>
               </div>
             </div>
@@ -186,11 +172,11 @@ export default function About() {
       </section>
 
       {/* Principles */}
-      <section className="py-14 sm:py-18 lg:py-24">
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
                 Our Principles
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -201,12 +187,10 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {principles.map((principle, idx) => (
-              <Reveal key={idx} delay={0.1 * idx}>
+              <Reveal key={idx} delay={0.1 * (idx % 3)}>
                 <Card className="p-6 card-hover group">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center mb-4">
-                    <span className="text-xl font-semibold text-[hsl(var(--accent-purple))]">
-                      {idx + 1}
-                    </span>
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center mb-4 text-[hsl(var(--accent-purple))] group-hover:scale-110 transition-transform">
+                    {principle.icon}
                   </div>
                   <h3 className="font-semibold text-lg mb-3 group-hover:text-[hsl(var(--accent-purple))] transition-colors">{principle.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -220,23 +204,26 @@ export default function About() {
       </section>
 
       {/* Founders */}
-      <section className="py-14 sm:py-18 lg:py-24 bg-secondary/40">
+      <section className="py-16 sm:py-20 lg:py-24 bg-secondary/30">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
                 Meet the Founders
               </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Technical depth meets business strategy
+              </p>
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {founders.map((founder, idx) => (
               <Reveal key={idx} delay={0.1 * idx}>
                 <Card className="p-8 card-hover group border-2">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(var(--accent-purple))]/20 to-[hsl(var(--accent-purple))]/15 flex items-center justify-center">
-                      <span className="text-lg font-semibold text-[hsl(var(--accent-purple))]">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[hsl(var(--accent-purple))]/20 to-[hsl(var(--accent-pink))]/15 flex items-center justify-center">
+                      <span className="text-xl font-semibold text-[hsl(var(--accent-purple))]">
                         {founder.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
@@ -252,11 +239,11 @@ export default function About() {
                   </p>
                   
                   <div className="mb-4">
-                    <p className="font-semibold text-sm mb-2">Responsibilities:</p>
+                    <p className="font-semibold text-sm mb-2">Focus Areas:</p>
                     <ul className="space-y-1">
                       {founder.responsibilities.map((resp, respIdx) => (
                         <li key={respIdx} className="text-sm text-muted-foreground flex items-start">
-                          <span className="mr-2">•</span>
+                          <span className="text-[hsl(var(--accent-purple))] mr-2">•</span>
                           <span>{resp}</span>
                         </li>
                       ))}
@@ -277,59 +264,53 @@ export default function About() {
         </div>
       </section>
 
-      {/* Operating Model */}
-      <section className="py-14 sm:py-18 lg:py-24">
+      {/* Engagement Model */}
+      <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="max-w-prose mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
                 How We Engage
               </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold mb-2">Consulting Engagements</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Strategy and architecture design for AI transformation initiatives. We help
-                    you identify high-value use cases, design technical roadmaps, and establish
-                    internal AI capabilities.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Custom Development</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    End-to-end implementation of agentic systems, RAG pipelines, and automation
-                    workflows. We work in iterative sprints with regular check-ins and clear
-                    deliverables.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Proof of Concept</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Rapid prototyping (2-4 weeks) to validate AI use cases before committing to
-                    full deployment. Includes technical feasibility, cost analysis, and
-                    production pathway recommendations.
-                  </p>
-                </div>
-              </div>
             </div>
           </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { title: 'Consulting', desc: 'Strategy and architecture for AI transformation. Identify use cases, design roadmaps, build internal capabilities.', duration: 'Ongoing' },
+              { title: 'Development', desc: 'End-to-end implementation of AI systems. Iterative sprints with regular demos and clear deliverables.', duration: '2-6 months' },
+              { title: 'Proof of Concept', desc: 'Rapid prototyping to validate use cases. Technical feasibility, cost analysis, and production pathway.', duration: '2-4 weeks' },
+            ].map((item, idx) => (
+              <Reveal key={idx} delay={0.1 * idx}>
+                <Card className="p-6 card-hover group">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-semibold text-lg group-hover:text-[hsl(var(--accent-purple))] transition-colors">{item.title}</h3>
+                    <Badge variant="outline" className="text-xs">{item.duration}</Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.desc}
+                  </p>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-14 sm:py-18 lg:py-24 bg-secondary/40">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[hsl(var(--accent-purple))]/5 to-[hsl(var(--accent-pink))]/5">
         <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
               Let's Work Together
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8">
-              Explore how Drag AI can support your AI initiatives
+              Explore how Drag AI can accelerate your AI initiatives
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
+                className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 shadow-lg hover:shadow-xl transition-all"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 h-4 w-4" />
