@@ -67,3 +67,7 @@ test_reports/
 
 # Lock files (keep yarn.lock, but ignore others)
 package-lock.json
+-e 
+# Environment files
+*.env
+*.env.*
