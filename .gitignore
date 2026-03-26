@@ -1,83 +1,69 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# IDE and editors
-.idea/
-.vscode/
-
 # Dependencies
 node_modules/
-/node_modules
-/.pnp
+*/node_modules/
+.pnp
 .pnp.js
-.yarn/install-state.gz
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
 
 # Testing
-/coverage
-
-# Next.js
-/.next/
-/out/
-next-env.d.ts
-*.tsbuildinfo
+coverage/
+*.log
 
 # Production builds
-/build
+build/
 dist/
-dist
+.next/
+out/
 
-# Environment files (comprehensive coverage)
+# Environment variables (IMPORTANT: Don't commit secrets!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
 
-*token.json*
-*credentials.json*
-
-# Logs and debug files
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 .pnpm-debug.log*
-dump.rdb
 
-# System files
+# OS files
 .DS_Store
-*.pem
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
 # Python
 __pycache__/
-*pyc*
+*.py[cod]
+*$py.class
+*.so
+.Python
 venv/
-.venv/
+ENV/
+env/
 
-# Development tools
-chainlit.md
-.chainlit
-.ipynb_checkpoints/
-.ac
+# Supervisor logs
+/var/log/
 
-# Deployment
-.vercel
-
-# Data and databases
-agenthub/agents/youtube/db
-
-# Archive files and large assets
-**/*.zip
-**/*.tar.gz
-**/*.tar
-**/*.tgz
-*.pack
-*.deb
-*.dylib
-
-# Build caches
+# Temporary files
+/tmp/
+*.tmp
 .cache/
 
-memory/test_credentials.md
+# Test reports (optional - you may want to commit these)
+test_reports/
 
-# Mobile development
-android-sdk/frontend/node_modules/.cache/default-development/2.pack
-frontend/node_modules/.cache/default-development/0.pack
+# Lock files (keep yarn.lock, but ignore others)
+package-lock.json
