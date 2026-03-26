@@ -48,7 +48,7 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <Link to="/contact">
               <Button
-                className="bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95"
+                className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
                 data-testid="nav-book-discovery-call"
               >
                 Book a Discovery Call
@@ -89,7 +89,7 @@ export const Navbar = () => {
                 ))}
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   <Button
-                    className="w-full bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))]"
+                    className="w-full bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))]"
                     data-testid="mobile-nav-book-discovery-call"
                   >
                     Book a Discovery Call

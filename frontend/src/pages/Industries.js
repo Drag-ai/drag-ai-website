@@ -88,12 +88,12 @@ export default function Industries() {
                   data-testid="industry-card"
                 >
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center">
-                      <span className="text-lg font-semibold text-[hsl(var(--accent-indigo))]">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center">
+                      <span className="text-lg font-semibold text-[hsl(var(--accent-purple))]">
                         {industry.name.charAt(0)}
                       </span>
                     </div>
-                    <h2 className="text-xl font-semibold flex-1 group-hover:text-[hsl(var(--accent-indigo))] transition-colors">
+                    <h2 className="text-xl font-semibold flex-1 group-hover:text-[hsl(var(--accent-purple))] transition-colors">
                       {industry.name}
                     </h2>
                   </div>
@@ -186,7 +186,7 @@ export default function Industries() {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95"
+                className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
               >
                 Get in Touch
                 <ArrowRight className="ml-2 h-4 w-4" />

@@ -1,14 +1,18 @@
 [
   {
-    "content": "Update CSS color variables to Indigo theme",
+    "content": "Update CSS variables to Purple + Pink theme",
     "status": "completed"
   },
   {
-    "content": "Update gradient combinations throughout the site",
+    "content": "Update neural network particles to purple/pink",
     "status": "completed"
   },
   {
-    "content": "Test color changes across all pages",
+    "content": "Update all component colors and gradients",
+    "status": "completed"
+  },
+  {
+    "content": "Test purple theme across all pages",
     "status": "completed"
   }
 ]

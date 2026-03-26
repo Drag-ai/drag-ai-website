@@ -124,12 +124,12 @@ export default function Services() {
                     {/* Left: Icon + Title */}
                     <div className="lg:col-span-4">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-indigo))]/15 to-[hsl(var(--accent-purple))]/10 text-[hsl(var(--accent-indigo))] icon-glow">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-purple))]/10 text-[hsl(var(--accent-purple))] icon-glow">
                           {service.icon}
                         </div>
                         <div>
                           <h2 className="text-2xl font-semibold mb-1">{service.name}</h2>
-                          <p className="text-sm text-[hsl(var(--accent-indigo))]">{service.tagline}</p>
+                          <p className="text-sm text-[hsl(var(--accent-purple))]">{service.tagline}</p>
                         </div>
                       </div>
                     </div>
@@ -232,7 +232,7 @@ export default function Services() {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-[hsl(var(--accent-indigo))] text-[hsl(var(--accent-indigo-foreground))] shadow-sm hover:brightness-95"
+                className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
               >
                 Schedule a Call
                 <ArrowRight className="ml-2 h-4 w-4" />

@@ -39,10 +39,10 @@ export const NeuralBackground = () => {
       },
       particles: {
         color: {
-          value: '#6366F1',
+          value: '#8B5CF6',
         },
         links: {
-          color: '#8B5CF6',
+          color: '#EC4899',
           distance: 150,
           enable: true,
           opacity: 0.4,
