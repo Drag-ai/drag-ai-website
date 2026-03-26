@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Reveal } from '../components/Reveal';
+import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
 import { ArrowRight } from 'lucide-react';
 
@@ -59,8 +60,9 @@ export default function Industries() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+        <NeuralBackground />
+        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
@@ -82,10 +84,19 @@ export default function Industries() {
             {industries.map((industry, idx) => (
               <Reveal key={idx} delay={0.1 * (idx % 4)}>
                 <Card
-                  className="p-6 card-hover"
+                  className="p-6 card-hover group"
                   data-testid="industry-card"
                 >
-                  <h2 className="text-xl font-semibold mb-3">{industry.name}</h2>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10 flex items-center justify-center">
+                      <span className="text-lg font-semibold text-[hsl(var(--accent-cyan))]">
+                        {industry.name.charAt(0)}
+                      </span>
+                    </div>
+                    <h2 className="text-xl font-semibold flex-1 group-hover:text-[hsl(var(--accent-cyan))] transition-colors">
+                      {industry.name}
+                    </h2>
+                  </div>
                   
                   <div className="mb-4">
                     <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-2">

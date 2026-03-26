@@ -216,18 +216,18 @@ export default function Home() {
             {capabilities.map((cap, idx) => (
               <Reveal key={idx} delay={0.1 * idx}>
                 <Card
-                  className="p-6 card-hover"
+                  className="p-6 card-hover group"
                   data-testid="capability-card"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-[hsl(var(--accent-cyan))]/10 text-[hsl(var(--accent-cyan))]">
+                    <div className="p-2 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10 text-[hsl(var(--accent-cyan))] icon-glow">
                       {cap.icon}
                     </div>
                     <div>
-                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-1">
+                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-[hsl(var(--accent-cyan))]/80 mb-1">
                         {cap.label}
                       </p>
-                      <h3 className="font-semibold text-lg mb-2">{cap.title}</h3>
+                      <h3 className="font-semibold text-lg mb-2 group-hover:text-[hsl(var(--accent-cyan))] transition-colors">{cap.title}</h3>
                       <p className="text-sm text-muted-foreground">
                         {cap.description}
                       </p>

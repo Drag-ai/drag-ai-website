@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Reveal } from '../components/Reveal';
+import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
 import { ArrowRight, Bot, Database, Cog, FileText, MessageSquare } from 'lucide-react';
 
@@ -92,8 +93,9 @@ export default function Services() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+        <NeuralBackground />
+        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
@@ -122,12 +124,12 @@ export default function Services() {
                     {/* Left: Icon + Title */}
                     <div className="lg:col-span-4">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 rounded-lg bg-[hsl(var(--accent-cyan))]/10 text-[hsl(var(--accent-cyan))]">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10 text-[hsl(var(--accent-cyan))] icon-glow">
                           {service.icon}
                         </div>
                         <div>
                           <h2 className="text-2xl font-semibold mb-1">{service.name}</h2>
-                          <p className="text-sm text-muted-foreground">{service.tagline}</p>
+                          <p className="text-sm text-[hsl(var(--accent-cyan))]">{service.tagline}</p>
                         </div>
                       </div>
                     </div>

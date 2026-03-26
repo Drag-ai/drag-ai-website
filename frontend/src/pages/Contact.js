@@ -5,6 +5,7 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { Reveal } from '../components/Reveal';
+import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
 import { toast } from 'sonner';
 import { Mail, MapPin, Linkedin, Send } from 'lucide-react';
@@ -76,8 +77,9 @@ export default function Contact() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+        <NeuralBackground />
+        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
@@ -99,60 +101,68 @@ export default function Contact() {
             {/* Left: Contact Info */}
             <div className="lg:col-span-2">
               <Reveal>
-                <div className="space-y-8">
-                  <div>
-                    <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      We typically respond within 24 hours during business days.
-                    </p>
+                <Card className="p-8 card-hover border-2">
+                  <div className="space-y-8">
+                    <div>
+                      <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        We typically respond within 24 hours during business days.
+                      </p>
+                    </div>
+
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4 group">
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10">
+                          <Mail className="h-5 w-5 text-[hsl(var(--accent-cyan))]" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm mb-1">Email</p>
+                          <a
+                            href="mailto:info@drag-ai.com"
+                            className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-cyan))] link-underline transition-colors"
+                          >
+                            info@drag-ai.com
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4 group">
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10">
+                          <MapPin className="h-5 w-5 text-[hsl(var(--accent-cyan))]" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm mb-1">Location</p>
+                          <p className="text-sm text-muted-foreground">Bengaluru, India</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4 group">
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10">
+                          <Linkedin className="h-5 w-5 text-[hsl(var(--accent-cyan))]" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm mb-1">LinkedIn</p>
+                          <a
+                            href="https://www.linkedin.com/company/drag-ai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-cyan))] link-underline transition-colors"
+                            data-testid="contact-linkedin-link"
+                          >
+                            Follow us on LinkedIn
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <Mail className="h-5 w-5 text-[hsl(var(--accent-cyan))] mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-sm mb-1">Email</p>
-                        <a
-                          href="mailto:info@drag-ai.com"
-                          className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-cyan))] link-underline"
-                        >
-                          info@drag-ai.com
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-[hsl(var(--accent-cyan))] mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-sm mb-1">Location</p>
-                        <p className="text-sm text-muted-foreground">Bengaluru, India</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Linkedin className="h-5 w-5 text-[hsl(var(--accent-cyan))] mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-sm mb-1">LinkedIn</p>
-                        <a
-                          href="https://www.linkedin.com/company/drag-ai/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-muted-foreground hover:text-[hsl(var(--accent-cyan))] link-underline"
-                          data-testid="contact-linkedin-link"
-                        >
-                          Follow us on LinkedIn
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </Card>
               </Reveal>
             </div>
 
             {/* Right: Form */}
             <div className="lg:col-span-3">
               <Reveal delay={0.2}>
-                <Card className="p-8">
+                <Card className="p-8 border-2 card-hover">
                   {isSuccess ? (
                     <div
                       className="text-center py-12"

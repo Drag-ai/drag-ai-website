@@ -3,6 +3,7 @@ import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Reveal } from '../components/Reveal';
+import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
 import { ArrowRight } from 'lucide-react';
 
@@ -66,8 +67,9 @@ export default function About() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+        <NeuralBackground />
+        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
@@ -132,8 +134,13 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {principles.map((principle, idx) => (
               <Reveal key={idx} delay={0.1 * idx}>
-                <Card className="p-6 card-hover">
-                  <h3 className="font-semibold text-lg mb-3">{principle.title}</h3>
+                <Card className="p-6 card-hover group">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-cyan))]/15 to-[hsl(var(--accent-violet))]/10 flex items-center justify-center mb-4">
+                    <span className="text-xl font-semibold text-[hsl(var(--accent-cyan))]">
+                      {idx + 1}
+                    </span>
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3 group-hover:text-[hsl(var(--accent-cyan))] transition-colors">{principle.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {principle.description}
                   </p>
@@ -158,11 +165,20 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {founders.map((founder, idx) => (
               <Reveal key={idx} delay={0.1 * idx}>
-                <Card className="p-8">
-                  <h3 className="font-semibold text-xl mb-1">{founder.name}</h3>
-                  <p className="text-sm text-[hsl(var(--accent-cyan))] mb-4">
-                    {founder.role}
-                  </p>
+                <Card className="p-8 card-hover group border-2">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(var(--accent-cyan))]/20 to-[hsl(var(--accent-violet))]/15 flex items-center justify-center">
+                      <span className="text-lg font-semibold text-[hsl(var(--accent-cyan))]">
+                        {founder.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl group-hover:text-[hsl(var(--accent-cyan))] transition-colors">{founder.name}</h3>
+                      <p className="text-sm text-[hsl(var(--accent-cyan))]">
+                        {founder.role}
+                      </p>
+                    </div>
+                  </div>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                     {founder.bio}
                   </p>

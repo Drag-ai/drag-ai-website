@@ -1,10 +1,12 @@
 import { Reveal } from '../components/Reveal';
+import { NeuralBackground } from '../components/NeuralBackground';
 
 export default function Privacy() {
   return (
     <div className="flex flex-col">
-      <section className="pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-18 lg:pb-24">
-        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-18 lg:pb-24">
+        <NeuralBackground />
+        <div className="relative mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
             <div className="prose prose-sm sm:prose max-w-none">
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-8">
