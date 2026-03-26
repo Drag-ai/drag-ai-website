@@ -1,0 +1,33 @@
+export const Logo = ({ className = "h-8 w-8" }) => {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      {/* Gradient definitions */}
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#EC4899" />
+        </linearGradient>
+      </defs>
+      
+      {/* Neural network nodes */}
+      <circle cx="20" cy="8" r="3" fill="url(#logoGradient)" opacity="0.9" />
+      <circle cx="10" cy="20" r="3" fill="url(#logoGradient)" opacity="0.9" />
+      <circle cx="30" cy="20" r="3" fill="url(#logoGradient)" opacity="0.9" />
+      <circle cx="20" cy="32" r="3" fill="url(#logoGradient)" opacity="0.9" />
+      <circle cx="20" cy="20" r="4" fill="url(#logoGradient)" />
+      
+      {/* Connecting lines */}
+      <line x1="20" y1="8" x2="20" y2="16" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.6" />
+      <line x1="20" y1="24" x2="20" y2="29" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.6" />
+      <line x1="17" y1="18" x2="13" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.6" />
+      <line x1="23" y1="18" x2="27" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.6" />
+      <line x1="17" y1="22" x2="13" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.6" />
+      <line x1="23" y1="22" x2="27" y2="20" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.6" />
+    </svg>
+  );
+};

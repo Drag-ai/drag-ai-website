@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from './ui/sheet';
 import { Menu } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,10 +26,13 @@ export const Navbar = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="font-display text-xl font-semibold tracking-tight"
+            className="flex items-center gap-2 group"
             data-testid="nav-logo"
           >
-            Drag AI
+            <Logo className="h-8 w-8 group-hover:scale-110 transition-transform" />
+            <span className="font-display text-xl font-semibold tracking-tight bg-gradient-to-r from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink))] bg-clip-text text-transparent">
+              Drag AI
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

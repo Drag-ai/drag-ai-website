@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Linkedin } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Footer = () => {
   return (
@@ -8,8 +9,9 @@ export const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link to="/" className="font-display text-xl font-semibold">
-              Drag AI
+            <Link to="/" className="flex items-center gap-2 group w-fit">
+              <Logo className="h-7 w-7 group-hover:scale-110 transition-transform" />
+              <span className="font-display text-xl font-semibold">Drag AI</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Production-grade Agentic AI consulting
