@@ -18,43 +18,43 @@ export default function Industries() {
       name: 'Logistics',
       workflows: ['Route optimization', 'Shipment tracking', 'Warehouse automation'],
       useCases:
-        'Intelligent dispatch systems, predictive maintenance for fleet, automated documentation processing.',
+        'Autonomous dispatch agents, AI-powered predictive maintenance for fleets, intelligent document processing agents for customs and compliance.',
     },
     {
       name: 'Construction',
       workflows: ['Project planning', 'Safety compliance', 'Resource allocation'],
       useCases:
-        'Automated permit tracking, site safety monitoring via computer vision, supply chain optimization.',
+        'AI agents for automated permit tracking, autonomous site safety monitoring with computer vision, multi-agent systems for supply chain coordination.',
     },
     {
       name: 'Hospitality',
       workflows: ['Guest services', 'Booking management', 'Operations coordination'],
       useCases:
-        'AI concierge systems, dynamic pricing optimization, review sentiment analysis and response automation.',
+        'AI concierge agents for 24/7 guest services, autonomous pricing agents for revenue optimization, workflow agents for review response and sentiment analysis.',
     },
     {
       name: 'Retail',
       workflows: ['Inventory management', 'Customer experience', 'Demand forecasting'],
       useCases:
-        'Conversational product search, personalized recommendations, automated reordering systems.',
+        'Conversational shopping agents, autonomous inventory replenishment agents, AI-powered demand forecasting with multi-agent coordination.',
     },
     {
       name: 'Insurance',
       workflows: ['Claims processing', 'Risk assessment', 'Policy management'],
       useCases:
-        'Automated claims triage, document intelligence for policy analysis, fraud detection systems.',
+        'Autonomous claims triage agents, intelligent document extraction agents for policy analysis, multi-agent fraud detection systems.',
     },
     {
       name: 'Property Management',
       workflows: ['Tenant services', 'Maintenance coordination', 'Lease management'],
       useCases:
-        'AI tenant support chatbots, automated maintenance scheduling, lease document processing.',
+        'AI tenant support agents for 24/7 service, autonomous maintenance scheduling agents, intelligent lease document processing with workflow automation.',
     },
     {
       name: 'Professional Services',
       workflows: ['Client engagement', 'Knowledge management', 'Proposal generation'],
       useCases:
-        'Internal knowledge Q&A systems, automated proposal drafting, client communication summarization.',
+        'Knowledge retrieval agents for internal expertise, autonomous proposal generation agents, AI-powered client communication summarization and routing.',
     },
   ];
 
@@ -69,11 +69,10 @@ export default function Industries() {
             <div>
               <Reveal>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                  Industries <span className="text-[hsl(var(--accent-purple))]">We Transform</span>
+                  Agentic AI for <span className="text-[hsl(var(--accent-purple))]">Every Industry</span>
                 </h1>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Tailored AI solutions across diverse sectors. We understand industry-specific
-                  workflows and translate them into production-ready AI systems.
+                  Custom AI agents and autonomous workflows tailored to your industry. From logistics to professional services—we build intelligent systems that understand your domain and transform your operations.
                 </p>
               </Reveal>
             </div>
@@ -148,7 +147,7 @@ export default function Industries() {
 
                   <div>
                     <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-2">
-                      EXAMPLE USE CASES
+                      AGENTIC AI USE CASES
                     </p>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {industry.useCases}
@@ -167,7 +166,7 @@ export default function Industries() {
           <Reveal>
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
-                What We Bring to Your Industry
+                Industry-Specific AI Agent Expertise
               </h2>
             </div>
           </Reveal>
@@ -175,28 +174,25 @@ export default function Industries() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Reveal delay={0.1}>
               <Card className="p-6 text-center">
-                <h3 className="font-semibold mb-2">Deep Technical Expertise</h3>
+                <h3 className="font-semibold mb-2">Domain-Aware AI Agents</h3>
                 <p className="text-sm text-muted-foreground">
-                  We don\'t just understand AI — we understand how to deploy it reliably in
-                  your industry\'s specific context.
+                  We build AI agents that understand your industry\'s language, workflows, and compliance requirements—not generic automation.
                 </p>
               </Card>
             </Reveal>
             <Reveal delay={0.2}>
               <Card className="p-6 text-center">
-                <h3 className="font-semibold mb-2">Production-First Mindset</h3>
+                <h3 className="font-semibold mb-2">Proven Agent Architectures</h3>
                 <p className="text-sm text-muted-foreground">
-                  Systems designed for scale, edge cases, and evolving requirements — not just
-                  demos.
+                  Reusable multi-agent patterns for common industry workflows, customized to your specific operational context.
                 </p>
               </Card>
             </Reveal>
             <Reveal delay={0.3}>
               <Card className="p-6 text-center">
-                <h3 className="font-semibold mb-2">Clear Communication</h3>
+                <h3 className="font-semibold mb-2">Rapid Agent Deployment</h3>
                 <p className="text-sm text-muted-foreground">
-                  Transparent about what\'s possible, what\'s valuable, and what will deliver
-                  measurable ROI.
+                  From pilot to production in weeks, not months. We deliver autonomous systems that scale with your operations.
                 </p>
               </Card>
             </Reveal>
