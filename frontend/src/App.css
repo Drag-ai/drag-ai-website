@@ -1,34 +1,58 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Minimal App.css - most styling handled by Tailwind */
+
+/* Custom gradient backgrounds for hero */
+.hero-gradient-cyan {
+  background: radial-gradient(60% 60% at 20% 10%, rgba(34, 211, 238, 0.18) 0%, rgba(34, 211, 238, 0.00) 60%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.hero-gradient-violet {
+  background: radial-gradient(50% 50% at 85% 15%, rgba(99, 102, 241, 0.10) 0%, rgba(99, 102, 241, 0.00) 55%);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Smooth link underline animation */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.link-underline:hover {
+  background-size: 100% 2px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Card hover effect */
+.card-hover {
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: hsl(var(--accent-cyan));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+/* Neural network background container */
+.nn-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nn-bg {
+    display: none;
+  }
 }

@@ -17,23 +17,23 @@
   },
   {
     "content": "Phase 2: Setup Next.js project with TypeScript and Tailwind",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Phase 2: Build design system and global layout",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: Create all 7 pages with approved content",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: Integrate working contact form from POC",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: All user stories covered in Development and testing",
-    "status": "pending"
+    "status": "in_progress"
   },
   {
     "content": "Phase 2: End to End Testing using Testing Agent",
