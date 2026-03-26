@@ -1,5 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*.json$
 
+# Sitemaps
 Sitemap: https://drag-ai.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

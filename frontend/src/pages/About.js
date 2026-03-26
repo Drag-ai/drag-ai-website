@@ -9,8 +9,8 @@ import { ArrowRight, Target, Users, Award, TrendingUp, Globe } from 'lucide-reac
 
 export default function About() {
   useSEO({
-    title: 'About',
-    description: 'Learn about Drag AI, our engineering-first approach to AI consulting, and meet our founders. We build production-ready AI systems, not demos.',
+    title: 'About Drag AI | AI Consulting Company in Bengaluru',
+    description: 'Learn about Drag AI, a Bengaluru-based AI consulting company. Meet our founders and discover our engineering-first approach to AI implementation and business transformation.',
     canonical: '/about',
   });
 

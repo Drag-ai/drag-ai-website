@@ -12,8 +12,8 @@ import { Mail, MapPin, Linkedin, Send } from 'lucide-react';
 
 export default function Contact() {
   useSEO({
-    title: 'Contact',
-    description: 'Get in touch with Drag AI to discuss your AI transformation goals. Based in Bengaluru, India. Email: info@drag-ai.com',
+    title: 'Contact Drag AI | AI Consulting in Bengaluru, India',
+    description: 'Contact Drag AI for AI consulting and implementation services. Schedule a discovery call to discuss your AI transformation. Based in Bengaluru, India. Email: info@drag-ai.com',
     canonical: '/contact',
   });
   const [formData, setFormData] = useState({

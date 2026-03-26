@@ -8,8 +8,8 @@ import { ArrowRight, Bot, Database, Cog, FileText, MessageSquare } from 'lucide-
 
 export default function Services() {
   useSEO({
-    title: 'Services',
-    description: 'AI consulting and development services: Agentic AI Systems, RAG, AI Automation, Document Intelligence, and Conversational AI. Production-grade solutions for enterprises.',
+    title: 'AI Services: RAG, Automation & AI Implementation | Drag AI',
+    description: 'Professional AI services including RAG systems, AI automation, agentic AI, document intelligence, and conversational AI. Expert AI implementation and consulting for growing businesses.',
     canonical: '/services',
   });
   const services = [
@@ -246,6 +246,66 @@ export default function Services() {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Deployment, monitoring setup, documentation, and knowledge transfer. We ensure
                   your team can maintain and evolve the system.
+                </p>
+              </Card>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-14 sm:py-18 lg:py-24">
+        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
+                Frequently Asked Questions
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="space-y-6">
+            <Reveal delay={0.1}>
+              <Card className="p-6">
+                <h3 className="font-semibold mb-2 text-lg">How long does AI implementation typically take?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Project timelines vary based on complexity. A proof of concept typically takes 2-4 weeks, while full implementation projects range from 2-6 months. We use iterative sprints with regular demos so you see progress weekly.
+                </p>
+              </Card>
+            </Reveal>
+
+            <Reveal delay={0.2}>
+              <Card className="p-6">
+                <h3 className="font-semibold mb-2 text-lg">Do we need an in-house AI team to work with you?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  No. We design systems that your existing technical team can maintain and evolve. We provide comprehensive documentation and knowledge transfer to ensure you're not dependent on us long-term.
+                </p>
+              </Card>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <Card className="p-6">
+                <h3 className="font-semibold mb-2 text-lg">What industries do you specialize in?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We work across logistics, construction, hospitality, retail, insurance, property management, and professional services. Our focus is on understanding your specific workflows and translating them into AI solutions.
+                </p>
+              </Card>
+            </Reveal>
+
+            <Reveal delay={0.4}>
+              <Card className="p-6">
+                <h3 className="font-semibold mb-2 text-lg">How do you ensure ROI from AI projects?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We start by defining clear success metrics during discovery. Our pilot-first approach allows you to validate business value before full-scale deployment. We focus on measurable outcomes like cost reduction, time savings, and operational efficiency.
+                </p>
+              </Card>
+            </Reveal>
+
+            <Reveal delay={0.5}>
+              <Card className="p-6">
+                <h3 className="font-semibold mb-2 text-lg">What's your pricing model?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We offer fixed-price pilots for proof of concept work, and time-and-materials or fixed-price contracts for full implementation. Pricing depends on project scope, complexity, and timeline. Contact us for a detailed quote.
                 </p>
               </Card>
             </Reveal>

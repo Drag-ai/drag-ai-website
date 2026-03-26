@@ -3,8 +3,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 const Careers = () => {
+  useSEO({
+    title: 'Careers at Drag AI | Join Our AI Consulting Team in Bengaluru',
+    description: 'Join Drag AI\'s team in Bengaluru, India. Open positions for AI engineers, ML consultants, and product managers. Build production-grade AI systems with us.',
+    canonical: '/careers',
+  });
+
   const openPositions = [
     {
       title: 'Senior AI Engineer',

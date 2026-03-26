@@ -9,8 +9,8 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Industries() {
   useSEO({
-    title: 'Industries',
-    description: 'AI solutions for Logistics, Construction, Hospitality, Retail, Insurance, Property Management, and Professional Services. Tailored workflows for your industry.',
+    title: 'Industry-Specific AI Solutions | Logistics, Construction & More',
+    description: 'AI solutions tailored for logistics, construction, hospitality, retail, insurance, property management, and professional services. Industry-specific AI consulting and implementation.',
     canonical: '/industries',
   });
   const industries = [

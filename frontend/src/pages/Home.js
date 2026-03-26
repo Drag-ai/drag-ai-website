@@ -10,8 +10,8 @@ import React from 'react';
 
 export default function Home() {
   useSEO({
-    title: 'Home',
-    description: 'Drag AI builds production-grade Agentic AI systems for enterprises. Specializing in RAG pipelines, multi-agent workflows, and AI automation. Engineering-first, no demos.',
+    title: 'AI Consulting & Implementation Services in Bengaluru, India',
+    description: 'Drag AI provides production-ready AI consulting and implementation services for businesses. Specializing in RAG systems, AI automation, and custom AI development. Based in Bengaluru, India.',
     canonical: '/',
   });
 
@@ -83,14 +83,13 @@ export default function Home() {
             <div>
               <Reveal>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                  Production-Grade
-                  <span className="block text-[hsl(var(--accent-purple))] mt-2">Agentic AI Systems</span>
+                  AI Consulting &amp; Implementation
+                  <span className="block text-[hsl(var(--accent-purple))] mt-2">Services in Bengaluru</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.1}>
                 <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-prose leading-relaxed">
-                  We build reliable, scalable AI systems for enterprises—from RAG pipelines
-                  to multi-agent workflows. Engineering-first, production-ready, no demos.
+                  Production-grade AI systems for growing businesses. From RAG pipelines to AI automation—we deliver practical, scalable AI solutions without requiring an in-house AI team.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
