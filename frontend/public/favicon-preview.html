@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag AI Favicon Preview</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    .preview-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .preview-item img {
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 10px;
+      background: white;
+    }
+    .preview-item span {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
+    .code {
+      background: #f3f4f6;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Monaco', monospace;
+      font-size: 13px;
+      color: #1f2937;
+      margin-top: 30px;
+      text-align: left;
+      overflow-x: auto;
+    }
+    .success {
+      color: #10b981;
+      font-weight: 600;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Drag AI Favicon Preview</h1>
+    
+    <div class="preview-grid">
+      <div class="preview-item">
+        <img src="favicon.svg" width="64" height="64" alt="64x64">
+        <span>64x64 (Desktop)</span>
+      </div>
+      <div class="preview-item">
+        <img src="favicon.svg" width="48" height="48" alt="48x48">
+        <span>48x48 (Bookmark)</span>
+      </div>
+      <div class="preview-item">
+        <img src="favicon.svg" width="32" height="32" alt="32x32">
+        <span>32x32 (Tab)</span>
+      </div>
+      <div class="preview-item">
+        <img src="favicon.svg" width="16" height="16" alt="16x16">
+        <span>16x16 (Small)</span>
+      </div>
+    </div>
+
+    <p class="success">✓ Favicon Successfully Created!</p>
+
+    <div class="code">
+&lt;!-- Favicon References (Already Added to index.html) --&gt;<br>
+&lt;link rel="icon" type="image/svg+xml" href="/favicon.svg" /&gt;<br>
+&lt;link rel="manifest" href="/manifest.json" /&gt;<br>
+&lt;link rel="apple-touch-icon" href="/favicon.svg" /&gt;
+    </div>
+
+    <p style="margin-top: 30px; color: #666; font-size: 14px;">
+      The favicon features your neural network logo with purple/pink gradient.<br>
+      It will appear in browser tabs, bookmarks, and mobile home screens.
+    </p>
+  </div>
+</body>
+</html>
