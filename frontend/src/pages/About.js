@@ -17,23 +17,27 @@ export default function About() {
   const founders = [
     {
       name: 'Deepesh Agrawal',
-      role: 'Technical Founder & AI Architect',
-      bio: 'Specializes in production-ready agentic AI systems, multi-agent orchestration, and autonomous workflow automation. Builds scalable, reliable AI infrastructure that businesses can depend on.',
-      expertise: ['Agentic AI', 'Multi-Agent Systems', 'LLM Automation', 'Production AI'],
+      role: 'Founder & AI Architect',
+      bio: 'AI Architect with 10+ years building production-grade AI systems across Generative AI, Agentic AI, RAG, NLP, Computer Vision, and MLOps. Previously contributed to enterprise AI platforms at IBM Labs, Fujitsu Research, and AMD, and delivered AI/ML solutions for clients including Swiss Re and Capital Group at UST (Abzooba). Through Drag AI, helps businesses design and deploy custom AI agents, autonomous workflows, RAG pipelines, and scalable AI systems that move from prototype to production.',
+      expertise: ['Agentic AI Systems', 'Multi-Agent Orchestration', 'RAG Pipelines', 'Production MLOps'],
       responsibilities: [
-        'Technical architecture & system design',
-        'AI agent development & orchestration',
+        'Technical architecture & AI system design',
+        'Agent development & workflow automation',
+        'Production deployment & scaling',
       ],
+      experience: '10+ years | IBM Labs, Fujitsu Research, AMD, UST',
     },
     {
       name: 'Nishit Gupta',
-      role: 'Business Founder',
-      bio: 'Leads strategy, partnerships, and client success. Translates business challenges into agentic AI solutions with measurable operational impact and ROI.',
-      expertise: ['Business Strategy', 'AI Transformation', 'Client Success'],
+      role: 'Co-Founder & Business Strategy',
+      bio: 'Business strategist with 10+ years across technology, e-learning, market research, consulting, and client growth. Expertise in lead generation, market analysis, consultative selling, digital transformation, automation, and CRM-led campaigns. MBA in International Business from James Cook University, Australia. Brings a business-first, global perspective to AI adoption, connecting practical business needs with production-grade AI agents, autonomous workflows, and enterprise-ready systems.',
+      expertise: ['Business Strategy', 'AI Transformation', 'Client Success', 'Digital Marketing'],
       responsibilities: [
         'Client partnerships & engagement',
         'Business strategy & growth',
+        'Market development & lead generation',
       ],
+      experience: 'MBA International Business | 10+ years Business Development',
     },
   ];
 
@@ -237,6 +241,13 @@ export default function About() {
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                     {founder.bio}
                   </p>
+                  
+                  {founder.experience && (
+                    <div className="mb-4 p-3 bg-secondary/50 rounded-lg">
+                      <p className="text-xs font-mono uppercase tracking-wider text-foreground/60 mb-1">Experience</p>
+                      <p className="text-sm text-muted-foreground">{founder.experience}</p>
+                    </div>
+                  )}
                   
                   <div className="mb-4">
                     <p className="font-semibold text-sm mb-2">Focus Areas:</p>
