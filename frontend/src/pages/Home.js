@@ -210,12 +210,13 @@ export default function Home() {
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* eslint-disable-next-line react/jsx-key */}
             {[
               { icon: <Target className="h-5 w-5" />, title: 'AI Strategy & Consulting', desc: 'Architecture design and roadmap planning for AI transformation initiatives.' },
               { icon: <Code className="h-5 w-5" />, title: 'Custom AI Development', desc: 'End-to-end implementation of agentic systems, RAG, and intelligent automation.' },
               { icon: <Rocket className="h-5 w-5" />, title: 'Proof of Concept', desc: 'Rapid prototyping to validate AI use cases before full-scale deployment.' },
             ].map((item, idx) => (
-              <Reveal key={idx} delay={0.1 * idx}>
+              <Reveal key={`service-${idx}`} delay={0.1 * idx}>
                 <Card className="p-6 card-hover group">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center text-[hsl(var(--accent-purple))] mb-4 group-hover:scale-110 transition-transform">
                     {item.icon}

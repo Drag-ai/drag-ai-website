@@ -6,12 +6,22 @@ export const NeuralBackground = () => {
   const [init, setInit] = React.useState(false);
 
   useEffect(() => {
+    // Only initialize once
+    let cancelled = false;
+    
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
-      setInit(true);
+      if (!cancelled) {
+        setInit(true);
+      }
     });
-  }, []);
+
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty deps intentional - only run once on mount
 
   const options = useMemo(
     () => ({

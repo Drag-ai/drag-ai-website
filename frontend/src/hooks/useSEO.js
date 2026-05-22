@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 export const useSEO = ({ title, description, canonical, ogImage }) => {
+  // Move setMetaTag outside useEffect and memoize it
+  const setMetaTag = useCallback((name, content, isProperty = false) => {
+    const attribute = isProperty ? 'property' : 'name';
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }, []);
+
   useEffect(() => {
     // Set page title
     document.title = title ? `${title} | Drag AI` : 'Drag AI - Production-Grade Agentic AI Systems';
-
-    // Set or update meta tags
-    const setMetaTag = (name, content, isProperty = false) => {
-      const attribute = isProperty ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
 
     // Description
     setMetaTag('description', description);
@@ -49,5 +49,5 @@ export const useSEO = ({ title, description, canonical, ogImage }) => {
       }
       link.setAttribute('href', `https://drag-ai.com${canonical}`);
     }
-  }, [title, description, canonical, ogImage]);
+  }, [title, description, canonical, ogImage, setMetaTag]);
 };

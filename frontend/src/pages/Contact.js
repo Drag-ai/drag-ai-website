@@ -34,10 +34,10 @@ export default function Contact() {
   useEffect(() => {
     if (location.hash === '#form' && formRef.current) {
       setTimeout(() => {
-        formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }
-  }, [location]);
+  }, [location, formRef]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
