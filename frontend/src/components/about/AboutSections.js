@@ -1,7 +1,9 @@
 import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
 import { Reveal } from '../Reveal';
-import { Target, Users, Award, TrendingUp, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Target, Users, Award, TrendingUp, Globe, Sparkles, ArrowRight } from 'lucide-react';
 import { FounderCard } from '../shared/FounderCard';
 
 const principles = [
@@ -162,6 +164,36 @@ export const EngagementSection = () => (
           </Reveal>
         ))}
       </div>
+
+      {/* We're hiring callout */}
+      <Reveal delay={0.3}>
+        <div
+          className="mt-10 max-w-5xl mx-auto rounded-2xl border-2 border-[hsl(var(--accent-purple))]/20 bg-gradient-to-br from-[hsl(var(--accent-purple))]/5 to-[hsl(var(--accent-pink))]/5 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+          data-testid="about-hiring-callout"
+        >
+          <div className="flex items-start sm:items-center gap-4">
+            <div className="p-2 rounded-lg bg-[hsl(var(--accent-purple))]/10 text-[hsl(var(--accent-purple))] flex-shrink-0">
+              <Sparkles className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="font-semibold text-base mb-1">We&apos;re growing &mdash; come build with us</p>
+              <p className="text-sm text-muted-foreground">
+                Open roles across engineering, design, and delivery. Remote-friendly, UK / EU preferred.
+              </p>
+            </div>
+          </div>
+          <Link to="/careers" className="w-full sm:w-auto">
+            <Button
+              variant="outline"
+              className="w-full sm:w-auto border-2 border-[hsl(var(--accent-purple))]/40 hover:bg-[hsl(var(--accent-purple))]/10"
+              data-testid="about-view-open-roles"
+            >
+              View Open Roles
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </Reveal>
     </div>
   </section>
 );
