@@ -46,7 +46,7 @@ export const HomeHero = () => (
               <span className="inline-block px-2 py-0.5 mr-2 rounded text-[10px] font-mono uppercase tracking-wider bg-[hsl(var(--accent-purple))]/10 text-[hsl(var(--accent-purple))] align-middle">
                 UK Registered
               </span>
-              UK-registered AI consulting company focused on practical, secure, and measurable AI adoption.
+              AI consulting company focused on practical, secure, and measurable AI adoption.
             </p>
           </Reveal>
           <Reveal delay={0.2}>

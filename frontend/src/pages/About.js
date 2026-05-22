@@ -31,10 +31,8 @@ const AboutHero = () => (
               <span className="text-[hsl(var(--accent-purple))]">Real Business Workflows</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Drag AI is a UK-registered AI consulting company helping organisations adopt
-              practical, production-ready AI systems. We focus on agentic AI, RAG, document
-              intelligence, conversational AI, predictive analytics, and workflow automation.
-              DRAG AI LIMITED is registered in England &amp; Wales (Company No.&nbsp;17222197).
+              We are an AI consulting company focused on building production-grade systems that
+              deliver real business value &mdash; from RAG pipelines to multi-agent workflows.
             </p>
           </Reveal>
         </div>
