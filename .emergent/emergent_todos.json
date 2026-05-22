@@ -1,54 +1,18 @@
 [
   {
-    "content": "Inspect NeuralBackground.js + use-toast.js (intentional eslint-disable comments)",
+    "content": "Code-quality refactor: useSEO + Contact + Home + Services + About + Resources + Careers + NeuralBackground",
     "status": "completed"
   },
   {
-    "content": "Rewrite useSEO.js with lower complexity + extracted helpers",
+    "content": "Array-index-as-key fixes across Industries + 7 industry subpages",
     "status": "completed"
   },
   {
-    "content": "Refactor Contact.js with useContactForm hook + ContactForm/ContactInfoCard/ContactQuickCards",
+    "content": "Console statement removal (production code)",
     "status": "completed"
   },
   {
-    "content": "Refactor Home.js into HomeHero + 6 section components (463→46 lines)",
+    "content": "Lint + build + testing-agent regression (100% pass, 19 tests, 0 bugs)",
     "status": "completed"
-  },
-  {
-    "content": "Refactor Services.js: ServiceDetailCard + ServicesQuickList + secondary sections",
-    "status": "completed"
-  },
-  {
-    "content": "Refactor About.js into 4 section components (331→131 lines)",
-    "status": "completed"
-  },
-  {
-    "content": "Refactor Resources.js: ResourceCard subcomponent (349→170 lines)",
-    "status": "completed"
-  },
-  {
-    "content": "Rewrite NeuralBackground.js with extracted buildParticlesOptions helper",
-    "status": "completed"
-  },
-  {
-    "content": "Rewrite Careers.js with stable keys + UK location + apostrophe fixes",
-    "status": "completed"
-  },
-  {
-    "content": "Fix array-index-as-key in Industries.js + 7 industry sub-pages",
-    "status": "completed"
-  },
-  {
-    "content": "Remove production console.error from Contact submit handler",
-    "status": "completed"
-  },
-  {
-    "content": "Lint + yarn build green + manual page-load sweep",
-    "status": "completed"
-  },
-  {
-    "content": "Call testing agent to confirm no regressions post-refactor",
-    "status": "in_progress"
   }
 ]
