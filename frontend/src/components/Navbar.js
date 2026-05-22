@@ -19,6 +19,9 @@ export const Navbar = () => {
     { to: '/contact', label: 'Contact' },
   ];
 
+  // Primary CTA target — kept centralized so it can be swapped to an external booking URL (e.g., Calendly) easily.
+  const PRIMARY_CTA_HREF = '/contact#ai-discovery-call';
+
   return (
     <nav
       className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70"
@@ -39,12 +42,13 @@ export const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-6 lg:gap-8 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 className="link-underline text-sm font-medium text-foreground/80 hover:text-foreground"
+                data-testid={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {link.label}
               </Link>
@@ -53,7 +57,7 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Link to="/contact#form">
+            <Link to={PRIMARY_CTA_HREF}>
               <Button
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
                 data-testid="nav-book-discovery-call"
@@ -70,6 +74,7 @@ export const Navbar = () => {
                 variant="ghost"
                 size="icon"
                 data-testid="mobile-nav-open-button"
+                aria-label="Open navigation menu"
               >
                 <Menu className="h-5 w-5" />
               </Button>
@@ -90,16 +95,17 @@ export const Navbar = () => {
                     to={link.to}
                     className="text-lg font-medium text-foreground/80 hover:text-foreground"
                     onClick={() => setIsOpen(false)}
+                    data-testid={`mobile-nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Link to="/contact#form" onClick={() => setIsOpen(false)}>
+                <Link to={PRIMARY_CTA_HREF} onClick={() => setIsOpen(false)}>
                   <Button
                     className="w-full bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))]"
                     data-testid="mobile-nav-book-discovery-call"
                   >
-                    Book a Discovery Call
+                    Book a 30-Minute AI Discovery Call
                   </Button>
                 </Link>
               </div>

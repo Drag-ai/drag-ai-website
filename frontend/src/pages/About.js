@@ -9,9 +9,13 @@ import { ArrowRight, Target, Users, Award, TrendingUp, Globe } from 'lucide-reac
 
 export default function About() {
   useSEO({
-    title: 'About Drag AI | Agentic AI Company Building Production Systems',
-    description: 'Drag AI builds production-grade agentic AI systems for businesses. Learn about our engineering-first approach, our founders, and our mission to make autonomous AI accessible to every organization.',
+    title: 'About Drag AI | UK AI Consulting Company Building Production Systems',
+    description: 'Drag AI Limited (Company No. 17222197) builds production-grade agentic AI, RAG, document intelligence, voice AI, and predictive analytics for businesses. Registered in England and Wales.',
     canonical: '/about',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'About', path: '/about' },
+    ],
   });
 
   const founders = [
@@ -82,7 +86,7 @@ export default function About() {
                   About <span className="text-[hsl(var(--accent-purple))]">Drag AI</span>
                 </h1>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  We're an AI consulting company focused on building production-grade systems that deliver real business value—from RAG pipelines to multi-agent workflows.
+                  We&apos;re an AI consulting company focused on building production-grade systems that deliver real business value—from RAG pipelines to multi-agent workflows. DRAG AI LIMITED is registered in England &amp; Wales (Company No. 17222197).
                 </p>
               </Reveal>
             </div>
@@ -96,7 +100,7 @@ export default function About() {
                         COMPANY SNAPSHOT
                       </span>
                       <span className="text-xs font-semibold text-[hsl(var(--accent-purple))]">
-                        Est. 2024
+                        UK Incorporated
                       </span>
                     </div>
 
@@ -142,7 +146,7 @@ export default function About() {
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-2 rounded-full bg-[hsl(var(--accent-purple))] animate-pulse" />
                         <span className="text-xs text-muted-foreground">
-                          Based in Bengaluru, India
+                          Registered in England &amp; Wales &middot; Company No. 17222197
                         </span>
                       </div>
                     </div>
@@ -313,17 +317,18 @@ export default function About() {
         <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8">
               Explore how Drag AI can accelerate your AI initiatives
             </p>
-            <Link to="/contact">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 shadow-lg hover:shadow-xl transition-all"
+                data-testid="about-cta-button"
               >
-                Get in Touch
+                Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

@@ -8,8 +8,12 @@ import { Building2, MapPin, Globe, Mail } from 'lucide-react';
 export default function CompanyInformation() {
   useSEO({
     title: 'Company Information | Drag AI Limited',
-    description: 'DRAG AI LIMITED is a UK-registered AI consulting company. Company Number 17222197, registered in England and Wales.',
+    description: 'DRAG AI LIMITED is a UK-registered AI consulting company. Company Number 17222197, registered in England and Wales. Registered Office: 128 City Road, London, EC1V 2NX.',
     canonical: '/company-information',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'Company Information', path: '/company-information' },
+    ],
   });
 
   return (
@@ -85,10 +89,21 @@ export default function CompanyInformation() {
                   <p className="text-muted-foreground">Private company limited by shares</p>
                 </div>
 
-                {/* Incorporated */}
+                {/* Registry Reference */}
                 <div className="pl-14">
-                  <h3 className="font-semibold mb-1">Incorporated</h3>
-                  <p className="text-muted-foreground">15 May 2026</p>
+                  <h3 className="font-semibold mb-1">Registry Reference</h3>
+                  <p className="text-muted-foreground">
+                    Public record available via Companies House:{' '}
+                    <a
+                      href="https://find-and-update.company-information.service.gov.uk/company/17222197"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors"
+                      data-testid="companies-house-link"
+                    >
+                      find-and-update.company-information.service.gov.uk
+                    </a>
+                  </p>
                 </div>
 
                 {/* Website */}
@@ -114,7 +129,11 @@ export default function CompanyInformation() {
                   <div>
                     <h3 className="font-semibold mb-1">Business Enquiries</h3>
                     <p className="text-muted-foreground">
-                      For business enquiries, please use the <a href="/contact#form" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">contact form</a> on this website.
+                      For business enquiries, please email{' '}
+                      <a href="mailto:info@drag-ai.com" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">info@drag-ai.com</a>{' '}
+                      or use the{' '}
+                      <a href="/contact#ai-discovery-call" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">contact form</a>{' '}
+                      on this website.
                     </p>
                   </div>
                 </div>

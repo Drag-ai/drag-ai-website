@@ -1,26 +1,30 @@
 [
   {
-    "content": "Update 'Book a Discovery Call' buttons to scroll to contact form",
+    "content": "Phase 1: Fix HowWeWork.js + yarn build",
     "status": "completed"
   },
   {
-    "content": "Create individual industry page components (7 pages)",
+    "content": "Phase 2: Overhaul Footer + Navbar + Privacy/Terms/CompanyInformation/CookiePolicy",
     "status": "completed"
   },
   {
-    "content": "Add routing for industry pages",
+    "content": "Phase 3: Update Home, Services, Industries, About, Contact (UK details + CTA)",
     "status": "completed"
   },
   {
-    "content": "Update Industries overview page with links to individual pages",
+    "content": "Phase 4: Create Insights.js + route /insights + Solutions CTAs",
     "status": "completed"
   },
   {
-    "content": "Add scroll-to-form functionality in Contact page",
+    "content": "Phase 5: Update useSEO hook, JSON-LD (Org/Website), per-page breadcrumbs, OG, sitemap.xml",
     "status": "completed"
   },
   {
-    "content": "Test all navigation and scrolling",
-    "status": "completed"
+    "content": "Phase 6: Call testing agent for frontend smoke test",
+    "status": "in_progress"
+  },
+  {
+    "content": "Phase 6: Summary & finish",
+    "status": "pending"
   }
 ]

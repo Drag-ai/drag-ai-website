@@ -7,8 +7,12 @@ import { useSEO } from '../hooks/useSEO';
 export default function CookiePolicy() {
   useSEO({
     title: 'Cookie Policy | Drag AI',
-    description: 'Cookie Policy for Drag AI website. Learn about how we use cookies and similar technologies.',
+    description: 'Cookie Policy for Drag AI Limited. Learn how DRAG AI LIMITED (Company No. 17222197) uses cookies and similar technologies on this website.',
     canonical: '/cookie-policy',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'Cookie Policy', path: '/cookie-policy' },
+    ],
   });
 
   return (
@@ -118,8 +122,9 @@ export default function CookiePolicy() {
                   If you have questions about our use of cookies, please contact us:
                 </p>
                 <ul className="list-none text-muted-foreground space-y-2">
-                  <li><strong className="text-foreground">Email:</strong> <a href="mailto:contact@drag-ai.com" className="text-[hsl(var(--accent-purple))] hover:brightness-110">contact@drag-ai.com</a></li>
-                  <li><strong className="text-foreground">Contact Form:</strong> <a href="/contact#form" className="text-[hsl(var(--accent-purple))] hover:brightness-110">https://drag-ai.com/contact</a></li>
+                  <li><strong className="text-foreground">Email:</strong> <a href="mailto:info@drag-ai.com" className="text-[hsl(var(--accent-purple))] hover:brightness-110">info@drag-ai.com</a></li>
+                  <li><strong className="text-foreground">Contact Form:</strong> <a href="/contact#ai-discovery-call" className="text-[hsl(var(--accent-purple))] hover:brightness-110">drag-ai.com/contact</a></li>
+                  <li><strong className="text-foreground">Postal:</strong> DRAG AI LIMITED, 128 City Road, London, EC1V 2NX, United Kingdom</li>
                 </ul>
               </div>
             </Card>

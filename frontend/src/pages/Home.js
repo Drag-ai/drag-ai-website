@@ -11,8 +11,19 @@ import React from 'react';
 export default function Home() {
   useSEO({
     title: 'Agentic AI Systems for Business | Production-Grade AI Agents',
-    description: 'Build production-grade agentic AI systems with Drag AI. Custom AI agents, autonomous workflows, and multi-agent orchestration for enterprise operations. Transform business processes with intelligent automation.',
+    description: 'Build production-grade agentic AI systems with Drag AI. Custom AI agents, autonomous workflows, RAG, document intelligence, voice AI, and predictive analytics for modern businesses.',
     canonical: '/',
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Drag AI — Production-Grade Agentic AI Systems',
+        url: 'https://drag-ai.com/',
+        isPartOf: { '@type': 'WebSite', name: 'Drag AI', url: 'https://drag-ai.com' },
+        about: 'Agentic AI, RAG, document intelligence, voice AI, predictive analytics, AI consulting',
+        inLanguage: 'en-GB',
+      },
+    ],
   });
 
   const capabilities = [
@@ -94,13 +105,13 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.2}>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/contact#form">
+                  <Link to="/contact#ai-discovery-call">
                     <Button
                       size="lg"
                       className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
                       data-testid="home-hero-book-call"
                     >
-                      Book a Discovery Call
+                      Book a 30-Minute AI Discovery Call
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -444,12 +455,13 @@ export default function Home() {
             <p className="text-base md:text-lg text-muted-foreground mb-8">
               Let's discuss your AI transformation goals and build something extraordinary
             </p>
-            <Link to="/contact">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 shadow-lg hover:shadow-xl transition-all"
+                data-testid="home-final-cta-button"
               >
-                Schedule a Discovery Call
+                Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

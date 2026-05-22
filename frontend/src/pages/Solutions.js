@@ -12,6 +12,10 @@ export default function Solutions() {
     title: 'AI Solutions for Business | Drag AI',
     description: 'Practical AI solutions for document processing, knowledge assistants, customer support, operations, recruitment, and analytics. UK-based AI consulting.',
     canonical: '/solutions',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'Solutions', path: '/solutions' },
+    ],
   });
 
   const solutions = [
@@ -116,7 +120,7 @@ export default function Solutions() {
                 AI Solutions for <span className="text-[hsl(var(--accent-purple))]">Real Business Problems</span>
               </h1>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We don't start with AI technology. We start with your business problem, then build practical AI systems that deliver measurable outcomes.
+                We don&apos;t start with AI technology. We start with your business problem, then build practical AI systems that deliver measurable outcomes.
               </p>
             </div>
           </Reveal>
@@ -177,8 +181,8 @@ export default function Solutions() {
 
                       {/* CTA */}
                       <div className="mt-6 pt-6 border-t">
-                        <Link to="/contact#form">
-                          <Button variant="outline" className="group">
+                        <Link to="/contact#ai-discovery-call">
+                          <Button variant="outline" className="group" data-testid={`solution-cta-${solution.id}`}>
                             Discuss This Use Case
                             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                           </Button>
@@ -198,15 +202,16 @@ export default function Solutions() {
         <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
-              Don't See Your Problem Listed?
+              Don&apos;t See Your Problem Listed?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Every business has unique challenges. Let's discuss your specific workflow, data, and automation needs.
+              Every business has unique challenges. Let&apos;s discuss your specific workflow, data, and automation needs.
             </p>
-            <Link to="/contact#form">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
+                data-testid="solutions-cta-button"
               >
                 Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />

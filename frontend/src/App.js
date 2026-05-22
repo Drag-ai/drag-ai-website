@@ -15,6 +15,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import CompanyInformation from './pages/CompanyInformation';
 import CookiePolicy from './pages/CookiePolicy';
+import Insights from './pages/Insights';
 
 // Industry pages
 import Logistics from './pages/industries/Logistics';
@@ -49,6 +50,7 @@ function App() {
             <Route path="/how-we-work" element={<HowWeWork />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/company-information" element={<CompanyInformation />} />
             <Route path="/privacy" element={<Privacy />} />

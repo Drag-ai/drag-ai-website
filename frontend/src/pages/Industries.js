@@ -10,8 +10,12 @@ import { ArrowRight } from 'lucide-react';
 export default function Industries() {
   useSEO({
     title: 'Agentic AI Solutions by Industry | Custom AI Agents for Business',
-    description: 'Industry-specific agentic AI solutions for logistics, construction, hospitality, insurance, and professional services. Custom AI agents tailored to your operational workflows and business challenges.',
+    description: 'Industry-specific agentic AI solutions for logistics, construction, hospitality, retail, insurance, property management and professional services. Tailored to your operational workflows.',
     canonical: '/industries',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'Industries', path: '/industries' },
+    ],
   });
   const industries = [
     {
@@ -190,7 +194,7 @@ export default function Industries() {
               <Card className="p-6 text-center">
                 <h3 className="font-semibold mb-2">Domain-Aware AI Agents</h3>
                 <p className="text-sm text-muted-foreground">
-                  We build AI agents that understand your industry\'s language, workflows, and compliance requirements—not generic automation.
+                  We build AI agents that understand your industry&apos;s language, workflows, and compliance requirements&mdash;not generic automation.
                 </p>
               </Card>
             </Reveal>
@@ -219,17 +223,18 @@ export default function Industries() {
         <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
-              Don't See Your Industry?
+              Don&apos;t See Your Industry?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8">
-              We work across many sectors. Let's discuss your specific use case.
+              We work across many sectors. Let&apos;s discuss your specific use case.
             </p>
-            <Link to="/contact">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
+                data-testid="industries-cta-button"
               >
-                Get in Touch
+                Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

@@ -4,13 +4,27 @@ import { Card } from '../components/ui/card';
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
-import { ArrowRight, Bot, Database, Cog, FileText, MessageSquare } from 'lucide-react';
+import {
+  ArrowRight,
+  Bot,
+  Database,
+  Cog,
+  FileText,
+  MessageSquare,
+  Mic,
+  LineChart,
+  Compass,
+} from 'lucide-react';
 
 export default function Services() {
   useSEO({
     title: 'Agentic AI Development Services | Custom AI Agents & Autonomous Workflows',
-    description: 'Professional agentic AI development services. Build custom AI agents, autonomous workflow automation, multi-agent systems, and intelligent orchestration for enterprise operations.',
+    description: 'Professional agentic AI development services. Build custom AI agents, autonomous workflow automation, multi-agent systems, RAG, document intelligence, voice AI, predictive analytics, and AI strategy consulting.',
     canonical: '/services',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services' },
+    ],
   });
   const services = [
     {
@@ -103,6 +117,51 @@ export default function Services() {
         'Built to handle high volumes of routine inquiries autonomously, improve response times, and help reduce support costs.',
       testId: 'services-conversational-agents-card',
     },
+    {
+      icon: <Mic className="h-6 w-6" />,
+      name: 'Voice AI Agents',
+      tagline: 'Real-time voice agents for support, intake, and scheduling',
+      whatItIs:
+        'Low-latency voice agents that handle inbound and outbound calls with natural conversation, integrate with your CRM and telephony stack, and follow your business logic and compliance scripts.',
+      whenToUse: [
+        'Automated customer support and FAQs',
+        'Appointment booking and reminders',
+        'Lead qualification and outbound follow-up',
+      ],
+      businessImpact:
+        'Designed to extend support hours, reduce queue times, and free human teams to focus on complex cases.',
+      testId: 'services-voice-ai-card',
+    },
+    {
+      icon: <LineChart className="h-6 w-6" />,
+      name: 'Predictive Analytics',
+      tagline: 'Forecasting and decision support powered by ML',
+      whatItIs:
+        'Custom machine learning models for demand forecasting, churn prediction, anomaly detection, and risk scoring \u2014 integrated into your dashboards and operational workflows.',
+      whenToUse: [
+        'Demand, inventory, and capacity planning',
+        'Customer churn and lifetime value prediction',
+        'Fraud, anomaly, and risk detection',
+      ],
+      businessImpact:
+        'Helps decision-makers act earlier with data-driven confidence and reduce avoidable losses.',
+      testId: 'services-predictive-analytics-card',
+    },
+    {
+      icon: <Compass className="h-6 w-6" />,
+      name: 'AI Strategy & Consulting',
+      tagline: 'Where to start, what to build, and how to scale AI safely',
+      whatItIs:
+        'Hands-on advisory for leadership teams: AI use-case discovery, opportunity sizing, architecture review, vendor and model selection, and a pragmatic 90-day roadmap that fits your data, team, and risk profile.',
+      whenToUse: [
+        'You want a credible starting point for AI adoption',
+        'You need a second opinion on an in-flight AI initiative',
+        'You want a roadmap your board and ops team both believe in',
+      ],
+      businessImpact:
+        'Cuts wasted spend on the wrong AI experiments and aligns AI investment with measurable business outcomes.',
+      testId: 'services-consulting-card',
+    },
   ];
 
   return (
@@ -134,21 +193,30 @@ export default function Services() {
                     </span>
                     <div className="space-y-3">
                       {[
-                        { icon: '🤖', name: 'Agentic AI Systems', color: 'purple' },
-                        { icon: '🗄️', name: 'RAG Systems', color: 'purple' },
-                        { icon: '⚡', name: 'AI Automation', color: 'purple' },
-                        { icon: '📄', name: 'Document Intelligence', color: 'purple' },
-                        { icon: '💬', name: 'Conversational AI', color: 'purple' },
-                      ].map((service, idx) => (
-                        <div key={idx} className="flex items-center gap-3 group">
-                          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center text-sm group-hover:scale-110 transition-transform">
-                            {service.icon}
+                        { Icon: Bot, name: 'Agentic AI Systems' },
+                        { Icon: Database, name: 'RAG & Knowledge Agents' },
+                        { Icon: FileText, name: 'Document Intelligence' },
+                        { Icon: MessageSquare, name: 'Conversational AI' },
+                        { Icon: Mic, name: 'Voice AI' },
+                        { Icon: LineChart, name: 'Predictive Analytics' },
+                        { Icon: Compass, name: 'AI Strategy & Consulting' },
+                      ].map((service, idx) => {
+                        const Icon = service.Icon;
+                        return (
+                          <div
+                            key={`quick-${idx}`}
+                            className="flex items-center gap-3 group"
+                            data-testid={`services-quick-${idx}`}
+                          >
+                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center text-[hsl(var(--accent-purple))] group-hover:scale-110 transition-transform">
+                              <Icon className="h-4 w-4" />
+                            </div>
+                            <span className="text-sm font-medium group-hover:text-[hsl(var(--accent-purple))] transition-colors">
+                              {service.name}
+                            </span>
                           </div>
-                          <span className="text-sm font-medium group-hover:text-[hsl(var(--accent-purple))] transition-colors">
-                            {service.name}
-                          </span>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 </Card>
@@ -308,7 +376,7 @@ export default function Services() {
 
             <Reveal delay={0.4}>
               <Card className="p-6">
-                <h3 className="font-semibold mb-2 text-lg">What's the difference between AI automation and agentic AI?</h3>
+                <h3 className="font-semibold mb-2 text-lg">What&apos;s the difference between AI automation and agentic AI?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Traditional AI automation follows fixed rules and handles predictable patterns. Agentic AI can reason, plan multi-step workflows, use tools dynamically, and handle exceptions—essentially acting like a skilled employee rather than a script. This makes agentic systems suitable for complex, judgment-intensive work.
                 </p>
@@ -335,14 +403,15 @@ export default function Services() {
               Ready to Get Started?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8">
-              Let's discuss which services align with your goals
+              Let&apos;s discuss which services align with your goals
             </p>
-            <Link to="/contact">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
+                data-testid="services-cta-button"
               >
-                Schedule a Call
+                Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
