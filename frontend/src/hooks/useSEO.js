@@ -1,7 +1,95 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect } from 'react';
 
+// Stable module-level constants — safe to reference from inside the effect
+// because they never change at runtime.
 const SITE_URL = 'https://drag-ai.com';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/favicon.svg`;
+const DEFAULT_TITLE = 'Drag AI — Production-Grade Agentic AI Systems';
+
+// ---------- Pure DOM helpers (module-scope; intentionally not memoized) ----------
+
+const upsertMeta = (selector, attribute, name, content) => {
+  if (!content) return;
+  let meta = document.querySelector(selector);
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+  meta.setAttribute('content', content);
+};
+
+const setNamedMeta = (name, content) =>
+  upsertMeta(`meta[name="${name}"]`, 'name', name, content);
+
+const setPropertyMeta = (property, content) =>
+  upsertMeta(`meta[property="${property}"]`, 'property', property, content);
+
+const setCanonical = (href) => {
+  if (!href) return;
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', href);
+};
+
+const buildFinalTitle = (title) => {
+  if (!title) return DEFAULT_TITLE;
+  return title.includes('Drag AI') ? title : `${title} | Drag AI`;
+};
+
+const applyOpenGraph = ({ finalTitle, description, ogType, ogImage, canonical }) => {
+  setPropertyMeta('og:site_name', 'Drag AI');
+  setPropertyMeta('og:title', finalTitle);
+  setPropertyMeta('og:description', description);
+  setPropertyMeta('og:type', ogType || 'website');
+  setPropertyMeta('og:image', ogImage || DEFAULT_OG_IMAGE);
+  if (canonical) setPropertyMeta('og:url', `${SITE_URL}${canonical}`);
+};
+
+const applyTwitter = ({ finalTitle, description, ogImage }) => {
+  setNamedMeta('twitter:card', 'summary_large_image');
+  setNamedMeta('twitter:title', finalTitle);
+  setNamedMeta('twitter:description', description);
+  setNamedMeta('twitter:image', ogImage || DEFAULT_OG_IMAGE);
+};
+
+const buildBreadcrumbsBlock = (breadcrumbs) => {
+  if (!Array.isArray(breadcrumbs) || breadcrumbs.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((b, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: b.name,
+      item: `${SITE_URL}${b.path}`,
+    })),
+  };
+};
+
+const normalizeJsonLd = (jsonLd) => {
+  if (!jsonLd) return [];
+  return Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+};
+
+const injectStructuredData = (blocks) => {
+  const nodes = [];
+  blocks.forEach((block, idx) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.dataset.useseo = `page-${idx}`;
+    script.text = JSON.stringify(block);
+    document.head.appendChild(script);
+    nodes.push(script);
+  });
+  return nodes;
+};
+
+// ---------- Hook ----------
 
 export const useSEO = ({
   title,
@@ -10,97 +98,29 @@ export const useSEO = ({
   ogImage,
   ogType,
   noindex,
-  jsonLd, // optional: array of structured data objects to inject per-page
-  breadcrumbs, // optional: [{ name, path }]
+  jsonLd,
+  breadcrumbs,
 }) => {
-  const setMetaTag = useCallback((name, content, isProperty = false) => {
-    if (!content) return;
-    const attribute = isProperty ? 'property' : 'name';
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  }, []);
-
   useEffect(() => {
-    // Title: keep "| Drag AI" suffix unless the title already contains "Drag AI"
-    const finalTitle = title
-      ? title.includes('Drag AI')
-        ? title
-        : `${title} | Drag AI`
-      : 'Drag AI \u2014 Production-Grade Agentic AI Systems';
+    const finalTitle = buildFinalTitle(title);
     document.title = finalTitle;
 
-    // Description
-    setMetaTag('description', description);
+    setNamedMeta('description', description);
+    setNamedMeta('robots', noindex ? 'noindex,nofollow' : 'index,follow');
 
-    // Robots
-    setMetaTag('robots', noindex ? 'noindex,nofollow' : 'index,follow');
+    applyOpenGraph({ finalTitle, description, ogType, ogImage, canonical });
+    applyTwitter({ finalTitle, description, ogImage });
 
-    // Open Graph
-    setMetaTag('og:site_name', 'Drag AI', true);
-    setMetaTag('og:title', finalTitle, true);
-    setMetaTag('og:description', description, true);
-    setMetaTag('og:type', ogType || 'website', true);
-    setMetaTag('og:image', ogImage || DEFAULT_OG_IMAGE, true);
-    if (canonical) {
-      setMetaTag('og:url', `${SITE_URL}${canonical}`, true);
-    }
-
-    // Twitter Card
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', finalTitle);
-    setMetaTag('twitter:description', description);
-    setMetaTag('twitter:image', ogImage || DEFAULT_OG_IMAGE);
-
-    // Canonical URL
-    if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]');
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'canonical');
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', `${SITE_URL}${canonical}`);
-    }
-
-    // Page-level JSON-LD blocks (Breadcrumb, WebPage, Article, etc.)
-    // Each block is injected with a stable id so we can clean it up on unmount.
-    const injectedNodes = [];
+    if (canonical) setCanonical(`${SITE_URL}${canonical}`);
 
     const blocks = [];
-    if (Array.isArray(breadcrumbs) && breadcrumbs.length > 0) {
-      blocks.push({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: breadcrumbs.map((b, i) => ({
-          '@type': 'ListItem',
-          position: i + 1,
-          name: b.name,
-          item: `${SITE_URL}${b.path}`,
-        })),
-      });
-    }
-    if (Array.isArray(jsonLd)) {
-      blocks.push(...jsonLd);
-    } else if (jsonLd) {
-      blocks.push(jsonLd);
-    }
+    const breadcrumbBlock = buildBreadcrumbsBlock(breadcrumbs);
+    if (breadcrumbBlock) blocks.push(breadcrumbBlock);
+    blocks.push(...normalizeJsonLd(jsonLd));
 
-    blocks.forEach((block, idx) => {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.dataset.useseo = `page-${idx}`;
-      script.text = JSON.stringify(block);
-      document.head.appendChild(script);
-      injectedNodes.push(script);
-    });
+    const injectedNodes = injectStructuredData(blocks);
 
     return () => {
-      // Cleanup injected JSON-LD on unmount or dep change
       injectedNodes.forEach((node) => {
         if (node && node.parentNode) node.parentNode.removeChild(node);
       });
@@ -114,6 +134,5 @@ export const useSEO = ({
     noindex,
     jsonLd,
     breadcrumbs,
-    setMetaTag,
   ]);
 };

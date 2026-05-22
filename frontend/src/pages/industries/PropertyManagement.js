@@ -216,14 +216,14 @@ export default function PropertyManagement() {
               Ready to Transform Your Property Management Operations?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's discuss how agentic AI can optimize your operations, reduce costs, and improve outcomes.
+              Let&apos;s discuss how agentic AI can optimize your operations, reduce costs, and improve outcomes.
             </p>
-            <Link to="/contact#form">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
               >
-                Book a Discovery Call
+                Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

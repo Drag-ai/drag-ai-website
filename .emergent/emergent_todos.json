@@ -1,26 +1,54 @@
 [
   {
-    "content": "Phase 1: Fix HowWeWork.js + yarn build",
+    "content": "Inspect NeuralBackground.js + use-toast.js (intentional eslint-disable comments)",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Footer + Navbar + Privacy/Terms/CompanyInformation/CookiePolicy",
+    "content": "Rewrite useSEO.js with lower complexity + extracted helpers",
     "status": "completed"
   },
   {
-    "content": "Phase 3: Home, Services, Industries, About, Contact (UK + CTA)",
+    "content": "Refactor Contact.js with useContactForm hook + ContactForm/ContactInfoCard/ContactQuickCards",
     "status": "completed"
   },
   {
-    "content": "Phase 4: Insights.js + route + Solutions/HowWeWork CTAs",
+    "content": "Refactor Home.js into HomeHero + 6 section components (463→46 lines)",
     "status": "completed"
   },
   {
-    "content": "Phase 5: useSEO + JSON-LD + Breadcrumbs + sitemap.xml + index.html UK Org",
+    "content": "Refactor Services.js: ServiceDetailCard + ServicesQuickList + secondary sections",
     "status": "completed"
   },
   {
-    "content": "Phase 6: Testing agent validation (17/17 passed, 100%)",
+    "content": "Refactor About.js into 4 section components (331→131 lines)",
     "status": "completed"
+  },
+  {
+    "content": "Refactor Resources.js: ResourceCard subcomponent (349→170 lines)",
+    "status": "completed"
+  },
+  {
+    "content": "Rewrite NeuralBackground.js with extracted buildParticlesOptions helper",
+    "status": "completed"
+  },
+  {
+    "content": "Rewrite Careers.js with stable keys + UK location + apostrophe fixes",
+    "status": "completed"
+  },
+  {
+    "content": "Fix array-index-as-key in Industries.js + 7 industry sub-pages",
+    "status": "completed"
+  },
+  {
+    "content": "Remove production console.error from Contact submit handler",
+    "status": "completed"
+  },
+  {
+    "content": "Lint + yarn build green + manual page-load sweep",
+    "status": "completed"
+  },
+  {
+    "content": "Call testing agent to confirm no regressions post-refactor",
+    "status": "in_progress"
   }
 ]

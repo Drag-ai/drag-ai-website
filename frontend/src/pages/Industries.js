@@ -123,7 +123,7 @@ export default function Industries() {
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industries.map((industry, idx) => (
-              <Reveal key={idx} delay={0.1 * (idx % 4)}>
+              <Reveal key={industry.slug} delay={0.1 * (idx % 4)}>
                 <Link to={`/industries/${industry.slug}`} className="block">
                   <Card
                     className="p-6 card-hover group"
@@ -145,9 +145,9 @@ export default function Industries() {
                         COMMON WORKFLOWS
                       </p>
                       <ul className="space-y-1">
-                        {industry.workflows.map((workflow, wIdx) => (
+                        {industry.workflows.map((workflow) => (
                           <li
-                            key={wIdx}
+                            key={`${industry.slug}-wf-${workflow}`}
                             className="text-sm text-muted-foreground flex items-start"
                           >
                             <span className="mr-2">•</span>

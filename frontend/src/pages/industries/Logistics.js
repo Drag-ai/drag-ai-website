@@ -77,7 +77,7 @@ export default function Logistics() {
                 description: 'Customs forms, BOLs, and compliance documents require manual review. Each delay cascades through the supply chain.'
               }
             ].map((challenge, idx) => (
-              <Reveal key={idx} delay={0.1 * idx}>
+              <Reveal key={`${challenge.title || ''}-${idx}`} delay={0.1 * idx}>
                 <Card className="p-6">
                   <h3 className="font-semibold mb-2">{challenge.title}</h3>
                   <p className="text-sm text-muted-foreground">{challenge.description}</p>
@@ -118,7 +118,7 @@ export default function Logistics() {
                 description: 'Coordinated AI agents for picking optimization, inventory replenishment, and dock scheduling. Adapts to demand fluctuations without manual planning.'
               }
             ].map((solution, idx) => (
-              <Reveal key={idx} delay={0.1 * idx}>
+              <Reveal key={`${solution.title || ''}-${idx}`} delay={0.1 * idx}>
                 <Card className="p-6 card-hover">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center mb-4">
                     <solution.icon className="h-6 w-6 text-[hsl(var(--accent-purple))]" />
@@ -164,7 +164,7 @@ export default function Logistics() {
                 benefit: 'Reduce shipping costs and improve delivery speed by pre-positioning inventory intelligently.'
               }
             ].map((useCase, idx) => (
-              <Reveal key={idx} delay={0.1 * (idx % 3)}>
+              <Reveal key={`${useCase.title || ''}-${idx}`} delay={0.1 * (idx % 3)}>
                 <Card className="p-6">
                   <h3 className="font-semibold text-lg mb-3">{useCase.title}</h3>
                   <div className="space-y-3">
@@ -192,14 +192,14 @@ export default function Logistics() {
               Ready to Transform Your Logistics Operations?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's discuss how agentic AI can optimize your supply chain, reduce costs, and improve delivery performance.
+              Let&apos;s discuss how agentic AI can optimize your supply chain, reduce costs, and improve delivery performance.
             </p>
-            <Link to="/contact#form">
+            <Link to="/contact#ai-discovery-call">
               <Button
                 size="lg"
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
               >
-                Book a Discovery Call
+                Book a 30-Minute AI Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
