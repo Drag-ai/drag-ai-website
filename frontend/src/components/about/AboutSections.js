@@ -2,6 +2,7 @@ import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Reveal } from '../Reveal';
 import { Target, Users, Award, TrendingUp, Globe } from 'lucide-react';
+import { FounderCard } from '../shared/FounderCard';
 
 const principles = [
   { id: 'engineering', Icon: Target, title: 'Engineering Excellence', description: 'Robust architecture, clean code, and maintainable systems built for long-term success.' },
@@ -45,8 +46,6 @@ const engagementModels = [
   { id: 'development', title: 'Development', desc: 'End-to-end implementation of AI systems. Iterative sprints with regular demos and clear deliverables.', duration: '2-6 months' },
   { id: 'poc', title: 'Proof of Concept', desc: 'Rapid prototyping to validate use cases. Technical feasibility, cost analysis, and production pathway.', duration: '2-4 weeks' },
 ];
-
-const initials = (name) => name.split(' ').map((n) => n[0]).join('');
 
 export const MissionSection = () => (
   <section className="py-16 sm:py-20 lg:py-24 bg-secondary/30">
@@ -105,56 +104,9 @@ export const PrinciplesSection = () => (
   </section>
 );
 
-const FounderCard = ({ founder, delay }) => (
+const FounderCardWithReveal = ({ founder, delay }) => (
   <Reveal delay={delay}>
-    <Card className="p-8 card-hover group border-2">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[hsl(var(--accent-purple))]/20 to-[hsl(var(--accent-pink))]/15 flex items-center justify-center">
-          <span className="text-xl font-semibold text-[hsl(var(--accent-purple))]">
-            {initials(founder.name)}
-          </span>
-        </div>
-        <div>
-          <h3 className="font-semibold text-xl group-hover:text-[hsl(var(--accent-purple))] transition-colors">
-            {founder.name}
-          </h3>
-          <p className="text-sm text-[hsl(var(--accent-purple))]">{founder.role}</p>
-        </div>
-      </div>
-      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{founder.bio}</p>
-
-      {founder.experience && (
-        <div className="mb-4 p-3 bg-secondary/50 rounded-lg">
-          <p className="text-xs font-mono uppercase tracking-wider text-foreground/60 mb-1">
-            Experience
-          </p>
-          <p className="text-sm text-muted-foreground">{founder.experience}</p>
-        </div>
-      )}
-
-      <div className="mb-4">
-        <p className="font-semibold text-sm mb-2">Focus Areas:</p>
-        <ul className="space-y-1">
-          {founder.responsibilities.map((resp) => (
-            <li
-              key={`${founder.id}-resp-${resp}`}
-              className="text-sm text-muted-foreground flex items-start"
-            >
-              <span className="text-[hsl(var(--accent-purple))] mr-2">•</span>
-              <span>{resp}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        {founder.expertise.map((skill) => (
-          <Badge key={`${founder.id}-skill-${skill}`} variant="outline" className="text-xs">
-            {skill}
-          </Badge>
-        ))}
-      </div>
-    </Card>
+    <FounderCard founder={founder} />
   </Reveal>
 );
 
@@ -174,7 +126,7 @@ export const FoundersSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {founders.map((founder, idx) => (
-          <FounderCard key={founder.id} founder={founder} delay={0.1 * idx} />
+          <FounderCardWithReveal key={founder.id} founder={founder} delay={0.1 * idx} />
         ))}
       </div>
     </div>

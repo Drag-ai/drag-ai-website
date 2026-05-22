@@ -3,6 +3,7 @@ import { Button } from '../ui/button';
 import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Reveal } from '../Reveal';
+import { FounderCard } from '../shared/FounderCard';
 import {
   ArrowRight,
   Zap,
@@ -54,20 +55,30 @@ const founders = [
   {
     id: 'deepesh',
     name: 'Deepesh Agrawal',
-    role: 'Technical Founder',
-    bio: 'AI Architect specializing in production-ready GenAI systems, RAG architectures, and agentic workflows.',
-    expertise: ['LLM Systems', 'RAG Architecture', 'Agentic AI', 'MLOps'],
+    role: 'Founder & AI Architect',
+    bio: 'AI Architect with 10+ years building production-grade AI systems across Generative AI, Agentic AI, RAG, NLP, Computer Vision, and MLOps. Previously contributed to enterprise AI platforms at IBM Labs, Fujitsu Research, and AMD, and delivered AI/ML solutions for clients including Swiss Re and Capital Group at UST (Abzooba). Through Drag AI, helps businesses design and deploy custom AI agents, autonomous workflows, RAG pipelines, and scalable AI systems that move from prototype to production.',
+    experience: '10+ years | IBM Labs, Fujitsu Research, AMD, UST',
+    responsibilities: [
+      'Technical architecture & AI system design',
+      'Agent development & workflow automation',
+      'Production deployment & scaling',
+    ],
+    expertise: ['Agentic AI Systems', 'Multi-Agent Orchestration', 'RAG Pipelines', 'Production MLOps'],
   },
   {
     id: 'nishit',
     name: 'Nishit Gupta',
-    role: 'Business Founder',
-    bio: 'Leads strategy, business development, and partnerships. Focused on practical AI implementation and business value.',
-    expertise: ['Business Strategy', 'AI Implementation', 'Business Development'],
+    role: 'Co-Founder & Business Strategy',
+    bio: 'Business strategist with 10+ years across technology, e-learning, market research, consulting, and client growth. Expertise in lead generation, market analysis, consultative selling, digital transformation, automation, and CRM-led campaigns. MBA in International Business from James Cook University, Australia. Brings a business-first, global perspective to AI adoption, connecting practical business needs with production-grade AI agents, autonomous workflows, and enterprise-ready systems.',
+    experience: 'MBA International Business | 10+ years Business Development',
+    responsibilities: [
+      'Client partnerships & engagement',
+      'Business strategy & growth',
+      'Market development & lead generation',
+    ],
+    expertise: ['Business Strategy', 'AI Transformation', 'Client Success', 'Digital Marketing'],
   },
 ];
-
-const initials = (name) => name.split(' ').map((n) => n[0]).join('');
 
 // ---------- Section components ----------
 
@@ -257,7 +268,7 @@ export const WhyDragAISection = () => (
 );
 
 export const FoundersSection = () => (
-  <section className="py-16 sm:py-20 lg:py-24">
+  <section className="py-16 sm:py-20 lg:py-24" data-testid="home-founders-section">
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <Reveal>
         <div className="text-center mb-12">
@@ -268,32 +279,10 @@ export const FoundersSection = () => (
         </div>
       </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {founders.map((founder, idx) => (
           <Reveal key={founder.id} delay={0.1 * idx}>
-            <Card className="p-8 card-hover group">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[hsl(var(--accent-purple))]/20 to-[hsl(var(--accent-pink))]/15 flex items-center justify-center">
-                  <span className="text-lg font-semibold text-[hsl(var(--accent-purple))]">
-                    {initials(founder.name)}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg group-hover:text-[hsl(var(--accent-purple))] transition-colors">
-                    {founder.name}
-                  </h3>
-                  <p className="text-sm text-[hsl(var(--accent-purple))]">{founder.role}</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{founder.bio}</p>
-              <div className="flex flex-wrap gap-2">
-                {founder.expertise.map((skill) => (
-                  <Badge key={skill} variant="outline" className="text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
+            <FounderCard founder={founder} />
           </Reveal>
         ))}
       </div>
