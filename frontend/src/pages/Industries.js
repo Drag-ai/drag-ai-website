@@ -10,7 +10,8 @@ import { ArrowRight } from 'lucide-react';
 export default function Industries() {
   useSEO({
     title: 'Agentic AI Solutions by Industry | Custom AI Agents for Business',
-    description: 'Industry-specific agentic AI solutions for logistics, construction, hospitality, retail, insurance, property management and professional services. Tailored to your operational workflows.',
+    description:
+      'Industry-specific agentic AI solutions for construction, hospitality, logistics, real estate, insurance, HR & recruitment, retail, manufacturing, and professional services. Tailored to your operational workflows.',
     canonical: '/industries',
     breadcrumbs: [
       { name: 'Home', path: '/' },
@@ -19,46 +20,60 @@ export default function Industries() {
   });
   const industries = [
     {
-      name: 'Logistics',
-      slug: 'logistics',
-      workflows: ['Route optimization', 'Shipment tracking', 'Warehouse automation'],
-      useCases:
-        'Autonomous dispatch agents, AI-powered predictive maintenance for fleets, intelligent document processing agents for customs and compliance.',
-    },
-    {
-      name: 'Construction',
+      name: 'Construction & EPC',
       slug: 'construction',
-      workflows: ['Project planning', 'Safety compliance', 'Resource allocation'],
+      workflows: ['BOQ extraction', 'RFI automation', 'Bid analysis', 'Site report summarization'],
       useCases:
         'AI agents for automated permit tracking, autonomous site safety monitoring with computer vision, multi-agent systems for supply chain coordination.',
     },
     {
-      name: 'Hospitality',
+      name: 'Hospitality & Restaurants',
       slug: 'hospitality',
-      workflows: ['Guest services', 'Booking management', 'Operations coordination'],
+      workflows: ['Booking assistant', 'Review intelligence', 'Staff scheduling', 'Customer support'],
       useCases:
         'AI concierge agents for 24/7 guest services, autonomous pricing agents for revenue optimization, workflow agents for review response and sentiment analysis.',
     },
     {
-      name: 'Retail',
-      slug: 'retail',
-      workflows: ['Inventory management', 'Customer experience', 'Demand forecasting'],
+      name: 'Logistics & Warehousing',
+      slug: 'logistics',
+      workflows: ['BOL/invoice extraction', 'ETA assistant', 'Exception triage', 'Warehouse analytics'],
       useCases:
-        'Conversational shopping agents, autonomous inventory replenishment agents, AI-powered demand forecasting with multi-agent coordination.',
+        'Autonomous dispatch agents, AI-powered predictive maintenance for fleets, intelligent document processing agents for customs and compliance.',
     },
     {
-      name: 'Insurance',
+      name: 'Real Estate & Property Management',
+      slug: 'property-management',
+      workflows: ['Lease abstraction', 'Tenant chatbot', 'Maintenance request triage'],
+      useCases:
+        'AI tenant support agents for 24/7 service, autonomous maintenance scheduling agents, intelligent lease document processing with workflow automation.',
+    },
+    {
+      name: 'Insurance & Claims',
       slug: 'insurance',
-      workflows: ['Claims processing', 'Risk assessment', 'Policy management'],
+      workflows: ['Policy Q&A', 'Claim extraction', 'Claims triage', 'Exception detection'],
       useCases:
         'Autonomous claims triage agents, intelligent document extraction agents for policy analysis, multi-agent fraud detection systems.',
     },
     {
-      name: 'Property Management',
-      slug: 'property-management',
-      workflows: ['Tenant services', 'Maintenance coordination', 'Lease management'],
+      name: 'HR & Recruitment',
+      slug: 'hr-recruitment',
+      workflows: ['Resume screening', 'JD matching', 'Candidate ranking'],
       useCases:
-        'AI tenant support agents for 24/7 service, autonomous maintenance scheduling agents, intelligent lease document processing with workflow automation.',
+        'Explainable resume-to-JD matching, skill-gap reasoning, AI-assisted shortlisting, and interview-prep generation for hiring teams.',
+    },
+    {
+      name: 'Retail & E-commerce',
+      slug: 'retail',
+      workflows: ['Product content automation', 'Returns triage', 'Demand forecasting'],
+      useCases:
+        'Conversational shopping agents, autonomous inventory replenishment agents, AI-powered demand forecasting with multi-agent coordination.',
+    },
+    {
+      name: 'Manufacturing & Operations',
+      slug: 'manufacturing-operations',
+      workflows: ['SOP assistant', 'Quality report analysis', 'Predictive maintenance insights'],
+      useCases:
+        'SOP and procedure assistants for operators, anomaly detection over quality and downtime data, and predictive maintenance signals integrated with existing MES/SCADA stacks.',
     },
     {
       name: 'Professional Services',
@@ -68,6 +83,66 @@ export default function Industries() {
         'Knowledge retrieval agents for internal expertise, autonomous proposal generation agents, AI-powered client communication summarization and routing.',
     },
   ];
+
+  // Slugs that have a dedicated detail subpage. Industries without a subpage
+  // render as static cards with a "Discuss this industry" CTA instead of a broken link.
+  const industriesWithSubpages = new Set([
+    'logistics',
+    'construction',
+    'hospitality',
+    'retail',
+    'insurance',
+    'property-management',
+    'professional-services',
+  ]);
+
+  const renderIndustryCard = (industry) => (
+    <Card className="p-6 card-hover group h-full" data-testid="industry-card">
+      <div className="flex items-start gap-3 mb-3">
+        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center flex-shrink-0">
+          <span className="text-lg font-semibold text-[hsl(var(--accent-purple))]">
+            {industry.name.charAt(0)}
+          </span>
+        </div>
+        <h2 className="text-xl font-semibold flex-1 group-hover:text-[hsl(var(--accent-purple))] transition-colors">
+          {industry.name}
+        </h2>
+      </div>
+
+      <div className="mb-4">
+        <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-2">
+          COMMON WORKFLOWS
+        </p>
+        <ul className="space-y-1">
+          {industry.workflows.map((workflow) => (
+            <li
+              key={`${industry.slug}-wf-${workflow}`}
+              className="text-sm text-muted-foreground flex items-start"
+            >
+              <span className="mr-2">&bull;</span>
+              <span>{workflow}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mb-4">
+        <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-2">
+          AGENTIC AI USE CASES
+        </p>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {industry.useCases}
+        </p>
+      </div>
+
+      <div className="pt-4 border-t flex items-center justify-between text-sm text-muted-foreground group-hover:text-[hsl(var(--accent-purple))] transition-colors">
+        <span>
+          {industriesWithSubpages.has(industry.slug) ? 'Learn more' : 'Discuss this industry'}
+        </span>
+        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+      </div>
+    </Card>
+  );
 
   return (
     <div className="flex flex-col">
@@ -95,12 +170,12 @@ export default function Industries() {
                   <div className="text-center">
                     <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/20 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center">
                       <span className="text-5xl font-bold text-[hsl(var(--accent-purple))]">
-                        7
+                        9
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Industries Served</h3>
                     <p className="text-sm text-muted-foreground mb-4">
-                      From logistics to professional services
+                      From construction to manufacturing
                     </p>
                     <div className="flex flex-wrap gap-2 justify-center">
                       <Badge variant="outline" className="text-xs border-[hsl(var(--accent-purple))]/30 bg-[hsl(var(--accent-purple))]/5">
@@ -121,59 +196,27 @@ export default function Industries() {
       {/* Industries Grid */}
       <section className="py-14 sm:py-18 lg:py-24 bg-secondary/40">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {industries.map((industry, idx) => (
-              <Reveal key={industry.slug} delay={0.1 * (idx % 4)}>
-                <Link to={`/industries/${industry.slug}`} className="block">
-                  <Card
-                    className="p-6 card-hover group"
-                    data-testid="industry-card"
-                  >
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-purple))]/10 flex items-center justify-center">
-                        <span className="text-lg font-semibold text-[hsl(var(--accent-purple))]">
-                          {industry.name.charAt(0)}
-                        </span>
-                      </div>
-                      <h2 className="text-xl font-semibold flex-1 group-hover:text-[hsl(var(--accent-purple))] transition-colors">
-                        {industry.name}
-                      </h2>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-2">
-                        COMMON WORKFLOWS
-                      </p>
-                      <ul className="space-y-1">
-                        {industry.workflows.map((workflow) => (
-                          <li
-                            key={`${industry.slug}-wf-${workflow}`}
-                            className="text-sm text-muted-foreground flex items-start"
-                          >
-                            <span className="mr-2">•</span>
-                            <span>{workflow}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-4">
-                      <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-foreground/60 mb-2">
-                        AGENTIC AI USE CASES
-                      </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {industry.useCases}
-                      </p>
-                    </div>
-
-                    <div className="pt-4 border-t flex items-center justify-between text-sm text-muted-foreground group-hover:text-[hsl(var(--accent-purple))] transition-colors">
-                      <span>Learn more</span>
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Card>
-                </Link>
-              </Reveal>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry, idx) => {
+              const hasSubpage = industriesWithSubpages.has(industry.slug);
+              return (
+                <Reveal key={industry.slug} delay={0.05 * (idx % 3)}>
+                  {hasSubpage ? (
+                    <Link to={`/industries/${industry.slug}`} className="block h-full">
+                      {renderIndustryCard(industry)}
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/contact#ai-discovery-call"
+                      className="block h-full"
+                      data-testid={`industry-discuss-${industry.slug}`}
+                    >
+                      {renderIndustryCard(industry)}
+                    </Link>
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

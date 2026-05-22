@@ -7,13 +7,13 @@ import { NeuralBackground } from '../NeuralBackground';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const focusItems = [
-  { id: 'custom-agents', title: 'Custom AI Agents', desc: 'Domain-specific autonomous agents for business workflows' },
-  { id: 'autonomous-workflows', title: 'Autonomous Workflows', desc: 'Multi-agent systems that orchestrate complex processes' },
-  { id: 'agent-orchestration', title: 'Agent Orchestration', desc: 'Coordinated multi-agent architectures for complex problems' },
-  { id: 'production-systems', title: 'Production Systems', desc: 'Deployed agents with monitoring and human-in-the-loop controls' },
+  { id: 'agentic-automation', title: 'Agentic AI Workflow Automation', desc: 'Autonomous, tool-using agents that execute multi-step business workflows safely.' },
+  { id: 'rag-knowledge', title: 'Enterprise RAG Systems', desc: 'Source-grounded knowledge assistants over your internal documents and data.' },
+  { id: 'doc-intelligence', title: 'Document Intelligence', desc: 'Invoice, contract, lease, and report extraction with validation and human review.' },
+  { id: 'chatbots-voice', title: 'AI Chatbots & Voice Assistants', desc: 'Customer and internal assistants across chat, voice, and multilingual channels.' },
 ];
 
-const techBadges = ['LLM Agents', 'Multi-Agent', 'LLM'];
+const techBadges = ['Agentic AI', 'RAG', 'Doc AI', 'Voice AI'];
 
 export const HomeHero = () => (
   <section
@@ -29,15 +29,24 @@ export const HomeHero = () => (
         <div>
           <Reveal>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-              Production-Grade
-              <span className="block text-[hsl(var(--accent-purple))] mt-2">Agentic AI Systems</span>
+              Production-Grade{' '}
+              <span className="text-[hsl(var(--accent-purple))]">AI Agents &amp; Automation</span>{' '}
+              Systems for Modern Businesses
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-prose leading-relaxed">
-              We design and build autonomous AI agents for business operations. From intelligent
-              workflow automation to multi-agent orchestration—focused on practical, production-ready
-              agentic systems.
+            <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-prose leading-relaxed">
+              Drag AI helps businesses design, build, and deploy practical AI solutions &mdash;
+              from intelligent agents and RAG systems to document automation, chatbots, voice
+              workflows, and predictive analytics.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-sm text-foreground/70 mb-8 max-w-prose">
+              <span className="inline-block px-2 py-0.5 mr-2 rounded text-[10px] font-mono uppercase tracking-wider bg-[hsl(var(--accent-purple))]/10 text-[hsl(var(--accent-purple))] align-middle">
+                UK Registered
+              </span>
+              UK-registered AI consulting company focused on practical, secure, and measurable AI adoption.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -52,14 +61,14 @@ export const HomeHero = () => (
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/services">
+              <Link to="/solutions">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-2 hover:bg-secondary/70"
-                  data-testid="home-hero-explore-services"
+                  data-testid="home-hero-explore-solutions"
                 >
-                  Explore Services
+                  Explore Solutions
                 </Button>
               </Link>
             </div>

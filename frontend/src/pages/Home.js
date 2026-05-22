@@ -3,6 +3,7 @@ import { HomeHero } from '../components/home/HomeHero';
 import {
   WhatWeDoSection,
   CapabilitiesSection,
+  AIBeyondDemosSection,
   ProcessSection,
   IndustriesSection,
   WhyDragAISection,
@@ -36,6 +37,7 @@ export default function Home() {
       <HomeHero />
       <WhatWeDoSection />
       <CapabilitiesSection />
+      <AIBeyondDemosSection />
       <ProcessSection />
       <IndustriesSection />
       <WhyDragAISection />

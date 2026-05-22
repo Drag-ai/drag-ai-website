@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -10,7 +10,6 @@ import Industries from './pages/Industries';
 import HowWeWork from './pages/HowWeWork';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
-import Resources from './pages/Resources';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import CompanyInformation from './pages/CompanyInformation';
@@ -51,7 +50,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/insights" element={<Insights />} />
-            <Route path="/resources" element={<Resources />} />
+            {/* Legacy: /resources is now /insights */}
+            <Route path="/resources" element={<Navigate to="/insights" replace />} />
             <Route path="/company-information" element={<CompanyInformation />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

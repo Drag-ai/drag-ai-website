@@ -87,13 +87,13 @@ export default function Contact() {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                Book a{' '}
-                <span className="text-[hsl(var(--accent-purple))]">30-Minute AI Discovery Call</span>
+                Let&apos;s Discuss Your{' '}
+                <span className="text-[hsl(var(--accent-purple))]">AI Use Case</span>
               </h1>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Tell us about your business problem, current workflow, and data. We will tell you
-                honestly whether AI can help, what would deliver real value, and what would be a
-                practical first step.
+                Tell us about your business problem, workflow, or automation idea. We&apos;ll help
+                you identify whether AI can solve it practically &mdash; honestly scoped, securely
+                built, and tied to measurable outcomes.
               </p>
             </div>
           </Reveal>

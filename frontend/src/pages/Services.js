@@ -7,10 +7,8 @@ import {
   ArrowRight,
   Bot,
   Database,
-  Cog,
   FileText,
   MessageSquare,
-  Mic,
   LineChart,
   Compass,
 } from 'lucide-react';
@@ -23,147 +21,99 @@ import {
 
 const services = [
   {
-    id: 'custom-agents',
+    id: 'agentic-ai',
     Icon: Bot,
-    name: 'Custom AI Agents Development',
-    tagline: 'Build domain-specific autonomous agents for your business',
+    name: 'Agentic AI Development',
+    tagline: 'Tool-using agents that execute multi-step business workflows',
     whatItIs:
-      'Purpose-built AI agents designed for specific business workflows—from customer intake to operations automation. Each agent understands context, uses tools, and takes autonomous action.',
+      'Production-ready agents built around your business logic: tool-calling, multi-step workflow execution, API and tool integration, human approval checkpoints, structured logging and monitoring, and guardrails with safe fallbacks.',
     whenToUse: [
-      'Automating repetitive knowledge work',
-      'Customer support and engagement workflows',
-      'Operations tasks requiring judgment and context',
+      'Operational workflows that span multiple systems and steps',
+      'Repetitive knowledge work that still needs judgement',
+      'Processes that need controlled autonomy with audit trails',
     ],
     businessImpact:
-      'Designed to reduce manual workload, enable continuous operation, and help scale operational capabilities across teams.',
-    testId: 'services-custom-agents-card',
-  },
-  {
-    id: 'workflow-automation',
-    Icon: Cog,
-    name: 'Autonomous Workflow Automation',
-    tagline: 'End-to-end process automation with AI orchestration',
-    whatItIs:
-      'Multi-step business processes automated using coordinated AI agents. From data intake to decision-making to action—without manual handoffs.',
-    whenToUse: [
-      'Complex workflows spanning multiple systems',
-      'Processes requiring conditional logic and decisions',
-      'High-volume operations needing intelligent routing',
-    ],
-    businessImpact:
-      'Built to accelerate processing times, reduce bottlenecks, and improve execution consistency.',
-    testId: 'services-workflow-automation-card',
-  },
-  {
-    id: 'multi-agent',
-    Icon: Bot,
-    name: 'Multi-Agent Systems & Orchestration',
-    tagline: 'Coordinate specialized agents for complex business problems',
-    whatItIs:
-      'Architected systems where multiple AI agents with different specializations collaborate to solve complex problems. Includes task routing, inter-agent communication, and result aggregation.',
-    whenToUse: [
-      'Problems requiring diverse expertise (analysis, writing, validation)',
-      'Workflows with parallel processing needs',
-      'Systems needing specialist agents for different domains',
-    ],
-    businessImpact:
-      'Designed to handle complex problems that require multiple specialized capabilities, reducing time-to-resolution through coordinated agent collaboration.',
-    testId: 'services-multi-agent-card',
+      'Reduce repetitive work and automate operational tasks without losing human control.',
+    testId: 'services-agentic-ai-card',
   },
   {
     id: 'rag',
     Icon: Database,
-    name: 'RAG Systems & Knowledge Agents',
-    tagline: 'AI agents grounded in your proprietary knowledge',
+    name: 'RAG & Enterprise Knowledge Assistants',
+    tagline: 'Source-grounded answers from your internal documents and systems',
     whatItIs:
-      "Retrieval-Augmented Generation systems where AI agents access and reason over your organization's documents, databases, and knowledge bases to provide accurate, context-aware responses.",
+      'Retrieval-Augmented Generation pipelines designed for the real world: PDF, DOCX, PPTX, and XLSX ingestion; embeddings and vector search; metadata filtering; source-grounded responses; access-control-ready architecture; and hallucination reduction with evaluation.',
     whenToUse: [
-      'Internal knowledge management and Q&A',
-      'Customer support with company-specific information',
-      'Compliance and policy interpretation',
+      'Internal Q&A over policies, SOPs, manuals, and proposals',
+      'Customer support grounded in your verified content',
+      'Compliance, audit, and onboarding knowledge assistants',
     ],
     businessImpact:
-      'Helps unlock institutional knowledge at scale, supports faster onboarding, and provides consistent information access.',
+      'Help teams get trusted answers from internal documents and knowledge bases.',
     testId: 'services-rag-card',
   },
   {
     id: 'doc-ai',
     Icon: FileText,
-    name: 'Document Processing Agents',
-    tagline: 'Intelligent extraction and classification at scale',
+    name: 'Document AI & Intelligent Extraction',
+    tagline: 'Structured data from unstructured documents at scale',
     whatItIs:
-      'AI agents specialized in document understanding—extracting data from invoices, contracts, forms, and unstructured files with context awareness.',
+      'Document understanding pipelines for invoices, contracts, leases, claims, and resumes. JD matching, validation rules, exception routing, and clean JSON / Excel / API output that drops straight into your existing workflows.',
     whenToUse: [
-      'Invoice and contract processing',
-      'Form digitization and validation',
-      'Compliance document review and categorization',
+      'Invoice, contract, and lease processing',
+      'Claims and policy document handling',
+      'Resume-to-JD matching and recruitment workflows',
     ],
     businessImpact:
-      'Designed to significantly accelerate document processing, improve accuracy, and enable faster data availability.',
-    testId: 'services-document-agents-card',
+      'Reduce manual document processing and improve operational speed.',
+    testId: 'services-doc-ai-card',
   },
   {
-    id: 'conversational',
+    id: 'chat-voice',
     Icon: MessageSquare,
-    name: 'Conversational AI Agents',
-    tagline: 'Natural language interfaces powered by agentic workflows',
+    name: 'Conversational AI & Voice AI',
+    tagline: 'Chat, voice, and multilingual assistants with safe escalation',
     whatItIs:
-      'Conversational agents that do not just answer questions—they take action. Book appointments, retrieve data, trigger workflows, and escalate to humans when needed.',
+      'Website chatbots, internal support bots, multilingual assistants, and real-time voice agents. Speech-to-text workflows, intent classification, entity extraction, and graceful human escalation when confidence is low.',
     whenToUse: [
-      'Customer self-service portals',
-      'Internal employee helpdesks',
-      'Intake automation for sales and support',
+      'Customer support, FAQs, and lead intake',
+      'Internal helpdesks across HR, IT, and operations',
+      'Voice agents for booking, qualification, and follow-up',
     ],
     businessImpact:
-      'Built to handle high volumes of routine inquiries autonomously, improve response times, and help reduce support costs.',
-    testId: 'services-conversational-agents-card',
-  },
-  {
-    id: 'voice',
-    Icon: Mic,
-    name: 'Voice AI Agents',
-    tagline: 'Real-time voice agents for support, intake, and scheduling',
-    whatItIs:
-      'Low-latency voice agents that handle inbound and outbound calls with natural conversation, integrate with your CRM and telephony stack, and follow your business logic and compliance scripts.',
-    whenToUse: [
-      'Automated customer support and FAQs',
-      'Appointment booking and reminders',
-      'Lead qualification and outbound follow-up',
-    ],
-    businessImpact:
-      'Designed to extend support hours, reduce queue times, and free human teams to focus on complex cases.',
-    testId: 'services-voice-ai-card',
+      'Improve response time and consistency across customer and internal support.',
+    testId: 'services-chat-voice-card',
   },
   {
     id: 'predictive',
     Icon: LineChart,
-    name: 'Predictive Analytics',
-    tagline: 'Forecasting and decision support powered by ML',
+    name: 'Predictive Analytics & ML Solutions',
+    tagline: 'Forecasting and decision support built into your workflows',
     whatItIs:
-      'Custom machine learning models for demand forecasting, churn prediction, anomaly detection, and risk scoring — integrated into your dashboards and operational workflows.',
+      'Custom ML models for forecasting, risk scoring, customer segmentation, recommendation systems, operational analytics, and KPI dashboards \u2014 integrated with your data platforms and reviewed against real business outcomes.',
     whenToUse: [
-      'Demand, inventory, and capacity planning',
-      'Customer churn and lifetime value prediction',
-      'Fraud, anomaly, and risk detection',
+      'Demand, inventory, and capacity forecasting',
+      'Churn, fraud, anomaly, and risk scoring',
+      'KPI dashboards that combine reporting and prediction',
     ],
     businessImpact:
-      'Helps decision-makers act earlier with data-driven confidence and reduce avoidable losses.',
-    testId: 'services-predictive-analytics-card',
+      'Help teams make better decisions using business data.',
+    testId: 'services-predictive-card',
   },
   {
     id: 'consulting',
     Icon: Compass,
-    name: 'AI Strategy & Consulting',
-    tagline: 'Where to start, what to build, and how to scale AI safely',
+    name: 'AI Consulting & PoC Delivery',
+    tagline: 'From AI idea to a measurable implementation plan',
     whatItIs:
-      'Hands-on advisory for leadership teams: AI use-case discovery, opportunity sizing, architecture review, vendor and model selection, and a pragmatic 90-day roadmap that fits your data, team, and risk profile.',
+      'Hands-on advisory and delivery: AI opportunity assessment, data readiness review, solution architecture, PoC delivery, evaluation framework, and a production roadmap your board and operations team both believe in.',
     whenToUse: [
       'You want a credible starting point for AI adoption',
       'You need a second opinion on an in-flight AI initiative',
-      'You want a roadmap your board and ops team both believe in',
+      'You want a 90-day roadmap tied to outcomes, not buzzwords',
     ],
     businessImpact:
-      'Cuts wasted spend on the wrong AI experiments and aligns AI investment with measurable business outcomes.',
+      'Move from AI idea to measurable implementation plan.',
     testId: 'services-consulting-card',
   },
 ];

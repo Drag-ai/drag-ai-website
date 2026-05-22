@@ -5,18 +5,18 @@ import { Target, Users, Award, TrendingUp, Globe } from 'lucide-react';
 import { FounderCard } from '../shared/FounderCard';
 
 const principles = [
-  { id: 'engineering', Icon: Target, title: 'Engineering Excellence', description: 'Robust architecture, clean code, and maintainable systems built for long-term success.' },
-  { id: 'production', Icon: Award, title: 'Production-First', description: 'Every solution is designed to handle edge cases, scale effectively, and evolve with your business.' },
-  { id: 'partnership', Icon: Users, title: 'Transparent Partnership', description: 'Honest communication about feasibility, timelines, and what will truly deliver business value.' },
-  { id: 'expertise', Icon: TrendingUp, title: 'Deep Expertise', description: 'Hands-on experience with LLMs, RAG, agentic workflows, and enterprise AI deployment.' },
-  { id: 'outcomes', Icon: Globe, title: 'Business Outcomes', description: 'Technology serves business goals. We align AI capabilities with measurable objectives and ROI.' },
+  { id: 'business-first', Icon: Target, title: 'Business-first AI use-case discovery', description: 'We start with the workflow, the data, and the outcome — not the model or the demo.' },
+  { id: 'engineering', Icon: Award, title: 'Strong technical implementation', description: 'Robust architecture, clean code, and systems built to be maintained beyond the first release.' },
+  { id: 'production-thinking', Icon: TrendingUp, title: 'Production-grade architecture thinking', description: 'Observability, evaluation, fallback paths, and security designed in from day one.' },
+  { id: 'roadmap', Icon: Globe, title: 'Clear PoC-to-production roadmap', description: 'A staged path from validated prototype to a deployed, monitored production system.' },
+  { id: 'outcomes', Icon: Users, title: 'Focus on measurable outcomes', description: 'Cycle time, accuracy, reviewer effort, cost — defined up front and tracked in delivery.' },
 ];
 
 const founders = [
   {
     id: 'deepesh',
     name: 'Deepesh Agrawal',
-    role: 'Founder & AI Architect',
+    role: 'Co-founder / AI Solutions Architect',
     bio: 'AI Architect with 10+ years building production-grade AI systems across Generative AI, Agentic AI, RAG, NLP, Computer Vision, and MLOps. Previously contributed to enterprise AI platforms at IBM Labs, Fujitsu Research, and AMD, and delivered AI/ML solutions for clients including Swiss Re and Capital Group at UST (Abzooba). Through Drag AI, helps businesses design and deploy custom AI agents, autonomous workflows, RAG pipelines, and scalable AI systems that move from prototype to production.',
     expertise: ['Agentic AI Systems', 'Multi-Agent Orchestration', 'RAG Pipelines', 'Production MLOps'],
     responsibilities: [
@@ -29,7 +29,7 @@ const founders = [
   {
     id: 'nishit',
     name: 'Nishit Gupta',
-    role: 'Co-Founder & Business Strategy',
+    role: 'Co-founder / Business Development & Strategy',
     bio: 'Business strategist with 10+ years across technology, e-learning, market research, consulting, and client growth. Expertise in lead generation, market analysis, consultative selling, digital transformation, automation, and CRM-led campaigns. MBA in International Business from James Cook University, Australia. Brings a business-first, global perspective to AI adoption, connecting practical business needs with production-grade AI agents, autonomous workflows, and enterprise-ready systems.',
     expertise: ['Business Strategy', 'AI Transformation', 'Client Success', 'Digital Marketing'],
     responsibilities: [
@@ -55,13 +55,14 @@ export const MissionSection = () => (
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">Our Mission</h2>
           <div className="space-y-4 text-base text-foreground/90 leading-relaxed">
             <p>
-              We bridge the gap between AI capabilities and real-world business applications.
-              Organizations need production-ready systems, not just promising demos.
+              Our mission is to help businesses move from AI curiosity to measurable AI implementation.
             </p>
             <p>
-              Our approach: understand your problem, design the right architecture, and build systems
-              your team can maintain and evolve. No vendor lock-in, no black boxes—just clean,
-              documented AI infrastructure.
+              We bridge the gap between AI capabilities and real-world business applications.
+              Organisations need production-ready systems, not just promising demos. Our approach:
+              understand your problem, design the right architecture, and build systems your team can
+              maintain and evolve &mdash; no vendor lock-in, no black boxes, just clean, documented AI
+              infrastructure.
             </p>
           </div>
         </div>
@@ -75,9 +76,11 @@ export const PrinciplesSection = () => (
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <Reveal>
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">Our Principles</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
+            What Makes Us Different
+          </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            The values that guide how we work with clients and build systems
+            How we think about practical, production-ready AI delivery.
           </p>
         </div>
       </Reveal>

@@ -1,18 +1,42 @@
 [
   {
-    "content": "Code-quality refactor: useSEO + Contact + Home + Services + About + Resources + Careers + NeuralBackground",
+    "content": "Phase 0: Build green + audit",
     "status": "completed"
   },
   {
-    "content": "Array-index-as-key fixes across Industries + 7 industry subpages",
+    "content": "Phase 1: Home (hero+trust line+6 capability cards+AI Beyond Demos+6-step process+final CTA)",
     "status": "completed"
   },
   {
-    "content": "Console statement removal (production code)",
+    "content": "Phase 2: Services restructure to 6 grouped services",
     "status": "completed"
   },
   {
-    "content": "Lint + build + testing-agent regression (100% pass, 19 tests, 0 bugs)",
+    "content": "Phase 3: Industries (HR + Manufacturing + suffixed names + safe links)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 4: About (hero+mission+'What Makes Us Different'+founder titles)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 5: Contact form (Industry select, Data Q select, Preferred contact select, submit text)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 6: Careers soft pivot (not actively hiring + 3 opportunity types + partnership form)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 7: Insights article titles updated to recommended 6",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 8: /resources → /insights redirect; sitemap cleaned; broken link removed from Insights",
+    "status": "completed"
+  },
+  {
+    "content": "Final yarn build + 14-route smoke test + screenshot verification",
     "status": "completed"
   }
 ]

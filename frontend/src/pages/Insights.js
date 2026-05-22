@@ -22,63 +22,63 @@ import {
 // outcomes. Replace `coming-soon` slug links with real articles when published.
 const articles = [
   {
-    id: 'agentic-vs-automation',
+    id: 'agents-automate-workflows',
     category: 'Agentic AI',
     Icon: Bot,
-    title: 'Agentic AI vs. Traditional Automation: Where Each Wins',
+    title: 'How AI Agents Can Automate Repetitive Business Workflows',
     excerpt:
-      'Why classic RPA and scripts struggle when work involves judgement, and how agentic systems combine reasoning, tools, and guardrails to handle real operational complexity.',
+      'Where classic automation stops and where agentic systems start \u2014 combining reasoning, tools, and guardrails to handle the parts of work that need judgement.',
     readingTime: '6 min read',
     status: 'Coming soon',
   },
   {
-    id: 'rag-in-production',
+    id: 'rag-vs-chatbot',
     category: 'RAG',
     Icon: Database,
-    title: 'Designing RAG Systems That Actually Hold Up in Production',
+    title: 'RAG vs. Chatbot: What Businesses Should Actually Build',
     excerpt:
-      'Chunking, retrieval quality, evaluation, and freshness \u2014 the design choices that separate impressive demos from RAG systems your teams will trust day after day.',
-    readingTime: '8 min read',
-    status: 'Coming soon',
-  },
-  {
-    id: 'document-ai-roi',
-    category: 'Document AI',
-    Icon: FileText,
-    title: 'Document AI: How to Identify the Highest-ROI Use Cases First',
-    excerpt:
-      'A practical framework to score document workflows by volume, variance, decision risk, and integration cost \u2014 so you start where AI moves the needle, not where it is easiest to demo.',
-    readingTime: '5 min read',
-    status: 'Coming soon',
-  },
-  {
-    id: 'voice-ai-cx',
-    category: 'Voice AI',
-    Icon: Mic,
-    title: 'Voice AI for Customer Operations: When It Helps, When It Hurts',
-    excerpt:
-      'Latency budgets, fallback strategies, regulated dialogue, and the operational design needed to make voice AI a credible part of customer support and inbound sales.',
+      'Most teams ask for a "chatbot" when they really need a retrieval system. A practical guide to choosing between RAG, conversational AI, and agentic workflows.',
     readingTime: '7 min read',
     status: 'Coming soon',
   },
   {
-    id: 'predictive-analytics-pitfalls',
-    category: 'Predictive Analytics',
-    Icon: LineChart,
-    title: 'Predictive Analytics: Five Pitfalls That Quietly Destroy ROI',
+    id: 'document-ai-operations',
+    category: 'Document AI',
+    Icon: FileText,
+    title: 'How Document AI Reduces Manual Operations Work',
     excerpt:
-      'Data leakage, drift, biased baselines, fragile pipelines, and stakeholder misalignment \u2014 a checklist to keep your forecasting initiatives honest and useful.',
+      'Identifying the document workflows where AI moves the needle, how to evaluate accuracy honestly, and how to design exception handling that protects the business.',
     readingTime: '6 min read',
     status: 'Coming soon',
   },
   {
-    id: 'ai-governance-uk-sme',
-    category: 'AI Governance',
+    id: 'poc-to-production',
+    category: 'Delivery',
     Icon: ShieldCheck,
-    title: 'Lightweight AI Governance for UK SMEs and Mid-Market Teams',
+    title: 'From AI PoC to Production: What Companies Often Miss',
     excerpt:
-      'A pragmatic governance starting point covering data handling, model selection, vendor due diligence, and human oversight \u2014 right-sized for teams that need to ship.',
+      'Observability, evaluation, security, fallback logic, and stakeholder design \u2014 the unglamorous work that turns an impressive demo into a system your business depends on.',
+    readingTime: '8 min read',
+    status: 'Coming soon',
+  },
+  {
+    id: 'human-in-the-loop',
+    category: 'AI Governance',
+    Icon: Mic,
+    title: 'Why Human-in-the-Loop Matters in Enterprise AI',
+    excerpt:
+      'Approval points, audit trails, and graceful fallbacks are not afterthoughts. How to design AI systems that augment human judgement instead of replacing it.',
     readingTime: '5 min read',
+    status: 'Coming soon',
+  },
+  {
+    id: 'sme-ai-use-cases',
+    category: 'Strategy',
+    Icon: LineChart,
+    title: 'Practical AI Use Cases for Small and Mid-Sized Businesses',
+    excerpt:
+      'A pragmatic shortlist of AI use cases that work well at SME scale &mdash; with realistic effort, data requirements, and expected outcomes.',
+    readingTime: '6 min read',
     status: 'Coming soon',
   },
 ];
@@ -216,30 +216,6 @@ export default function Insights() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* Methodology / Resources link-out (preserves Resources.js content) */}
-      <section className="py-14 sm:py-18">
-        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <Reveal>
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-3">
-              Looking for our Methodology &amp; Examples?
-            </h2>
-            <p className="text-base text-muted-foreground mb-6">
-              Internal prototypes, illustrative use cases, and delivery blueprints are available on our Resources page.
-            </p>
-            <Link to="/resources">
-              <Button
-                variant="outline"
-                className="border-2"
-                data-testid="insights-view-resources-button"
-              >
-                View Examples &amp; Blueprints
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </Reveal>
         </div>
       </section>
 

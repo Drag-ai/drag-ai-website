@@ -48,11 +48,61 @@ const SubmitButton = ({ isSubmitting }) => (
       'Sending...'
     ) : (
       <>
-        Book My 30-Minute AI Discovery Call
+        Request AI Discovery Call
         <Send className="ml-2 h-4 w-4" />
       </>
     )}
   </Button>
+);
+
+const INDUSTRY_OPTIONS = [
+  'Construction & EPC',
+  'Hospitality & Restaurants',
+  'Logistics & Warehousing',
+  'Real Estate & Property Management',
+  'Insurance & Claims',
+  'HR & Recruitment',
+  'Retail & E-commerce',
+  'Manufacturing & Operations',
+  'Professional Services',
+  'Financial Services',
+  'Healthcare',
+  'Other',
+];
+
+const PREFERRED_CONTACT_OPTIONS = ['Email', 'Phone', 'Video call', 'No preference'];
+
+const HAS_DATA_OPTIONS = [
+  { value: '', label: 'Select an option' },
+  { value: 'yes', label: 'Yes \u2014 we already have data, documents, and systems' },
+  { value: 'partial', label: 'Partially \u2014 some data or systems are available' },
+  { value: 'no', label: 'No \u2014 we are starting from scratch' },
+  { value: 'not-sure', label: 'Not sure yet' },
+];
+
+const SelectField = ({ id, name, value, onChange, disabled, options, placeholder, testId }) => (
+  <select
+    id={id}
+    name={name}
+    value={value}
+    onChange={onChange}
+    disabled={disabled}
+    data-testid={testId}
+    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+  >
+    {placeholder !== undefined && <option value="">{placeholder}</option>}
+    {options.map((opt) =>
+      typeof opt === 'string' ? (
+        <option key={opt} value={opt}>
+          {opt}
+        </option>
+      ) : (
+        <option key={opt.value} value={opt.value}>
+          {opt.label}
+        </option>
+      ),
+    )}
+  </select>
 );
 
 const HoneypotField = () => (
@@ -152,6 +202,19 @@ export const ContactForm = ({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <FormField id="industry" label="Industry">
+                  <SelectField
+                    id="industry"
+                    name="industry"
+                    value={formData.industry}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                    options={INDUSTRY_OPTIONS}
+                    placeholder="Select your industry"
+                    testId="contact-form-industry-select"
+                  />
+                </FormField>
+
                 <FormField id="country" label="Country">
                   <Input
                     id="country"
@@ -164,32 +227,44 @@ export const ContactForm = ({
                     data-testid="contact-form-country-input"
                   />
                 </FormField>
-
-                <FormField id="interest" label="Area of Interest">
-                  <Input
-                    id="interest"
-                    name="interest"
-                    type="text"
-                    placeholder="Agentic AI, RAG, Doc AI, Voice AI..."
-                    value={formData.interest}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    data-testid="contact-form-interest-input"
-                  />
-                </FormField>
               </div>
 
-              <FormField id="message" label="Tell us about your problem" required>
+              <FormField id="hasData" label="Do you already have data, documents, or systems for this workflow?">
+                <SelectField
+                  id="hasData"
+                  name="hasData"
+                  value={formData.hasData}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  options={HAS_DATA_OPTIONS}
+                  testId="contact-form-has-data-select"
+                />
+              </FormField>
+
+              <FormField id="message" label="What problem are you trying to solve?" required>
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="What is the business problem, the current workflow, and the outcome you would like to achieve?"
+                  placeholder="Tell us about the business problem, the current workflow, and the outcome you would like to achieve."
                   value={formData.message}
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
                   rows={6}
                   data-testid="contact-form-message-textarea"
+                />
+              </FormField>
+
+              <FormField id="preferredContact" label="Preferred contact method">
+                <SelectField
+                  id="preferredContact"
+                  name="preferredContact"
+                  value={formData.preferredContact}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  options={PREFERRED_CONTACT_OPTIONS}
+                  placeholder="No preference"
+                  testId="contact-form-preferred-contact-select"
                 />
               </FormField>
 
