@@ -277,7 +277,7 @@ export default function Industries() {
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
                 data-testid="industries-cta-button"
               >
-                Book a 30-Minute AI Discovery Call
+                Book Free AI Strategy Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

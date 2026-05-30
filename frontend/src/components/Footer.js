@@ -81,7 +81,9 @@ export const Footer = () => {
               <li><Link to="/solutions" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-solutions">Solutions</Link></li>
               <li><Link to="/industries" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-industries">Industries</Link></li>
               <li><Link to="/how-we-work" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-how-we-work">How We Work</Link></li>
+              <li><Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-case-studies">Case Studies</Link></li>
               <li><Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-about">About</Link></li>
+              <li><Link to="/resources" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-resources">Resources</Link></li>
               <li><Link to="/insights" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-insights">Insights</Link></li>
               <li><Link to="/careers" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-careers">Careers</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-contact">Contact</Link></li>
@@ -96,6 +98,7 @@ export const Footer = () => {
               <li><Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-privacy">Privacy Policy</Link></li>
               <li><Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-cookie-policy">Cookie Policy</Link></li>
               <li><Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-terms">Terms of Use</Link></li>
+              <li><a href="/sitemap.xml" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-sitemap">Sitemap</a></li>
             </ul>
           </div>
 
@@ -119,7 +122,7 @@ export const Footer = () => {
                   className="text-[hsl(var(--accent-purple))] hover:brightness-110 font-medium transition-colors"
                   data-testid="footer-book-discovery-call"
                 >
-                  Book a 30-Minute AI Discovery Call →
+                  Book Free AI Strategy Call →
                 </Link>
               </li>
             </ul>

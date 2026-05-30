@@ -22,6 +22,7 @@ import {
 const services = [
   {
     id: 'agentic-ai',
+    detailPath: '/services/ai-agents',
     Icon: Bot,
     name: 'Agentic AI Development',
     tagline: 'Tool-using agents that execute multi-step business workflows',
@@ -38,6 +39,7 @@ const services = [
   },
   {
     id: 'rag',
+    detailPath: '/services/rag-systems',
     Icon: Database,
     name: 'RAG & Enterprise Knowledge Assistants',
     tagline: 'Source-grounded answers from your internal documents and systems',
@@ -54,6 +56,7 @@ const services = [
   },
   {
     id: 'doc-ai',
+    detailPath: '/services/document-ai',
     Icon: FileText,
     name: 'Document AI & Intelligent Extraction',
     tagline: 'Structured data from unstructured documents at scale',
@@ -70,6 +73,7 @@ const services = [
   },
   {
     id: 'chat-voice',
+    detailPath: '/services/ai-chatbots',
     Icon: MessageSquare,
     name: 'Conversational AI & Voice AI',
     tagline: 'Chat, voice, and multilingual assistants with safe escalation',
@@ -158,7 +162,7 @@ const ServicesCTA = () => (
             className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
             data-testid="services-cta-button"
           >
-            Book a 30-Minute AI Discovery Call
+            Book Free AI Strategy Call
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </Link>

@@ -9,31 +9,29 @@ const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 const INITIAL_FORM = {
   name: '',
-  email: '',
   company: '',
-  industry: '',
-  role: '',
-  country: '',
-  hasData: '',
-  preferredContact: '',
-  message: '',
+  email: '',
+  phone: '',
+  automation: '',
+  currentTools: '',
+  budget: '',
+  timeline: '',
   consent: false,
 };
 
 const buildPayload = (formData) => ({
   access_key: WEB3FORMS_KEY,
-  subject: `New AI Discovery Call request from ${formData.name}`,
-  from_name: 'Drag AI Contact Form',
+  subject: `AI Strategy Call request from ${formData.name}`,
+  from_name: 'Drag AI Lead Form',
   email: formData.email,
   reply_to: formData.email,
   name: formData.name,
   company: formData.company,
-  industry: formData.industry,
-  role: formData.role,
-  country: formData.country,
-  has_data_or_systems: formData.hasData,
-  preferred_contact_method: formData.preferredContact,
-  message: formData.message,
+  phone_or_whatsapp: formData.phone,
+  what_to_automate: formData.automation,
+  current_tools: formData.currentTools,
+  budget_range: formData.budget,
+  timeline: formData.timeline,
   botcheck: false,
 });
 
@@ -51,8 +49,8 @@ const postForm = async (formData) => {
 };
 
 /**
- * Encapsulates the contact form's local state, validation, and Web3Forms submission.
- * Keeps the Contact page component focused on layout/composition.
+ * Encapsulates the lead-capture form's local state, validation, and submission.
+ * Used by both the homepage lead form and the dedicated Contact page.
  */
 export const useContactForm = ({ onSuccess, onError } = {}) => {
   const [formData, setFormData] = useState(INITIAL_FORM);

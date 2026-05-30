@@ -1,168 +1,156 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Card } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
-import { FlaskConical, Lightbulb, Map } from 'lucide-react';
-import { ResourceCard } from '../components/resources/ResourceCard';
+import { ArrowRight, Bot, Database, MessageSquare, Clock } from 'lucide-react';
 
-const resources = [
+// Only published, indexable articles are shown here. Skeleton (noindex) drafts
+// are intentionally NOT listed in the hub to avoid thin-content SEO issues.
+const articles = [
   {
-    id: 'prototype',
-    type: 'Internal',
-    typeColor: 'bg-blue-500/10 text-blue-600 border-blue-500/30',
-    icon: <FlaskConical className="h-5 w-5" />,
-    title: 'Internal Prototype: Multi-Agent Workflow Demo',
-    subtitle: 'Built by our team for demonstration purposes',
-    summary:
-      'An internal prototype exploring how agentic AI systems can coordinate research, planning, and structured output generation.',
-    content: {
-      overview:
-        'We built this internal prototype to explore how agentic AI systems can coordinate research, planning, and structured output generation for business workflows.',
-      problem:
-        'Many teams spend too much time collecting information, routing tasks, and manually preparing outputs. We wanted to test whether a multi-agent workflow could reduce coordination overhead while keeping humans in control.',
-      built:
-        'A prototype workflow with distinct agents for intake, retrieval, reasoning, draft generation, and human review. The system was designed to pass context between steps and surface uncertainty clearly.',
-      howItWorks: [
-        'Intake agent structures the request',
-        'Research agent gathers relevant context',
-        'Planning agent decides next steps',
-        'Drafting agent produces outputs',
-        'Review layer flags uncertainty and routes for human approval',
-      ],
-      architecture: [
-        'LLMs for reasoning and generation',
-        'Retrieval systems for context',
-        'API integrations for data access',
-        'Workflow orchestration layer',
-        'Human-in-the-loop review interface',
-      ],
-      observations:
-        'Internal testing suggested that agentic workflows may help speed up repetitive coordination-heavy tasks, but performance depends heavily on scope control, tool reliability, and review design.',
-      limitations:
-        'This prototype was tested internally only. Results described here are observations from internal testing and are not presented as production outcomes.',
-      fits:
-        'Operations, internal knowledge work, research workflows, triage, and structured drafting tasks.',
-      disclaimer:
-        'This is an internal prototype created by our team for demonstration purposes. Any observations described here are based on internal testing only.',
-    },
+    slug: 'what-is-an-ai-agent-for-business',
+    category: 'Agentic AI',
+    Icon: Bot,
+    title: 'What is an AI Agent for Business? A Practical Guide',
+    excerpt:
+      'How AI agents differ from chatbots and RPA, where they earn their keep, what a production-grade agent looks like, and how to start without overcommitting.',
+    readingTime: '8 min read',
   },
   {
-    id: 'usecase',
-    type: 'Hypothetical',
-    typeColor: 'bg-purple-500/10 text-purple-600 border-purple-500/30',
-    icon: <Lightbulb className="h-5 w-5" />,
-    title: 'Illustrative Use Case: Insurance Operations',
-    subtitle: 'Hypothetical example for educational purposes',
-    summary:
-      'How an insurance operations team could use agentic AI to support claim intake, document processing, and coordination.',
-    content: {
-      scenario:
-        'This example shows how an insurance operations team could use agentic AI to support claim intake, document classification, follow-up coordination, and human review.',
-      profile:
-        'A mid-sized insurance team handling high volumes of inbound claims and supporting documents.',
-      before:
-        'Manual intake, repeated document checks, fragmented handoffs, and delayed follow-up.',
-      workflow: [
-        'Intake agent receives and categorizes incoming requests',
-        'Document agent extracts structured data',
-        'Policy-check agent surfaces relevant rules for review',
-        'Follow-up agent drafts missing-information requests',
-        'Human reviewer approves key decisions',
-      ],
-      humanReview:
-        'All coverage decisions, exception handling, and customer-facing final actions remain under human control.',
-      risks:
-        'Document quality, policy interpretation risk, escalation design, audit trails, and clear approval checkpoints.',
-      benefits:
-        'Potentially faster triage, better consistency in information gathering, and less manual coordination. These are not presented as measured results.',
-      validation:
-        'Accuracy, latency, escalation rates, reviewer burden, compliance requirements, and integration constraints.',
-      disclaimer:
-        'This is a hypothetical example created for educational purposes. It is intended to illustrate approach, workflow design, and evaluation thinking.',
-    },
+    slug: 'rag-vs-fine-tuning',
+    category: 'Architecture',
+    Icon: Database,
+    title: 'RAG vs Fine-Tuning: Which One Should You Actually Use?',
+    excerpt:
+      'A practical comparison of RAG and fine-tuning for business AI \u2014 when each one is the right call, common mistakes, and a short decision checklist.',
+    readingTime: '7 min read',
   },
   {
-    id: 'blueprint',
-    type: 'Methodology',
-    typeColor: 'bg-green-500/10 text-green-600 border-green-500/30',
-    icon: <Map className="h-5 w-5" />,
-    title: 'Delivery Blueprint: Our Implementation Approach',
-    subtitle: 'A methodology example showing how we work',
-    summary:
-      'Our recommended approach for designing and deploying an agentic AI workflow for business use cases.',
-    content: {
-      objective:
-        'Show how we would approach designing and deploying an agentic AI workflow for a business use case.',
-      discovery:
-        'We document the current workflow, identify repetitive decisions, define constraints, and determine where human review must remain.',
-      design:
-        'We define the roles of each agent, context boundaries, tool access, and handoff logic.',
-      integration:
-        'We identify which systems the workflow needs to read from, write to, or trigger.',
-      guardrails:
-        'We define approval points, fallback behavior, auditability requirements, and confidence thresholds.',
-      pilot:
-        'We recommend starting with a narrow, low-risk workflow and clear evaluation criteria.',
-      evaluation:
-        'We assess output quality, exception handling, time savings, reviewer effort, and operational fit.',
-      rollout: 'Expand gradually after the pilot shows acceptable quality and governance readiness.',
-      success:
-        'Cycle time, handoff reduction, accuracy, reviewer load, and business-specific workflow KPIs. No actual numbers are included.',
-      disclaimer:
-        'This blueprint describes our recommended approach for this kind of problem. It is intended to show our methodology, planning process, and evaluation framework.',
-    },
+    slug: 'private-ai-chatbot-company-documents',
+    category: 'RAG',
+    Icon: MessageSquare,
+    title: 'Private AI Chatbot Trained on Your Company Documents',
+    excerpt:
+      'How a private chatbot grounded in your company documents actually works \u2014 architecture, access control, supported formats, accuracy, and rollout.',
+    readingTime: '8 min read',
   },
 ];
 
 export default function Resources() {
   useSEO({
-    title: 'Resources | Agentic AI Examples & Methodology | Drag AI',
+    title: 'AI Resources & Insights | Drag AI',
     description:
-      'Explore our internal prototypes, illustrative use cases, and delivery blueprints for agentic AI systems. Transparent examples showing our technical approach and implementation methodology.',
+      'Practical articles from Drag AI on agentic AI, RAG, document intelligence, voice AI, and AI automation \u2014 written for operations and engineering leaders.',
     canonical: '/resources',
+    breadcrumbs: [
+      { name: 'Home', path: '/' },
+      { name: 'Resources', path: '/resources' },
+    ],
   });
 
-  const [expandedCard, setExpandedCard] = useState(null);
-
-  const toggleCard = (cardId) =>
-    setExpandedCard((curr) => (curr === cardId ? null : cardId));
-
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" data-testid="resources-page">
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="border-b bg-secondary/20">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-3 text-xs text-muted-foreground">
+          <Link to="/" className="hover:text-foreground">Home</Link>
+          <span className="mx-2">/</span>
+          <span className="text-foreground">Resources</span>
+        </div>
+      </nav>
+
       {/* Hero */}
-      <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+      <section className="relative overflow-hidden pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-14">
         <NeuralBackground />
-        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
+        <div className="relative mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8" style={{ zIndex: 10 }}>
           <Reveal>
-            <div className="max-w-3xl">
-              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-6">Resources</h1>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Internal prototypes, educational examples, and practical implementation thinking.
-                These resources help you understand our technical approach and evaluation methodology.
-              </p>
-            </div>
+            <Badge variant="outline" className="mb-4 border-[hsl(var(--accent-purple))]/30">
+              Resources &amp; Insights
+            </Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 max-w-3xl">
+              Practical Articles on AI Automation
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              Honest, opinionated writing about agentic AI, RAG, document intelligence, and voice
+              AI \u2014 what works in production, what does not, and how to tell the difference
+              before you spend.
+            </p>
           </Reveal>
         </div>
       </section>
 
-      {/* Examples */}
-      <section className="py-14 sm:py-18 lg:py-24">
+      {/* Article grid */}
+      <section className="py-10 sm:py-14 bg-secondary/40">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-8">Examples</h2>
-          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((article) => {
+              const { Icon } = article;
+              return (
+                <Reveal key={article.slug}>
+                  <Link to={`/resources/${article.slug}`} className="block h-full group">
+                    <Card
+                      className="p-6 card-hover h-full flex flex-col"
+                      data-testid={`article-card-${article.slug}`}
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 text-[hsl(var(--accent-purple))]">
+                          <Icon className="h-4 w-4" />
+                        </div>
+                        <Badge variant="outline" className="text-[10px] uppercase tracking-wider border-[hsl(var(--accent-purple))]/30">
+                          {article.category}
+                        </Badge>
+                      </div>
 
-          <div className="space-y-6">
-            {resources.map((resource, idx) => (
-              <Reveal key={resource.id} delay={idx * 0.1}>
-                <ResourceCard
-                  resource={resource}
-                  isExpanded={expandedCard === resource.id}
-                  onToggle={() => toggleCard(resource.id)}
-                />
-              </Reveal>
-            ))}
+                      <h2 className="font-semibold text-lg mb-2 group-hover:text-[hsl(var(--accent-purple))] transition-colors">
+                        {article.title}
+                      </h2>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                        {article.excerpt}
+                      </p>
+
+                      <div className="flex items-center justify-between pt-4 border-t text-xs text-muted-foreground">
+                        <span className="inline-flex items-center gap-1.5">
+                          <Clock className="h-3.5 w-3.5" />
+                          {article.readingTime}
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-[hsl(var(--accent-purple))]">
+                          Read article
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </span>
+                      </div>
+                    </Card>
+                  </Link>
+                </Reveal>
+              );
+            })}
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-14 sm:py-18 lg:py-24 bg-gradient-to-br from-[hsl(var(--accent-purple))]/5 to-[hsl(var(--accent-pink))]/5">
+        <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+          <Reveal>
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">
+              Want to apply this to your business?
+            </h2>
+            <p className="text-base text-muted-foreground mb-8">
+              Book a free AI strategy call and we will scope something concrete with you.
+            </p>
+            <Link to="/contact#ai-discovery-call">
+              <Button
+                size="lg"
+                className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-95 shadow-sm"
+                data-testid="resources-cta-button"
+              >
+                Book Free AI Strategy Call
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </Reveal>
         </div>
       </section>
     </div>

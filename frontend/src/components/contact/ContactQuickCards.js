@@ -22,7 +22,7 @@ const items = [
     id: 'call',
     Icon: Calendar,
     label: 'Discovery Call',
-    content: <p className="text-sm font-medium">30 minutes &middot; free &middot; no obligation</p>,
+    content: <p className="text-sm font-medium">Free strategy call &middot; no obligation</p>,
   },
   {
     id: 'response',

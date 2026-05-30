@@ -63,7 +63,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "postbuild": "react-snap"
   },
   "browserslist": {
     "production": [
@@ -94,11 +95,62 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "globals": "15.15.0",
     "postcss": "^8.4.49",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^6.0.2"
   },
   "engines": {
     "node": ">=20.0.0",
     "yarn": "1.22.22"
+  },
+  "reactSnap": {
+    "source": "build",
+    "destination": "build",
+    "include": [
+      "/",
+      "/about",
+      "/contact",
+      "/how-we-work",
+      "/case-studies",
+      "/careers",
+      "/services",
+      "/services/ai-agents",
+      "/services/rag-systems",
+      "/services/document-ai",
+      "/services/ai-chatbots",
+      "/services/voice-ai",
+      "/solutions",
+      "/industries",
+      "/industries/real-estate-ai",
+      "/industries/healthcare-ai",
+      "/industries/finance-ai",
+      "/industries/construction",
+      "/industries/hospitality",
+      "/industries/logistics",
+      "/industries/retail",
+      "/industries/insurance",
+      "/industries/professional-services",
+      "/insights",
+      "/resources",
+      "/resources/what-is-an-ai-agent-for-business",
+      "/resources/rag-vs-fine-tuning",
+      "/resources/private-ai-chatbot-company-documents",
+      "/company-information",
+      "/privacy",
+      "/cookie-policy",
+      "/terms"
+    ],
+    "inlineCss": false,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage"
+    ],
+    "skipThirdPartyRequests": true,
+    "cacheAjaxRequests": false,
+    "http2PushManifest": false,
+    "removeBlobs": true,
+    "fixWebpackChunksIssue": "CRA2",
+    "crawl": false
   }
 }

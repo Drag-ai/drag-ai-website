@@ -1,103 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://drag-ai.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/solutions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/logistics</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/construction</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/hospitality</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/retail</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/property-management</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/industries/professional-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/how-we-work</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/insights</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/careers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/company-information</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/privacy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/cookie-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://drag-ai.com/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- Core pages -->
+  <url><loc>https://drag-ai.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://drag-ai.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drag-ai.com/how-we-work</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/case-studies</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/careers</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Services overview + 5 detail pages -->
+  <url><loc>https://drag-ai.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drag-ai.com/services/ai-agents</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drag-ai.com/services/rag-systems</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drag-ai.com/services/document-ai</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drag-ai.com/services/ai-chatbots</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drag-ai.com/services/voice-ai</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Solutions overview -->
+  <url><loc>https://drag-ai.com/solutions</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Industries overview + sub-pages + 3 new deep-dives -->
+  <url><loc>https://drag-ai.com/industries</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/industries/real-estate-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/industries/healthcare-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/industries/finance-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://drag-ai.com/industries/construction</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://drag-ai.com/industries/hospitality</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://drag-ai.com/industries/logistics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://drag-ai.com/industries/retail</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://drag-ai.com/industries/insurance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://drag-ai.com/industries/professional-services</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Insights index -->
+  <url><loc>https://drag-ai.com/insights</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Resources hub + ONLY published articles -->
+  <url><loc>https://drag-ai.com/resources</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://drag-ai.com/resources/what-is-an-ai-agent-for-business</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://drag-ai.com/resources/rag-vs-fine-tuning</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://drag-ai.com/resources/private-ai-chatbot-company-documents</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://drag-ai.com/company-information</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://drag-ai.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://drag-ai.com/cookie-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://drag-ai.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

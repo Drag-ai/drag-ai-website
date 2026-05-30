@@ -97,7 +97,7 @@ const AboutCTA = () => (
             className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 shadow-lg hover:shadow-xl transition-all"
             data-testid="about-cta-button"
           >
-            Book a 30-Minute AI Discovery Call
+            Book Free AI Strategy Call
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </Link>

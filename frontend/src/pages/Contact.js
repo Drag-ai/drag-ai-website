@@ -29,9 +29,9 @@ const useScrollToFormOnHash = (formRef, hash) => {
 
 export default function Contact() {
   useSEO({
-    title: 'Book a 30-Minute AI Discovery Call | Contact Drag AI Limited',
+    title: 'Book Free AI Strategy Call | Contact Drag AI Limited',
     description:
-      'Book a 30-minute AI discovery call with Drag AI Limited (Company No. 17222197). Discuss agentic AI, RAG, document intelligence, voice AI, and predictive analytics for your business.',
+      'Book a free AI strategy call with Drag AI Limited (Company No. 17222197). Discuss agentic AI, RAG, document intelligence, voice AI, and predictive analytics for your business.',
     canonical: '/contact',
     breadcrumbs: [
       { name: 'Home', path: '/' },

@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import { Card } from '../ui/card';
 import { Reveal } from '../Reveal';
+import { ArrowRight } from 'lucide-react';
 
 export const ServiceDetailCard = ({ service }) => {
-  const { Icon, name, tagline, whatItIs, whenToUse, businessImpact, testId, id } = service;
+  const { Icon, name, tagline, whatItIs, whenToUse, businessImpact, testId, id, detailPath } = service;
   return (
     <Reveal>
       <Card className="p-8 md:p-10 card-hover" data-testid={testId}>
@@ -17,6 +19,17 @@ export const ServiceDetailCard = ({ service }) => {
                 <p className="text-sm text-[hsl(var(--accent-purple))]">{tagline}</p>
               </div>
             </div>
+
+            {detailPath && (
+              <Link
+                to={detailPath}
+                className="inline-flex items-center text-sm text-[hsl(var(--accent-purple))] hover:brightness-110 font-medium group"
+                data-testid={`service-${id}-detail-link`}
+              >
+                Explore this service
+                <ArrowRight className="ml-1.5 h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+            )}
           </div>
 
           <div className="lg:col-span-8 space-y-6">
@@ -33,7 +46,7 @@ export const ServiceDetailCard = ({ service }) => {
                     key={`${id}-when-${item}`}
                     className="text-sm text-muted-foreground flex items-start"
                   >
-                    <span className="mr-2">•</span>
+                    <span className="mr-2">&bull;</span>
                     <span>{item}</span>
                   </li>
                 ))}

@@ -8,77 +8,16 @@ import { Send } from 'lucide-react';
 
 const PUBLIC_EMAIL = 'info@drag-ai.com';
 
-const FormField = ({ id, label, required, children }) => (
+const FormField = ({ id, label, required, children, helper }) => (
   <div>
     <Label htmlFor={id}>
       {label}
       {required ? ' *' : ''}
     </Label>
     <div className="mt-1.5">{children}</div>
+    {helper && <p className="mt-1 text-xs text-muted-foreground">{helper}</p>}
   </div>
 );
-
-const SuccessState = ({ onReset }) => (
-  <div className="text-center py-12" data-testid="contact-form-success-message">
-    <div className="w-16 h-16 bg-[hsl(var(--accent-purple))]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-      <Send className="h-8 w-8 text-[hsl(var(--accent-purple))]" />
-    </div>
-    <h3 className="text-xl font-semibold mb-2">Request received</h3>
-    <p className="text-sm text-muted-foreground mb-6">
-      Thank you for reaching out. We will reply within one business day to schedule your 30-minute AI discovery call.
-    </p>
-    <Button
-      variant="outline"
-      onClick={onReset}
-      data-testid="contact-form-send-another"
-    >
-      Send another message
-    </Button>
-  </div>
-);
-
-const SubmitButton = ({ isSubmitting }) => (
-  <Button
-    type="submit"
-    disabled={isSubmitting}
-    className="w-full bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
-    data-testid="contact-form-submit-button"
-  >
-    {isSubmitting ? (
-      'Sending...'
-    ) : (
-      <>
-        Request AI Discovery Call
-        <Send className="ml-2 h-4 w-4" />
-      </>
-    )}
-  </Button>
-);
-
-const INDUSTRY_OPTIONS = [
-  'Construction & EPC',
-  'Hospitality & Restaurants',
-  'Logistics & Warehousing',
-  'Real Estate & Property Management',
-  'Insurance & Claims',
-  'HR & Recruitment',
-  'Retail & E-commerce',
-  'Manufacturing & Operations',
-  'Professional Services',
-  'Financial Services',
-  'Healthcare',
-  'Other',
-];
-
-const PREFERRED_CONTACT_OPTIONS = ['Email', 'Phone', 'Video call', 'No preference'];
-
-const HAS_DATA_OPTIONS = [
-  { value: '', label: 'Select an option' },
-  { value: 'yes', label: 'Yes \u2014 we already have data, documents, and systems' },
-  { value: 'partial', label: 'Partially \u2014 some data or systems are available' },
-  { value: 'no', label: 'No \u2014 we are starting from scratch' },
-  { value: 'not-sure', label: 'Not sure yet' },
-];
 
 const SelectField = ({ id, name, value, onChange, disabled, options, placeholder, testId }) => (
   <select
@@ -105,6 +44,39 @@ const SelectField = ({ id, name, value, onChange, disabled, options, placeholder
   </select>
 );
 
+const SuccessState = ({ onReset }) => (
+  <div className="text-center py-12" data-testid="contact-form-success-message">
+    <div className="w-16 h-16 bg-[hsl(var(--accent-purple))]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+      <Send className="h-8 w-8 text-[hsl(var(--accent-purple))]" />
+    </div>
+    <h3 className="text-xl font-semibold mb-2">Thank you</h3>
+    <p className="text-sm text-muted-foreground mb-6">
+      Drag AI will review your workflow and contact you soon.
+    </p>
+    <Button variant="outline" onClick={onReset} data-testid="contact-form-send-another">
+      Send another message
+    </Button>
+  </div>
+);
+
+const SubmitButton = ({ isSubmitting }) => (
+  <Button
+    type="submit"
+    disabled={isSubmitting}
+    className="w-full bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
+    data-testid="contact-form-submit-button"
+  >
+    {isSubmitting ? (
+      'Sending...'
+    ) : (
+      <>
+        Request AI Strategy Call
+        <Send className="ml-2 h-4 w-4" />
+      </>
+    )}
+  </Button>
+);
+
 const HoneypotField = () => (
   <input
     type="checkbox"
@@ -116,6 +88,23 @@ const HoneypotField = () => (
   />
 );
 
+const BUDGET_OPTIONS = [
+  '< £5k',
+  '£5k – £15k',
+  '£15k – £50k',
+  '£50k – £150k',
+  '£150k+',
+  'Not sure yet',
+];
+
+const TIMELINE_OPTIONS = [
+  'ASAP (this month)',
+  '1\u20133 months',
+  '3\u20136 months',
+  '6+ months',
+  'Just exploring',
+];
+
 export const ContactForm = ({
   formRef,
   formData,
@@ -124,8 +113,9 @@ export const ContactForm = ({
   handleChange,
   handleSubmit,
   onReset,
+  compact = false,
 }) => (
-  <div className="lg:col-span-3" ref={formRef} id="form">
+  <div className={compact ? '' : 'lg:col-span-3'} ref={formRef} id="form">
     <Reveal delay={0.2}>
       <Card className="p-8 border-2 card-hover">
         {isSuccess ? (
@@ -133,9 +123,9 @@ export const ContactForm = ({
         ) : (
           <form onSubmit={handleSubmit} data-testid="contact-form" noValidate>
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold mb-2">Request Your Discovery Call</h2>
+              <h2 className="text-2xl font-semibold mb-2">Request Your AI Strategy Call</h2>
               <p className="text-sm text-muted-foreground">
-                Share a few details so we come prepared with the right questions.
+                Share a few details and we&apos;ll come prepared with the right questions.
               </p>
             </div>
 
@@ -143,7 +133,7 @@ export const ContactForm = ({
 
             <div className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <FormField id="name" label="Full Name" required>
+                <FormField id="name" label="Name" required>
                   <Input
                     id="name"
                     name="name"
@@ -157,22 +147,6 @@ export const ContactForm = ({
                   />
                 </FormField>
 
-                <FormField id="email" label="Work Email" required>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="jane@company.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    disabled={isSubmitting}
-                    data-testid="contact-form-email-input"
-                  />
-                </FormField>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <FormField id="company" label="Company" required>
                   <Input
                     id="company"
@@ -186,87 +160,99 @@ export const ContactForm = ({
                     data-testid="contact-form-company-input"
                   />
                 </FormField>
-
-                <FormField id="role" label="Role / Title">
-                  <Input
-                    id="role"
-                    name="role"
-                    type="text"
-                    placeholder="CTO, Head of Operations, etc."
-                    value={formData.role}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    data-testid="contact-form-role-input"
-                  />
-                </FormField>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <FormField id="industry" label="Industry">
-                  <SelectField
-                    id="industry"
-                    name="industry"
-                    value={formData.industry}
+                <FormField id="email" label="Work email" required>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="jane@company.com"
+                    value={formData.email}
                     onChange={handleChange}
+                    required
                     disabled={isSubmitting}
-                    options={INDUSTRY_OPTIONS}
-                    placeholder="Select your industry"
-                    testId="contact-form-industry-select"
+                    data-testid="contact-form-email-input"
                   />
                 </FormField>
 
-                <FormField id="country" label="Country">
+                <FormField
+                  id="phone"
+                  label="Phone or WhatsApp"
+                  helper="Optional, useful for faster scheduling."
+                >
                   <Input
-                    id="country"
-                    name="country"
-                    type="text"
-                    placeholder="United Kingdom"
-                    value={formData.country}
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+44 ..."
+                    value={formData.phone}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    data-testid="contact-form-country-input"
+                    data-testid="contact-form-phone-input"
                   />
                 </FormField>
               </div>
 
-              <FormField id="hasData" label="Do you already have data, documents, or systems for this workflow?">
-                <SelectField
-                  id="hasData"
-                  name="hasData"
-                  value={formData.hasData}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                  options={HAS_DATA_OPTIONS}
-                  testId="contact-form-has-data-select"
-                />
-              </FormField>
-
-              <FormField id="message" label="What problem are you trying to solve?" required>
+              <FormField id="automation" label="What do you want to automate?" required>
                 <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about the business problem, the current workflow, and the outcome you would like to achieve."
-                  value={formData.message}
+                  id="automation"
+                  name="automation"
+                  placeholder="Describe the workflow, decision, or process you want AI to support."
+                  value={formData.automation}
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  rows={6}
-                  data-testid="contact-form-message-textarea"
+                  rows={5}
+                  data-testid="contact-form-automation-textarea"
                 />
               </FormField>
 
-              <FormField id="preferredContact" label="Preferred contact method">
-                <SelectField
-                  id="preferredContact"
-                  name="preferredContact"
-                  value={formData.preferredContact}
+              <FormField
+                id="currentTools"
+                label="Current tools used"
+                helper="CRM, helpdesk, spreadsheets, internal systems, etc."
+              >
+                <Input
+                  id="currentTools"
+                  name="currentTools"
+                  type="text"
+                  placeholder="HubSpot, Notion, Zendesk, Excel, ..."
+                  value={formData.currentTools}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  options={PREFERRED_CONTACT_OPTIONS}
-                  placeholder="No preference"
-                  testId="contact-form-preferred-contact-select"
+                  data-testid="contact-form-tools-input"
                 />
               </FormField>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <FormField id="budget" label="Budget range">
+                  <SelectField
+                    id="budget"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                    options={BUDGET_OPTIONS}
+                    placeholder="Select a range"
+                    testId="contact-form-budget-select"
+                  />
+                </FormField>
+
+                <FormField id="timeline" label="Timeline">
+                  <SelectField
+                    id="timeline"
+                    name="timeline"
+                    value={formData.timeline}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                    options={TIMELINE_OPTIONS}
+                    placeholder="When do you want to start?"
+                    testId="contact-form-timeline-select"
+                  />
+                </FormField>
+              </div>
 
               <div className="flex items-start gap-3">
                 <input
@@ -276,15 +262,16 @@ export const ContactForm = ({
                   checked={formData.consent}
                   onChange={handleChange}
                   disabled={isSubmitting}
+                  required
                   className="mt-1 h-4 w-4 rounded border-input text-[hsl(var(--accent-purple))] focus:ring-[hsl(var(--accent-purple))]"
                   data-testid="contact-form-consent-checkbox"
-                  required
                 />
                 <Label
                   htmlFor="consent"
                   className="text-xs text-muted-foreground leading-relaxed cursor-pointer"
                 >
-                  I agree to Drag AI processing the information above to respond to my enquiry, as described in the{' '}
+                  I agree to Drag AI processing the information above to respond to my enquiry, as
+                  described in the{' '}
                   <a href="/privacy" className="text-[hsl(var(--accent-purple))] hover:brightness-110">
                     Privacy Policy
                   </a>

@@ -11,11 +11,11 @@ export const Navbar = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/services', label: 'Services' },
-    { to: '/solutions', label: 'Solutions' },
     { to: '/industries', label: 'Industries' },
+    { to: '/case-studies', label: 'Case Studies' },
     { to: '/how-we-work', label: 'How We Work' },
+    { to: '/resources', label: 'Resources' },
     { to: '/about', label: 'About' },
-    { to: '/insights', label: 'Insights' },
     { to: '/contact', label: 'Contact' },
   ];
 
@@ -62,7 +62,7 @@ export const Navbar = () => {
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
                 data-testid="nav-book-discovery-call"
               >
-                Book a 30-Minute AI Discovery Call
+                Book Free AI Strategy Call
               </Button>
             </Link>
           </div>
@@ -105,7 +105,7 @@ export const Navbar = () => {
                     className="w-full bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))]"
                     data-testid="mobile-nav-book-discovery-call"
                   >
-                    Book a 30-Minute AI Discovery Call
+                    Book Free AI Strategy Call
                   </Button>
                 </Link>
               </div>

@@ -57,7 +57,7 @@ export const HomeHero = () => (
                   className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
                   data-testid="home-hero-book-call"
                 >
-                  Book a 30-Minute AI Discovery Call
+                  Book Free AI Strategy Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>

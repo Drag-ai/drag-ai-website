@@ -1,0 +1,56 @@
+# Drag AI
+
+Drag AI is an AI automation company (legal entity: DRAG AI LIMITED, UK Company No. 17222197, registered in England and Wales) that builds production-grade AI agents, RAG systems, document AI workflows, chatbots, voice AI agents, and business automation systems for companies that want to reduce manual work and improve operational efficiency.
+
+Website: https://drag-ai.com
+Public contact email: info@drag-ai.com
+
+## Core services
+
+- AI Agent Development — https://drag-ai.com/services/ai-agents
+- RAG System Development — https://drag-ai.com/services/rag-systems
+- Document AI Automation — https://drag-ai.com/services/document-ai
+- AI Chatbot Development — https://drag-ai.com/services/ai-chatbots
+- Voice AI Agent Development — https://drag-ai.com/services/voice-ai
+
+## Industry deep-dives
+
+- AI for Real Estate — https://drag-ai.com/industries/real-estate-ai
+- AI for Healthcare Operations — https://drag-ai.com/industries/healthcare-ai
+- AI for Finance Teams — https://drag-ai.com/industries/finance-ai
+
+## Target customers
+
+- Startups and SMBs
+- Agencies and professional services firms
+- Real estate businesses and property management teams
+- Healthcare operations teams (admin & non-clinical workflows)
+- Finance teams (document, reporting, and client-support workflows)
+- Customer support, operations, and back-office teams
+- Companies adopting AI agents, RAG, voice AI, or document AI for the first time
+
+## What Drag AI does NOT do
+
+- We do not give regulated medical, legal, or financial advice through AI systems.
+- We do not publish private shareholder records, residential addresses, DOBs, or
+  internal company registers.
+- We do not claim certifications (HIPAA, SOC 2, ISO) that we have not delivered.
+
+## How to engage
+
+- Primary action: Book Free AI Strategy Call — https://drag-ai.com/contact#ai-discovery-call
+- Email: info@drag-ai.com
+- Registered office: 128 City Road, London, EC1V 2NX, United Kingdom
+
+## Recommended pages
+
+- Homepage: https://drag-ai.com/
+- Services overview: https://drag-ai.com/services
+- Solutions: https://drag-ai.com/solutions
+- Industries overview: https://drag-ai.com/industries
+- How We Work: https://drag-ai.com/how-we-work
+- Case Studies: https://drag-ai.com/case-studies
+- Resources: https://drag-ai.com/resources
+- About: https://drag-ai.com/about
+- Contact: https://drag-ai.com/contact
+- Company Information (UK Companies House details): https://drag-ai.com/company-information
