@@ -5,7 +5,7 @@ import { Button } from '../components/ui/button';
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
-import { ArrowRight, Bot, Database, MessageSquare, Clock } from 'lucide-react';
+import { ArrowRight, Bot, Database, MessageSquare, Clock, FileText, Calculator } from 'lucide-react';
 
 // Only published, indexable articles are shown here. Skeleton (noindex) drafts
 // are intentionally NOT listed in the hub to avoid thin-content SEO issues.
@@ -36,6 +36,24 @@ const articles = [
     excerpt:
       'How a private chatbot grounded in your company documents actually works \u2014 architecture, access control, supported formats, accuracy, and rollout.',
     readingTime: '8 min read',
+  },
+  {
+    slug: 'ai-agent-development-cost',
+    category: 'Pricing & Planning',
+    Icon: Calculator,
+    title: 'AI Agent Development Cost: A Practical Budgeting Guide for 2026',
+    excerpt:
+      'Realistic price ranges for production-grade AI agents, the five biggest cost drivers, ongoing run + improvement costs, and a decision checklist for buyers.',
+    readingTime: '9 min read',
+  },
+  {
+    slug: 'document-ai-automation',
+    category: 'Document AI',
+    Icon: FileText,
+    title: 'Document AI Automation: How It Works & Where It Pays Off',
+    excerpt:
+      'A practical guide to Document AI automation \u2014 real use cases, how a production pipeline is built, where projects fail, and a 4-week first-phase plan.',
+    readingTime: '10 min read',
   },
 ];
 
@@ -75,7 +93,7 @@ export default function Resources() {
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
               Honest, opinionated writing about agentic AI, RAG, document intelligence, and voice
-              AI \u2014 what works in production, what does not, and how to tell the difference
+              AI — what works in production, what does not, and how to tell the difference
               before you spend.
             </p>
           </Reveal>

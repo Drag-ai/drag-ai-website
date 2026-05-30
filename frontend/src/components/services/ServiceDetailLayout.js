@@ -64,6 +64,8 @@ export default function ServiceDetailLayout({ service }) {
     title: service.seo.title,
     description: service.seo.description,
     canonical: `/services/${service.slug}`,
+    ogImage: service.seo.ogImage || `/og-images/service-${service.slug}.png`,
+    ogType: 'article',
     breadcrumbs,
     jsonLd,
   });

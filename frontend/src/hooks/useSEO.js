@@ -3,8 +3,14 @@ import { useEffect } from 'react';
 // Stable module-level constants — safe to reference from inside the effect
 // because they never change at runtime.
 const SITE_URL = 'https://drag-ai.com';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/favicon.svg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-images/home.png`;
 const DEFAULT_TITLE = 'Drag AI — Production-Grade Agentic AI Systems';
+
+const resolveOgImage = (ogImage) => {
+  if (!ogImage) return DEFAULT_OG_IMAGE;
+  if (/^https?:\/\//i.test(ogImage)) return ogImage;
+  return `${SITE_URL}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
+};
 
 // ---------- Pure DOM helpers (module-scope; intentionally not memoized) ----------
 
@@ -42,19 +48,25 @@ const buildFinalTitle = (title) => {
 };
 
 const applyOpenGraph = ({ finalTitle, description, ogType, ogImage, canonical }) => {
+  const resolvedImage = resolveOgImage(ogImage);
   setPropertyMeta('og:site_name', 'Drag AI');
   setPropertyMeta('og:title', finalTitle);
   setPropertyMeta('og:description', description);
   setPropertyMeta('og:type', ogType || 'website');
-  setPropertyMeta('og:image', ogImage || DEFAULT_OG_IMAGE);
+  setPropertyMeta('og:image', resolvedImage);
+  setPropertyMeta('og:image:width', '1200');
+  setPropertyMeta('og:image:height', '630');
+  setPropertyMeta('og:image:alt', finalTitle);
   if (canonical) setPropertyMeta('og:url', `${SITE_URL}${canonical}`);
 };
 
 const applyTwitter = ({ finalTitle, description, ogImage }) => {
+  const resolvedImage = resolveOgImage(ogImage);
   setNamedMeta('twitter:card', 'summary_large_image');
   setNamedMeta('twitter:title', finalTitle);
   setNamedMeta('twitter:description', description);
-  setNamedMeta('twitter:image', ogImage || DEFAULT_OG_IMAGE);
+  setNamedMeta('twitter:image', resolvedImage);
+  setNamedMeta('twitter:image:alt', finalTitle);
 };
 
 const buildBreadcrumbsBlock = (breadcrumbs) => {

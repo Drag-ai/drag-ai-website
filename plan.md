@@ -33,7 +33,7 @@
 - **Strict legal constraint:** NEVER publish private/residential addresses, DOBs, shareholder docs, internal registers, or private incorporation PDFs.
 - **No fake claims**: No fake clients, logos, revenue, performance percentages, or certifications.
 
-**Current status:** Phases 1–7 completed ✅ and the new SEO/architecture expansion (Phases A–G) is **also fully completed ✅**. The site builds cleanly, react-snap pre-renders every indexable route to static HTML, all per-page meta + JSON-LD is correct, the sitewide CTA is standardized, and noindex/sitemap rules for unfinished content are in place. Remaining items are user-supplied (analytics IDs, optional Calendly swap).
+**Current status:** Phases 1–7 completed ✅, expansion Phases A–G completed ✅, and Phase H (post-launch QA + branded OG images + 2 additional full articles) is **also completed ✅**. The site builds cleanly, react-snap pre-renders **34 indexable routes** to static HTML, every page has a unique branded 1200×630 OG/Twitter image, all per-page meta + JSON-LD is correct, the sitewide CTA is standardized, the Resources hub now lists **5 full articles**, and noindex/sitemap rules for the remaining 3 skeleton drafts are preserved. Remaining items are user-supplied (analytics IDs, optional Calendly swap).
 
 ---
 
@@ -361,6 +361,43 @@
 2. Booking calendar:
    - Swap CTA href to Calendly once available.
 3. Publish remaining resource articles before indexing them.
+
+---
+
+## 2C) Post-launch hardening (Phase H — Testing, Social, Content)
+
+### Phase H — Comprehensive site test + OG images + 2 more full articles
+**Goal:** Verify the entire site behaves like a production B2B website, give every key page a branded social-share image, and convert two more skeleton drafts into indexable full articles.
+
+**Current status:** ✅ **COMPLETED**
+
+**Delivered**
+1. **Comprehensive end-to-end testing (testing-agent, iteration 4):** 70 / 70 tests passed across all 20+ routes — desktop & mobile navigation, hamburger menu, footer UK company block, all 5 service deep-dives, all 3 industry deep-dives, the `/industries/property-management` → `/industries/real-estate-ai` redirect, all 6 legacy industry pages, the Resources hub, all 3 originally-published articles, all 5 skeleton drafts (noindex verified via `document.querySelector('meta[name="robots"]').content`), case-studies, about, careers, how-we-work, contact (with mocked Web3Forms submission → success toast), all 4 legal pages, the SEO meta sanity per page, the static `robots.txt` / `sitemap.xml` / `llms.txt`, scroll-to-top behavior, mobile responsive sanity, and console-error sweep. No critical bugs found.
+2. **12 branded 1200×630 OG / Twitter card images** generated via Playwright + an HTML template (`/app/scripts/generate_og_images.py`, `/app/scripts/og_template.html`) for: home, 5 services (`/services/ai-agents`, `/services/rag-systems`, `/services/document-ai`, `/services/ai-chatbots`, `/services/voice-ai`), 3 industries (`/industries/real-estate-ai`, `/industries/healthcare-ai`, `/industries/finance-ai`), and 3 original articles. Saved to `/app/frontend/public/og-images/` (each ~220 KB). Branded with Drag AI logo, UK Registered chip, page-specific eyebrow + headline + subtitle, drag-ai.com domain, and a Book Free AI Strategy Call CTA pill.
+3. **2 more full OG images** generated when the new articles were published, totalling **14 branded OG images**.
+4. **`useSEO` upgraded** to support per-page `ogImage`, resolve relative paths to absolute, and emit `og:image`, `og:image:width`, `og:image:height`, `og:image:alt`, `twitter:image`, `twitter:image:alt` in the rendered HTML. Article JSON-LD now also includes the `image` property.
+5. **Per-page OG wiring**: extended `ServiceDetailLayout`, `IndustryDetailLayout`, `ArticleLayout`, and `Home.js` to pass `ogImage` automatically (fallback to `/og-images/<type>-<slug>.png`). Verified in pre-rendered HTML: every key route now has a unique `og:image` and `twitter:image` URL.
+6. **2 new full articles published** (previously noindex skeletons, now indexable):
+   - `/resources/ai-agent-development-cost` — "AI Agent Development Cost: A Practical Budgeting Guide for 2026" (~1200 words, 7 sections, 6 FAQs, ToC, 5 internal links, full Article + FAQPage + BreadcrumbList schema, branded OG image).
+   - `/resources/document-ai-automation` — "Document AI Automation: How It Works, Where It Pays Off, and How to Get It Right" (~1300 words, 7 sections, 6 FAQs, ToC, 6 internal links, full Article + FAQPage + BreadcrumbList schema, branded OG image).
+7. **Resources hub `/resources` updated** to surface both new articles (now lists 5 full articles instead of 3). 3 remaining skeleton drafts continue to use `noindex,nofollow` and are still excluded from the hub.
+8. **`sitemap.xml` updated** to include the 2 new article URLs. 3 remaining skeleton URLs continue to be excluded.
+9. **`package.json` `reactSnap.include` updated** so both new articles are pre-rendered to static HTML at build time.
+10. **Resource hub copy fix** — replaced literal `\u2014` (which was rendering as text in JSX) with a real em-dash character.
+11. **Final fresh build verified**: `yarn build` succeeds end-to-end (~25s), pre-rendering 34 routes (was 32 before this phase). Spot-check confirms both new articles emit `index,follow`, canonical URL, single H1, unique title/description, Article + FAQPage + BreadcrumbList JSON-LD, and their branded OG image.
+
+**Files created/changed in Phase H**
+- Created: `/app/scripts/generate_og_images.py`, `/app/scripts/og_template.html`, `/app/frontend/public/og-images/*.png` (14 images + manifest.json).
+- Modified: `/app/frontend/src/hooks/useSEO.js` (resolveOgImage helper + extra OG/Twitter meta), `/app/frontend/src/components/services/ServiceDetailLayout.js`, `/app/frontend/src/components/industries/IndustryDetailLayout.js`, `/app/frontend/src/components/resources/ArticleLayout.js`, `/app/frontend/src/pages/Home.js`, `/app/frontend/public/index.html` (default OG image + dimensions), `/app/frontend/public/sitemap.xml`, `/app/frontend/package.json` (reactSnap.include).
+- Rewritten (skeleton → full): `/app/frontend/src/pages/resources/AIAgentCostArticle.js`, `/app/frontend/src/pages/resources/DocumentAIArticle.js`.
+- Modified: `/app/frontend/src/pages/Resources.js` (added 2 cards to hub, fixed em-dash, added 2 new icons).
+
+**Exit criteria (met)**
+- ✅ 70/70 end-to-end tests passed.
+- ✅ 14 branded OG images shipped at `/og-images/*.png`.
+- ✅ Per-page `og:image` + `twitter:image` verified in pre-rendered HTML for all 14 key routes.
+- ✅ 2 new full articles published, indexable, added to sitemap, and pre-rendered.
+- ✅ Fresh `yarn build` succeeds with 34 pre-rendered routes.
 
 ---
 

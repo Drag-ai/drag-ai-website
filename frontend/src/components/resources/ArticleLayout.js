@@ -27,6 +27,8 @@ export default function ArticleLayout({ article }) {
     { name: article.title, path: `/resources/${article.slug}` },
   ];
 
+  const ogImagePath = article.seo.ogImage || (article.noindex ? undefined : `/og-images/article-${article.slug}.png`);
+
   const jsonLd = [];
   if (!article.noindex) {
     jsonLd.push({
@@ -34,6 +36,7 @@ export default function ArticleLayout({ article }) {
       '@type': 'Article',
       headline: article.title,
       description: article.seo.description,
+      image: ogImagePath ? `https://drag-ai.com${ogImagePath}` : undefined,
       author: { '@type': 'Organization', name: 'DRAG AI LIMITED' },
       publisher: {
         '@type': 'Organization',
@@ -65,6 +68,8 @@ export default function ArticleLayout({ article }) {
     title: article.seo.title,
     description: article.seo.description,
     canonical: `/resources/${article.slug}`,
+    ogImage: ogImagePath,
+    ogType: article.noindex ? 'website' : 'article',
     noindex: !!article.noindex,
     breadcrumbs: article.noindex ? undefined : breadcrumbs,
     jsonLd: jsonLd.length > 0 ? jsonLd : undefined,

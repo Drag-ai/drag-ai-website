@@ -1,34 +1,38 @@
 [
   {
-    "content": "Priority 1 — Comprehensive testing pass via testing-agent across all 20+ routes (nav, footer, CTAs, forms, mobile, sitemap, robots, noindex, 404, form success)",
-    "status": "in_progress"
+    "content": "Priority 1 — Comprehensive testing pass via testing-agent across all 20+ routes",
+    "status": "completed"
   },
   {
-    "content": "Priority 1.b — Fix any bugs reported by testing-agent (high → low priority)",
-    "status": "pending"
+    "content": "Priority 1.b — Fix any bugs reported by testing-agent",
+    "status": "completed"
   },
   {
     "content": "Priority 2 — Generate 12 branded OG images (1200x630) for home, 5 services, 3 industries, 3 articles",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Priority 2.b — Wire og:image + twitter:image meta tags per page via useSEO and verify in pre-rendered HTML",
-    "status": "pending"
+    "status": "completed"
   },
   {
-    "content": "Priority 3 — Write full SEO-ready article for /resources/ai-agent-development-cost (1000-1500 words, H1/meta, ToC, internal links, FAQ + schema, CTA, remove noindex)",
-    "status": "pending"
+    "content": "Priority 3 — Write full SEO-ready article for /resources/ai-agent-development-cost",
+    "status": "completed"
   },
   {
-    "content": "Priority 3 — Write full SEO-ready article for /resources/document-ai-automation (1000-1500 words, H1/meta, ToC, internal links, FAQ + schema, CTA, remove noindex)",
-    "status": "pending"
+    "content": "Priority 3 — Write full SEO-ready article for /resources/document-ai-automation",
+    "status": "completed"
   },
   {
-    "content": "Priority 3.b — Add both newly-published article URLs to sitemap.xml and reactSnap.include list, then rebuild",
-    "status": "pending"
+    "content": "Priority 3.b — Generate 2 more OG images for the newly published articles",
+    "status": "completed"
+  },
+  {
+    "content": "Priority 3.c — Add both newly-published article URLs to sitemap.xml and reactSnap.include list, then rebuild",
+    "status": "completed"
   },
   {
     "content": "Final — Run yarn build, verify pre-rendering captures new articles + new OG meta tags, produce final report",
-    "status": "pending"
+    "status": "completed"
   }
 ]

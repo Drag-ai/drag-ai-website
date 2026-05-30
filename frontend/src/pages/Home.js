@@ -29,6 +29,7 @@ export default function Home() {
     description:
       'Build production-grade agentic AI systems with Drag AI. Custom AI agents, autonomous workflows, RAG, document intelligence, voice AI, and predictive analytics for modern businesses.',
     canonical: '/',
+    ogImage: '/og-images/home.png',
     jsonLd: HOME_JSON_LD,
   });
 

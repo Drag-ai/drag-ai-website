@@ -48,6 +48,8 @@ export default function IndustryDetailLayout({ industry }) {
     title: industry.seo.title,
     description: industry.seo.description,
     canonical: `/industries/${industry.slug}`,
+    ogImage: industry.seo.ogImage || `/og-images/industry-${industry.slug}.png`,
+    ogType: 'article',
     breadcrumbs,
     jsonLd,
   });
