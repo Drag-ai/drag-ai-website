@@ -3,6 +3,13 @@ import { Card } from '../ui/card';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Label } from '../ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../ui/select';
 import { Reveal } from '../Reveal';
 import { Send } from 'lucide-react';
 
@@ -20,28 +27,26 @@ const FormField = ({ id, label, required, children, helper }) => (
 );
 
 const SelectField = ({ id, name, value, onChange, disabled, options, placeholder, testId }) => (
-  <select
-    id={id}
-    name={name}
-    value={value}
-    onChange={onChange}
+  <Select
+    value={value || undefined}
+    onValueChange={(next) => onChange({ target: { name, value: next, type: 'select-one' } })}
     disabled={disabled}
-    data-testid={testId}
-    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
   >
-    {placeholder !== undefined && <option value="">{placeholder}</option>}
-    {options.map((opt) =>
-      typeof opt === 'string' ? (
-        <option key={opt} value={opt}>
-          {opt}
-        </option>
-      ) : (
-        <option key={opt.value} value={opt.value}>
-          {opt.label}
-        </option>
-      ),
-    )}
-  </select>
+    <SelectTrigger id={id} data-testid={testId}>
+      <SelectValue placeholder={placeholder} />
+    </SelectTrigger>
+    <SelectContent>
+      {options.map((opt) => {
+        const optValue = typeof opt === 'string' ? opt : opt.value;
+        const optLabel = typeof opt === 'string' ? opt : opt.label;
+        return (
+          <SelectItem key={optValue} value={optValue}>
+            {optLabel}
+          </SelectItem>
+        );
+      })}
+    </SelectContent>
+  </Select>
 );
 
 const SuccessState = ({ onReset }) => (
