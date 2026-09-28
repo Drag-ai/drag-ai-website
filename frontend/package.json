@@ -64,7 +64,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap || echo 'react-snap prerendering failed (e.g. no headless Chrome available in this build environment) — shipping the client-rendered build without prerendering.'"
   },
   "browserslist": {
     "production": [
