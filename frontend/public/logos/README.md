@@ -108,7 +108,7 @@ The Drag AI logo features a **neural network node pattern** representing artific
 Access the interactive logo gallery with previews and direct downloads:
 
 **Local URL:** http://localhost:3000/logos/
-**Live URL:** https://ai-systems-4.preview.emergentagent.com/logos/
+**Live URL:** https://drag-ai.com/logos/
 
 ---
 

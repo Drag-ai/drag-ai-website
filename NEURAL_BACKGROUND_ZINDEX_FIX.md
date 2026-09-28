@@ -255,7 +255,7 @@ For content that should appear "on top of" the background but "below" other cont
 
 1. **Load homepage:**
    ```
-   https://ai-systems-4.preview.emergentagent.com
+   https://drag-ai.com
    ```
 
 2. **Check hero section:**

@@ -36,7 +36,8 @@ I've created a complete logo package for Drag AI with **4 professional-grade SVG
 ## 🌐 Access Your Logos
 
 ### Web Gallery (Recommended)
-**Live URL:** https://ai-systems-4.preview.emergentagent.com/logos/
+**Live URL:** https://drag-ai.com/logos/
+**Local URL:** http://localhost:3000/logos/
 
 The gallery includes:
 - ✅ Visual previews of all logo variants
@@ -164,7 +165,7 @@ import { Logo } from '@/components/Logo';
 
 ## 📱 Next Steps
 
-1. **Visit the gallery:** https://ai-systems-4.preview.emergentagent.com/logos/
+1. **Visit the gallery:** https://drag-ai.com/logos/
 2. **Download the logos you need** for immediate use
 3. **Bookmark the gallery URL** for future reference
 4. **Share with your team** - they can download directly from the gallery
@@ -185,7 +186,7 @@ import { Logo } from '@/components/Logo';
 ---
 
 **Files Location:** `/app/frontend/public/logos/`
-**Web Gallery:** https://ai-systems-4.preview.emergentagent.com/logos/
+**Web Gallery:** https://drag-ai.com/logos/
 **Created:** March 26, 2025
 
 Enjoy your new high-quality logo assets! 🎉
