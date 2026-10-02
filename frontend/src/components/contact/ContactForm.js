@@ -143,7 +143,7 @@ export const ContactForm = ({
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Jane Doe"
+                    placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -157,7 +157,7 @@ export const ContactForm = ({
                     id="company"
                     name="company"
                     type="text"
-                    placeholder="Acme Ltd."
+                    placeholder="Company Name"
                     value={formData.company}
                     onChange={handleChange}
                     required
@@ -173,7 +173,7 @@ export const ContactForm = ({
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="jane@company.com"
+                    placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
                     required
