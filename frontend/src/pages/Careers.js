@@ -23,86 +23,6 @@ const WEB3FORMS_KEY =
 
 const openPositions = [
   {
-    id: 'senior-agentic-ai-engineer',
-    title: 'Senior Agentic AI Engineer',
-    team: 'Engineering',
-    type: 'Full-time',
-    location: 'Remote (UK / EU friendly)',
-    experience: '5+ years',
-    summary:
-      'Design and build production-grade agentic AI systems: tool-using agents, multi-step workflows, evaluation harnesses, and human-in-the-loop interfaces for real client engagements.',
-    requirements: [
-      '5+ years software engineering, with 2+ years on LLM / agent systems',
-      'Strong Python and TypeScript; comfortable across backend and full-stack',
-      'Hands-on with at least one agent framework (LangGraph, LlamaIndex, CrewAI, etc.)',
-      'Experience designing evaluation, guardrails, and observability for AI systems',
-    ],
-  },
-  {
-    id: 'rag-knowledge-engineer',
-    title: 'RAG &amp; Knowledge Systems Engineer',
-    team: 'Engineering',
-    type: 'Full-time',
-    location: 'Remote (UK / EU friendly)',
-    experience: '3+ years',
-    summary:
-      'Own the design and delivery of enterprise RAG pipelines: ingestion, chunking, embeddings, retrieval quality, freshness, evaluation, and source-grounded responses.',
-    requirements: [
-      'Solid experience with embeddings, vector stores, and retrieval evaluation',
-      'Python, FastAPI / Node, and at least one vector DB (pgvector, Pinecone, Qdrant, Weaviate)',
-      'Comfortable working with messy enterprise data: PDF, DOCX, PPTX, XLSX',
-      'Strong sense for accuracy, latency, and cost trade-offs in production',
-    ],
-  },
-  {
-    id: 'document-ai-engineer',
-    title: 'Document AI Engineer',
-    team: 'Engineering',
-    type: 'Full-time / Contract',
-    location: 'Remote',
-    experience: '3+ years',
-    summary:
-      'Build Document AI pipelines for invoices, contracts, leases, claims, and forms — extraction, validation, exception routing, and clean JSON / Excel / API output.',
-    requirements: [
-      'Experience with document parsing, OCR, and structured extraction',
-      'Comfortable combining LLMs with classical NLP, schemas, and validation rules',
-      'Python; bonus for experience with layout-aware models or custom extractors',
-      'Outcome-focused: precision, recall, and human review effort matter',
-    ],
-  },
-  {
-    id: 'ai-solutions-consultant',
-    title: 'AI Solutions Consultant',
-    team: 'Delivery',
-    type: 'Full-time',
-    location: 'Remote (UK / EU preferred)',
-    experience: '4+ years',
-    summary:
-      'Bridge client business problems and our technical delivery. Run discovery, scope PoCs, design workflows, and translate operational needs into AI solutions that actually ship.',
-    requirements: [
-      '4+ years in consulting, solutions engineering, or technical product roles',
-      'Strong communication with senior stakeholders and operational teams',
-      'Good intuition for what AI can and cannot do today; honest framing of trade-offs',
-      'Comfortable scoping, sizing, and evaluating AI use cases end-to-end',
-    ],
-  },
-  {
-    id: 'ai-product-designer',
-    title: 'AI Product Designer',
-    team: 'Design',
-    type: 'Full-time / Contract',
-    location: 'Remote',
-    experience: '3+ years',
-    summary:
-      'Design interfaces and workflows for AI systems — agent UIs, review tools, dashboards, and human-in-the-loop experiences that are clear, fast, and trustworthy.',
-    requirements: [
-      '3+ years in product design with strong B2B or workflow tooling experience',
-      'Solid Figma, design-system thinking, and a craft-led portfolio',
-      'Interest in AI UX patterns: trust, control, transparency, and graceful fallback',
-      'Comfortable working closely with engineering and partnering on prototypes',
-    ],
-  },
-  {
     id: 'ai-delivery-lead',
     title: 'AI Delivery Lead',
     team: 'Delivery',
@@ -116,6 +36,32 @@ const openPositions = [
       'Strong project leadership, scoping, and stakeholder management skills',
       'Hands-on enough to challenge architecture and timeline assumptions',
       'Bias for honest scoping and measurable outcomes over scope creep',
+    ],
+  },
+  {
+    id: 'business-development-executive',
+    title: 'Business Development Executive',
+    team: 'Sales',
+    type: 'Full-time',
+    location: 'Remote (UK / EU friendly)',
+    experience: '5+ years',
+    summary:
+      'Drive new business for Drag AI: find and qualify organisations ready to put AI into production, build relationships with senior decision makers, and turn conversations into signed engagements.',
+    responsibilities: [
+      'Build and manage your own pipeline through outbound outreach, LinkedIn, email campaigns, events, networking, and referrals',
+      'Research target industries and accounts to identify where agentic AI, RAG, document AI, and voice AI can deliver measurable value',
+      'Run discovery meetings to understand client challenges, and qualify opportunities with our delivery team',
+      'Prepare and present tailored proposals, and negotiate scope, pricing, and terms through to close',
+      'Keep the CRM accurate and report on pipeline, forecasts, and progress against targets',
+      'Track market trends and competitor activity, and feed client insight back into our services and marketing',
+    ],
+    requirements: [
+      'Minimum 5 years in business development or B2B sales, ideally selling technology, software, or consulting services',
+      'Proven track record of generating new business and meeting or exceeding revenue targets',
+      'Confident building relationships with senior stakeholders and running consultative sales conversations',
+      'Excellent written and verbal communication, presentation, and negotiation skills',
+      'Strong interest in AI and automation, and able to explain technical value in plain business terms',
+      'Comfortable with CRM tools (e.g. HubSpot or Salesforce) and LinkedIn Sales Navigator',
     ],
   },
 ];
@@ -193,6 +139,19 @@ const PositionCard = ({ position, onApply }) => (
         </Button>
       </div>
 
+      {position.responsibilities && (
+        <div className="mb-4">
+          <p className="font-mono text-[10px] uppercase tracking-wider text-foreground/60 mb-2">
+            Key responsibilities
+          </p>
+          <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+            {position.responsibilities.map((item) => (
+              <li key={`${position.id}-resp-${item}`}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div>
         <p className="font-mono text-[10px] uppercase tracking-wider text-foreground/60 mb-2">
           Key requirements
@@ -250,7 +209,9 @@ const Careers = () => {
           ? 'designer-product'
           : position.team === 'Delivery'
             ? 'consultant'
-            : 'ai-engineer',
+            : position.team === 'Sales'
+              ? 'business-development'
+              : 'ai-engineer',
     }));
     formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -494,6 +455,7 @@ const Careers = () => {
                       <option value="ai-engineer">AI Engineer</option>
                       <option value="designer-product">Designer / Product</option>
                       <option value="consultant">Consultant / Delivery</option>
+                      <option value="business-development">Business Development / Sales</option>
                       <option value="delivery-partner">Delivery Partner / Studio</option>
                       <option value="other">Other</option>
                     </select>
