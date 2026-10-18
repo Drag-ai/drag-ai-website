@@ -103,11 +103,14 @@ export default function Resources() {
       {/* Article grid */}
       <section className="py-10 sm:py-14 bg-secondary/40">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map((article) => {
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6">
+            {articles.map((article, index) => {
               const { Icon } = article;
               return (
-                <Reveal key={article.slug}>
+                <Reveal
+                  key={article.slug}
+                  className={`lg:col-span-2 ${index === 3 ? 'lg:col-start-2' : ''} ${index === 4 ? 'lg:col-start-4' : ''}`}
+                >
                   <Link to={`/resources/${article.slug}`} className="block h-full group">
                     <Card
                       className="p-6 card-hover h-full flex flex-col"

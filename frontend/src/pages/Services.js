@@ -166,6 +166,12 @@ const ServicesCTA = () => (
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </Link>
+        <p className="mt-5 text-sm text-muted-foreground">
+          <span>Looking for ready-to-try conversation tools? </span>
+          <Link to="/products" className="font-medium text-[hsl(var(--accent-purple))] hover:underline">
+            Explore Drag Voice and Drag Chat.
+          </Link>
+        </p>
       </Reveal>
     </div>
   </section>

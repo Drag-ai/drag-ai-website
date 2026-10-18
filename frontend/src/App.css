@@ -1,12 +1,37 @@
 /* Minimal App.css - most styling handled by Tailwind */
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 100;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.prose a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.prose a:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 3px;
+}
+
 /* Custom gradient backgrounds for hero */
 .hero-gradient-purple {
-  background: radial-gradient(60% 60% at 20% 10%, rgba(139, 92, 246, 0.20) 0%, rgba(139, 92, 246, 0.00) 60%);
+  background: radial-gradient(60% 60% at 20% 10%, rgba(34, 211, 238, 0.16) 0%, rgba(34, 211, 238, 0.00) 60%);
 }
 
 .hero-gradient-pink {
-  background: radial-gradient(50% 50% at 85% 15%, rgba(236, 72, 153, 0.14) 0%, rgba(236, 72, 153, 0.00) 55%);
+  background: radial-gradient(50% 50% at 85% 15%, rgba(99, 102, 241, 0.10) 0%, rgba(99, 102, 241, 0.00) 55%);
 }
 
 /* Smooth link underline animation */
@@ -68,6 +93,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+
   .nn-bg {
     display: none;
   }

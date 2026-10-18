@@ -93,7 +93,7 @@ export default function CompanyInformation() {
                 <div className="pl-14">
                   <h3 className="font-semibold mb-1">Registry Reference</h3>
                   <p className="text-muted-foreground">
-                    Public record available via Companies House:{' '}
+                    <span>Public record available via Companies House: </span>
                     <a
                       href="https://find-and-update.company-information.service.gov.uk/company/17222197"
                       target="_blank"
@@ -129,11 +129,11 @@ export default function CompanyInformation() {
                   <div>
                     <h3 className="font-semibold mb-1">Business Enquiries</h3>
                     <p className="text-muted-foreground">
-                      For business enquiries, please email{' '}
-                      <a href="mailto:info@drag-ai.com" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">info@drag-ai.com</a>{' '}
-                      or use the{' '}
-                      <a href="/contact#ai-discovery-call" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">contact form</a>{' '}
-                      on this website.
+                      <span>For business enquiries, please email </span>
+                      <a href="mailto:info@drag-ai.com" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">info@drag-ai.com</a>
+                      <span> or use the </span>
+                      <a href="/contact#ai-discovery-call" className="text-[hsl(var(--accent-purple))] hover:brightness-110 transition-colors">contact form</a>
+                      <span> on this website.</span>
                     </p>
                   </div>
                 </div>

@@ -3,6 +3,9 @@ import { NeuralBackground } from '../components/NeuralBackground';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { useSEO } from '../hooks/useSEO';
+import { getLastUpdatedDate } from '../lib/lastUpdatedDate';
+
+const LAST_UPDATED = getLastUpdatedDate();
 
 export default function Terms() {
   useSEO({
@@ -27,7 +30,7 @@ export default function Terms() {
                 Terms <span className="text-[hsl(var(--accent-purple))]">of Use</span>
               </h1>
               <p className="text-sm text-muted-foreground">
-                Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                Last updated: <time data-last-updated dateTime={LAST_UPDATED.dateTime}>{LAST_UPDATED.label}</time>
               </p>
             </div>
           </Reveal>

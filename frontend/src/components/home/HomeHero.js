@@ -29,9 +29,9 @@ export const HomeHero = () => (
         <div>
           <Reveal>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-              Production-Grade{' '}
-              <span className="text-[hsl(var(--accent-purple))]">AI Agents &amp; Automation</span>{' '}
-              Systems for Modern Businesses
+              <span>Production-Grade </span>
+              <span className="text-[hsl(var(--accent-purple))]">AI Agents &amp; Automation</span>
+              <span> Systems for Modern Businesses</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>

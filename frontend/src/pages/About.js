@@ -27,7 +27,7 @@ const AboutHero = () => (
         <div>
           <Reveal>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-              Building Practical AI Systems for{' '}
+              <span>Building Practical AI Systems for </span>
               <span className="text-[hsl(var(--accent-purple))]">Real Business Workflows</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">

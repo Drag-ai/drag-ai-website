@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from './ui/sheet';
 import { Menu } from 'lucide-react';
@@ -7,10 +7,12 @@ import { Logo } from './Logo';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/services', label: 'Services' },
+    { to: '/products', label: 'Products' },
     { to: '/industries', label: 'Industries' },
     { to: '/case-studies', label: 'Case Studies' },
     { to: '/how-we-work', label: 'How We Work' },
@@ -24,6 +26,7 @@ export const Navbar = () => {
 
   return (
     <nav
+      aria-label="Main navigation"
       className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70"
       data-testid="site-nav"
     >
@@ -36,18 +39,19 @@ export const Navbar = () => {
             data-testid="nav-logo"
           >
             <Logo className="h-8 w-8 group-hover:scale-110 transition-transform" />
-            <span className="font-display text-xl font-semibold tracking-tight bg-gradient-to-r from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink))] bg-clip-text text-transparent">
+            <span className="font-display text-xl font-semibold tracking-tight bg-gradient-to-r from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink-contrast))] bg-clip-text text-transparent">
               Drag AI
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-6 lg:gap-8 md:flex">
+          <div className="hidden items-center gap-4 min-[1280px]:flex 2xl:gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="link-underline text-sm font-medium text-foreground/80 hover:text-foreground"
+                aria-current={pathname === link.to || (link.to !== '/' && pathname.startsWith(`${link.to}/`)) ? 'page' : undefined}
+                className={`link-underline whitespace-nowrap text-sm font-medium hover:text-foreground ${pathname === link.to || (link.to !== '/' && pathname.startsWith(`${link.to}/`)) ? 'text-foreground' : 'text-foreground/80'}`}
                 data-testid={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {link.label}
@@ -56,7 +60,7 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden min-[1280px]:block">
             <Link to={PRIMARY_CTA_HREF}>
               <Button
                 className="bg-[hsl(var(--accent-purple))] text-[hsl(var(--accent-purple-foreground))] shadow-sm hover:brightness-95"
@@ -69,7 +73,7 @@ export const Navbar = () => {
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="min-[1280px]:hidden">
               <Button
                 variant="ghost"
                 size="icon"
@@ -81,14 +85,14 @@ export const Navbar = () => {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[300px] sm:w-[400px]"
+              className="max-h-dvh w-[300px] max-w-[calc(100vw-1rem)] overflow-y-auto sm:w-[400px]"
               data-testid="mobile-nav-sheet"
             >
               <SheetTitle className="text-lg font-semibold mb-2">Navigation Menu</SheetTitle>
               <SheetDescription className="text-sm text-muted-foreground mb-4">
                 Navigate to different sections of the website
               </SheetDescription>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.to}

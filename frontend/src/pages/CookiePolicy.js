@@ -3,6 +3,9 @@ import { Badge } from '../components/ui/badge';
 import { Reveal } from '../components/Reveal';
 import { NeuralBackground } from '../components/NeuralBackground';
 import { useSEO } from '../hooks/useSEO';
+import { getLastUpdatedDate } from '../lib/lastUpdatedDate';
+
+const LAST_UPDATED = getLastUpdatedDate();
 
 export default function CookiePolicy() {
   useSEO({
@@ -43,7 +46,7 @@ export default function CookiePolicy() {
           <Reveal>
             <Card className="p-8 sm:p-10">
               <div className="prose prose-sm max-w-none">
-                <p className="text-sm text-muted-foreground mb-6">Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                <p className="text-sm text-muted-foreground mb-6">Last updated: <time data-last-updated dateTime={LAST_UPDATED.dateTime}>{LAST_UPDATED.label}</time></p>
 
                 <h2 className="text-xl font-semibold mb-4">What Are Cookies?</h2>
                 <p className="text-muted-foreground mb-6">

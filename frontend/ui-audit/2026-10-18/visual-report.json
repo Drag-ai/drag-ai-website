@@ -1,0 +1,2013 @@
+{
+  "generatedAt": "2026-10-18T18:31:19.402Z",
+  "baseUrl": "http://127.0.0.1:8788",
+  "routeCount": 36,
+  "viewportWidths": [
+    360,
+    390,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "screenshotRoutes": [
+    "/",
+    "/products",
+    "/contact",
+    "/services",
+    "/industries",
+    "/how-we-work",
+    "/case-studies",
+    "/resources",
+    "/insights",
+    "/about",
+    "/careers",
+    "/resources/what-is-an-ai-agent-for-business",
+    "/privacy",
+    "/chat-demo/"
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "heading": "Production-Grade AI Agents & Automation Systems for Modern Businesses",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 10658,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 10309,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 6621,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 6338,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 6246,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 6246,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "heading": "Building Practical AI Systems for Real Business Workflows",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 7018,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 6639,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 4367,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4384,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4220,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4220,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "heading": "Let's Discuss Your AI Use Case",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 3956,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 3920,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 2635,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 2166,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 2166,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 2166,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/how-we-work",
+      "status": 200,
+      "heading": "How We Work",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6651,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 6511,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3987,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4023,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4023,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4023,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/case-studies",
+      "status": 200,
+      "heading": "AI Automation Case Studies",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 4861,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 4720,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 2711,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 2625,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 2578,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 2578,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/careers",
+      "status": 200,
+      "heading": "Build practical AI with us",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6149,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5897,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3688,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3472,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3449,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3449,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "heading": "Agentic AI Development Services",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 9558,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 9146,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 6342,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 6040,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 5994,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 5994,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/products",
+      "status": 200,
+      "heading": "Automate the conversations that move work forward.",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 7692,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 7483,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5449,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 5087,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 5028,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 5028,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/services/ai-agents",
+      "status": 200,
+      "heading": "Custom AI Agent Development for Business Workflows",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 8207,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 7824,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5175,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 5048,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 5048,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 5048,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/services/rag-systems",
+      "status": 200,
+      "heading": "RAG Systems for Private Business Knowledge Search",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 8111,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 7686,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5195,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 5070,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 5070,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 5070,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/services/document-ai",
+      "status": 200,
+      "heading": "Document AI Automation for Faster Back-Office Work",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 7880,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 7618,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5132,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4990,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4990,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4990,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/services/ai-chatbots",
+      "status": 200,
+      "heading": "AI Chatbots That Answer, Qualify, and Automate",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 7936,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 7620,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5109,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4919,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4919,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4919,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/services/voice-ai",
+      "status": 200,
+      "heading": "Voice AI Agents for Business Call Automation",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 7891,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 7572,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5086,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4964,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4964,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4964,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/solutions",
+      "status": 200,
+      "heading": "AI Solutions for Real Business Problems",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 8550,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 8102,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5917,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 5330,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 5284,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 5284,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries",
+      "status": 200,
+      "heading": "Agentic AI for Every Industry",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6585,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 6424,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3831,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3409,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3309,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3309,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/real-estate-ai",
+      "status": 200,
+      "heading": "AI Automation for Real Estate Businesses",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6166,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5951,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 4000,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3971,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3971,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3971,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/healthcare-ai",
+      "status": 200,
+      "heading": "AI Automation for Healthcare Operations",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6018,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5787,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3921,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3862,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3862,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3862,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/finance-ai",
+      "status": 200,
+      "heading": "AI Automation for Finance Teams",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5826,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5572,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3820,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3748,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3748,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3748,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/construction",
+      "status": 200,
+      "heading": "Agentic AI for Construction",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5382,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5238,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3717,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3405,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3345,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3345,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/hospitality",
+      "status": 200,
+      "heading": "Agentic AI for Hospitality",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5442,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5366,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3737,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3445,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3365,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3365,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/logistics",
+      "status": 200,
+      "heading": "Agentic AI for Logistics",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5626,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5516,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3745,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3477,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3393,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3393,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/retail",
+      "status": 200,
+      "heading": "Agentic AI for Retail",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5434,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5310,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3737,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3445,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3365,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3365,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/insurance",
+      "status": 200,
+      "heading": "Agentic AI for Insurance",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5430,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5232,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3697,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3397,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3317,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3317,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/industries/professional-services",
+      "status": 200,
+      "heading": "Agentic AI for Professional Services",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5518,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5336,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3809,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3481,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3297,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3297,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/insights",
+      "status": 200,
+      "heading": "Field Notes on Practical AI",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 4873,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 4759,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 2861,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 2583,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 2481,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 2481,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/resources",
+      "status": 200,
+      "heading": "Practical Articles on AI Automation",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 3782,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 3666,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 2383,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 2223,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 2149,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 2149,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/resources/what-is-an-ai-agent-for-business",
+      "status": 200,
+      "heading": "What is an AI Agent for Business? A Practical Guide",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6537,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 6302,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 4297,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4419,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4419,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4419,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/resources/rag-vs-fine-tuning",
+      "status": 200,
+      "heading": "RAG vs Fine-Tuning: Which One Should You Actually Use?",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6088,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5872,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 4197,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4316,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4316,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4316,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/resources/private-ai-chatbot-company-documents",
+      "status": 200,
+      "heading": "Private AI Chatbot Trained on Your Company Documents: How It Actually Works",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6624,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 6260,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 4265,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 4369,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 4369,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 4369,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/resources/ai-agent-development-cost",
+      "status": 200,
+      "heading": "AI Agent Development Cost: A Practical Budgeting Guide for 2026",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 9072,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 8492,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5640,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 5846,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 5846,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 5846,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/resources/document-ai-automation",
+      "status": 200,
+      "heading": "Document AI Automation: How It Works, Where It Pays Off, and How to Get It Right",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 9208,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 8805,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 5809,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 6005,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 6005,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 6005,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/company-information",
+      "status": 200,
+      "heading": "Company Information",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 2829,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 2793,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 1958,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 1986,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 1986,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 1986,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "heading": "Privacy Policy",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 6631,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 6229,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 4090,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3968,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3968,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3968,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/cookie-policy",
+      "status": 200,
+      "heading": "Cookie Policy",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 4565,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 4357,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 2930,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 2934,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 2934,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 2934,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "heading": "Terms of Use",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 5893,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 5415,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 3562,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 3494,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 3494,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 3494,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    },
+    {
+      "route": "/chat-demo/",
+      "status": 200,
+      "heading": "Drag Chat",
+      "layouts": [
+        {
+          "width": 360,
+          "viewport": 360,
+          "document": 360,
+          "body": 360,
+          "pageHeight": 1451,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "body": 390,
+          "pageHeight": 1434,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "body": 768,
+          "pageHeight": 1031,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "viewport": 1024,
+          "document": 1024,
+          "body": 1024,
+          "pageHeight": 1031,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "body": 1440,
+          "pageHeight": 1031,
+          "hasHorizontalOverflow": false
+        },
+        {
+          "width": 1920,
+          "viewport": 1920,
+          "document": 1920,
+          "body": 1920,
+          "pageHeight": 1031,
+          "hasHorizontalOverflow": false
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

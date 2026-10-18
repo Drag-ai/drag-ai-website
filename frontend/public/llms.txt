@@ -13,6 +13,14 @@ Public contact email: info@drag-ai.com
 - AI Chatbot Development — https://drag-ai.com/services/ai-chatbots
 - Voice AI Agent Development — https://drag-ai.com/services/voice-ai
 
+## Products
+
+- Drag Voice â€” configurable outbound AI calling for sales follow-up, support, appointment requests, feedback, and reminders. The current workspace places one call at a time. https://drag-ai.com/products#voice
+- Drag Chat â€” configurable website conversation assistant with templates for lead qualification, support, FAQs, appointment requests, feedback, and general inquiries. https://drag-ai.com/products#chat
+- Product overview, demos, and monthly, annual, and custom quote options: https://drag-ai.com/products
+- Early-access pilot platform fees (USD): Drag Chat starts at $29/month or $290/year; Drag Voice starts at $99/month or $990/year. Variable AI and telephone usage is scoped separately before a pilot; custom plans are available.
+- The product page offers a six-message chat trial and an optional in-browser voice conversation. The browser voice preview does not place or record a phone call; outbound calls remain in the authenticated workspace.
+
 ## Industry deep-dives
 
 - AI for Real Estate — https://drag-ai.com/industries/real-estate-ai
@@ -22,6 +30,7 @@ Public contact email: info@drag-ai.com
 ## Target customers
 
 - Startups and SMBs
+- Independent professionals and small teams
 - Agencies and professional services firms
 - Real estate businesses and property management teams
 - Healthcare operations teams (admin & non-clinical workflows)

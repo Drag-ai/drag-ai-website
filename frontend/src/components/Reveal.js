@@ -1,10 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion';
 
-export const Reveal = ({ children, delay = 0 }) => {
+export const Reveal = ({ children, delay = 0, className }) => {
   const shouldReduce = useReducedMotion();
 
   return (
     <motion.div
+      className={className}
       initial={shouldReduce ? { opacity: 1 } : { opacity: 0, y: 14 }}
       whileInView={shouldReduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

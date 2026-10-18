@@ -161,7 +161,7 @@ export default function HowWeWork() {
                     <div className="flex flex-col sm:flex-row gap-6">
                       <div className="flex-shrink-0">
                         <div className="relative">
-                          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[hsl(var(--accent-purple))] to-[hsl(var(--accent-pink))] flex items-center justify-center text-white font-bold text-lg">
+                          <div className="w-14 h-14 rounded-full bg-[hsl(var(--accent-purple))] flex items-center justify-center text-white font-bold text-lg">
                             {step.number}
                           </div>
                           <div className="mt-3 w-14 h-14 rounded-xl bg-gradient-to-br from-[hsl(var(--accent-purple))]/15 to-[hsl(var(--accent-pink))]/10 flex items-center justify-center">

@@ -67,6 +67,11 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "test:e2e": "playwright test",
+    "visual:audit": "node scripts/visual-audit.js",
+    "a11y:audit": "node scripts/accessibility-audit.js",
+    "perf:audit": "node scripts/performance-audit.js",
+    "pages:dev": "wrangler pages dev build --ip 127.0.0.1 --port 8788",
     "postinstall": "patch-package",
     "postbuild": "node scripts/prerender.js || echo 'Prerendering failed — shipping the client-rendered build without prerendering.'"
   },
@@ -89,7 +94,12 @@
     "@babel/plugin-transform-react-jsx": "^7.28.6",
     "@craco/craco": "^7.1.0",
     "@eslint/js": "9.23.0",
+    "@playwright/test": "^1.64.1",
     "@sparticuz/chromium": "153.0.0",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^25.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "9.23.0",
@@ -102,7 +112,8 @@
     "postcss": "^8.4.49",
     "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "wrangler": "^4.151.1"
   },
   "engines": {
     "node": ">=22.17.0",
@@ -119,6 +130,7 @@
       "/case-studies",
       "/careers",
       "/services",
+      "/products",
       "/services/ai-agents",
       "/services/rag-systems",
       "/services/document-ai",

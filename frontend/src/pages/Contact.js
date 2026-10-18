@@ -63,6 +63,14 @@ export default function Contact() {
 
   const location = useLocation();
   const formRef = useRef(null);
+  const enquiryParams = new URLSearchParams(location.search);
+  const productLabels = { voice: 'Drag Voice', chat: 'Drag Chat', both: 'Drag Voice and Drag Chat' };
+  const planLabels = { monthly: 'monthly', annual: 'annual', custom: 'custom' };
+  const productLabel = productLabels[enquiryParams.get('product')];
+  const planLabel = planLabels[enquiryParams.get('plan')];
+  const initialAutomation = productLabel
+    ? `I'm interested in ${productLabel}${planLabel ? ` (${planLabel} plan)` : ''}. Please share the pilot price, included usage, and next steps.`
+    : '';
 
   useScrollToFormOnHash(formRef, location.hash);
 
@@ -74,6 +82,7 @@ export default function Contact() {
     handleSubmit,
     setIsSuccess,
   } = useContactForm({
+    initialAutomation,
     onSuccess: () => toast.success('Request received. We will reply within one business day.'),
     onError: (code) => toast.error(ERROR_MESSAGES[code] || ERROR_MESSAGES.submission_failed),
   });
@@ -87,7 +96,7 @@ export default function Contact() {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
-                Let&apos;s Discuss Your{' '}
+                <span>Let&apos;s Discuss Your </span>
                 <span className="text-[hsl(var(--accent-purple))]">AI Use Case</span>
               </h1>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">

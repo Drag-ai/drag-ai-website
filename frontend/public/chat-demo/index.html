@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Try a Drag AI chat assistant using reusable business conversation templates.">
+  <title>Drag Chat | Business Conversation Demo</title>
+  <link rel="stylesheet" href="./styles.css?v=6">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">DA</div>
+    <div><div class="eyebrow">Drag AI · Product demo</div><h1 id="product-title">Drag Chat</h1></div>
+    <div id="demo-label" class="demo-label">Website conversation assistant</div>
+  </header>
+  <main class="app-shell">
+    <section class="conversation-panel" aria-label="Chat demo">
+      <div class="panel-heading">
+        <div><span class="live-dot"></span><span id="conversation-heading">Try a business conversation</span></div>
+        <button id="reset" class="text-button" type="button">New demo</button>
+      </div>
+      <div class="trial-meter"><span id="template-name">General business assistant</span><span id="message-count">6 messages left</span></div>
+      <p id="voice-help" class="voice-help" hidden>Speak to try this in-browser voice preview. Your browser may process audio with its speech provider; only the transcript is sent to Drag AI. No phone call is placed or recorded.</p>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <form id="chat-form" class="composer">
+        <input id="message-input" autocomplete="off" maxlength="1000" placeholder="Type a question..." aria-label="Your message" required>
+        <button id="voice-button" class="voice-button" type="button" hidden aria-pressed="false">Speak</button>
+        <button id="send-button" type="submit">Send <span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="voice-actions"><button id="listen-button" class="listen-button" type="button" hidden>Listen to the latest reply</button><span id="voice-status" class="voice-status" aria-live="polite"></span></div>
+      <div id="prompt-row" class="prompt-row" aria-label="Try a sample question"></div>
+      <p id="demo-footnote" class="demo-footnote">Demo replies use the selected template and the example business details. Please don’t enter sensitive or real customer information.</p>
+    </section>
+    <aside class="insight-rail">
+      <section class="rail-section setup-section">
+        <div class="section-title"><span>01</span> Choose a template</div>
+        <label class="field-label" for="template-select">Conversation type</label>
+        <select id="template-select" class="field-control">
+          <option value="general">General business assistant</option>
+          <option value="lead_qualification">Sales & lead qualification</option>
+          <option value="customer_support">Customer support</option>
+          <option value="appointment_request">Appointment requests</option>
+          <option value="faq">Product & service FAQs</option>
+          <option value="feedback">Feedback & surveys</option>
+        </select>
+        <p id="template-description" class="field-note">Answer everyday questions using the business details provided.</p>
+        <div class="section-title business-title"><span>02</span> Add example business details</div>
+        <form id="profile-form" class="profile-form">
+          <label class="field-label" for="company-name">Business name <span>optional</span></label>
+          <input class="field-control" id="company-name" maxlength="100" placeholder="e.g. Northstar Repairs">
+          <label class="field-label" for="company-offer">What you offer <span>optional</span></label>
+          <input class="field-control" id="company-offer" maxlength="500" placeholder="e.g. Home appliance repair">
+          <label class="field-label" for="company-knowledge">Verified details the assistant can use <span>optional</span></label>
+          <textarea class="field-control field-textarea" id="company-knowledge" maxlength="2000" placeholder="Add example services, opening hours, policies, or other approved facts."></textarea>
+          <button class="apply-button" type="submit">Apply details & start fresh</button>
+        </form>
+        <p class="privacy-note">This demo is not connected to a business inbox, CRM, or calendar. Use fictional details; they are sent to OpenAI to generate replies. Do not enter sensitive or real customer information.</p>
+      </section>
+    </aside>
+  </main>
+  <footer class="site-note">Drag AI · Reusable conversation templates for teams and independent professionals</footer>
+  <script src="./app.js?v=5"></script>
+</body>
+</html>

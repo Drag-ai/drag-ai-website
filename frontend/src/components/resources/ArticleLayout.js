@@ -104,7 +104,7 @@ export default function ArticleLayout({ article }) {
                 {article.readingTime}
               </span>
               <span className="text-foreground/30">&middot;</span>
-              <span>Last updated: {article.lastUpdated}</span>
+              <span>{`Last updated: ${article.lastUpdated}`}</span>
             </div>
 
             {article.tldr && (
@@ -135,7 +135,7 @@ export default function ArticleLayout({ article }) {
                         href={`#${s.id}`}
                         className="text-[hsl(var(--accent-purple))] hover:brightness-110"
                       >
-                        {idx + 1}. {s.heading}
+                        <span>{`${idx + 1}. ${s.heading}`}</span>
                       </a>
                     </li>
                   ))}
@@ -145,7 +145,7 @@ export default function ArticleLayout({ article }) {
                         href="#faq"
                         className="text-[hsl(var(--accent-purple))] hover:brightness-110"
                       >
-                        {article.sections.length + 1}. FAQ
+                        <span>{`${article.sections.length + 1}. FAQ`}</span>
                       </a>
                     </li>
                   )}

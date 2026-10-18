@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom';
 import { Linkedin, Facebook, Instagram, Mail } from 'lucide-react';
 import { Logo } from './Logo';
 
+const COPYRIGHT_YEAR = (() => {
+  const snapshotYear = typeof document !== 'undefined'
+    ? document.querySelector('[data-copyright-year]')?.textContent.trim()
+    : null;
+  const year = Number(snapshotYear);
+  return Number.isInteger(year) && year >= 2000 ? year : new Date().getFullYear();
+})();
+
 export const Footer = () => {
   const PRIMARY_CTA_HREF = '/contact#ai-discovery-call';
   const PUBLIC_EMAIL = 'info@drag-ai.com';
@@ -78,6 +86,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-home">Home</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-services">Services</Link></li>
+              <li><Link to="/products" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-products">Products</Link></li>
               <li><Link to="/solutions" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-solutions">Solutions</Link></li>
               <li><Link to="/industries" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-industries">Industries</Link></li>
               <li><Link to="/how-we-work" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-how-we-work">How We Work</Link></li>
@@ -130,7 +139,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 border-t pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} DRAG AI LIMITED. All rights reserved.</p>
+          <p>© <span data-copyright-year>{COPYRIGHT_YEAR}</span> DRAG AI LIMITED. All rights reserved.</p>
           <p>Registered in England and Wales · Company No. 17222197</p>
         </div>
       </div>

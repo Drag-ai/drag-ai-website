@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useReducedMotion } from 'framer-motion';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
-const PARTICLE_COLOR = '#8B5CF6';
-const LINK_COLOR = '#EC4899';
+const PARTICLE_COLOR = '#6A33EB';
+const LINK_COLOR = '#06B6D4';
 
 // Pure helper extracted to keep cyclomatic complexity of the component low
 // and to keep the options object reference stable for tsparticles.
@@ -52,11 +53,22 @@ const buildParticlesOptions = () => {
 
 export const NeuralBackground = () => {
   const [init, setInit] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
+  // Keep React Snap's prerendered DOM aligned with the client's first render.
+  // The particle layer is decorative and does not belong in automated snapshots.
+  const shouldRenderParticles = !shouldReduceMotion && !(typeof navigator !== 'undefined' && navigator.webdriver);
 
   useEffect(() => {
     // `setInit` from useState is stable by React's contract,
     // so this effect should run exactly once on mount.
     let cancelled = false;
+
+    if (!shouldRenderParticles) {
+      setInit(false);
+      return () => {
+        cancelled = true;
+      };
+    }
 
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -67,11 +79,11 @@ export const NeuralBackground = () => {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [shouldRenderParticles]);
 
   const options = useMemo(buildParticlesOptions, []);
 
-  if (!init) return null;
+  if (!init || !shouldRenderParticles) return null;
 
   return (
     <div

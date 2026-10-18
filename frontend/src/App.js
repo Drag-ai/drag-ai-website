@@ -6,6 +6,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import Products from './pages/Products';
 import AIAgents from './pages/services/AIAgents';
 import RAGSystems from './pages/services/RAGSystems';
 import DocumentAI from './pages/services/DocumentAI';
@@ -57,12 +58,19 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
+        <a
+          href="#main-content"
+          className="skip-link rounded-md bg-background px-4 py-3 font-medium text-foreground shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="flex-1">
+        <main id="main-content" tabIndex="-1" className="flex-1 focus:outline-none">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/services/ai-agents" element={<AIAgents />} />
             <Route path="/services/rag-systems" element={<RAGSystems />} />
             <Route path="/services/document-ai" element={<DocumentAI />} />

@@ -3,23 +3,15 @@ import { Card } from '../ui/card';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Label } from '../ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '../ui/select';
 import { Reveal } from '../Reveal';
-import { Send } from 'lucide-react';
+import { ChevronDown, Send } from 'lucide-react';
 
 const PUBLIC_EMAIL = 'info@drag-ai.com';
 
 const FormField = ({ id, label, required, children, helper }) => (
   <div>
     <Label htmlFor={id}>
-      {label}
-      {required ? ' *' : ''}
+      {required ? `${label} *` : label}
     </Label>
     <div className="mt-1.5">{children}</div>
     {helper && <p className="mt-1 text-xs text-muted-foreground">{helper}</p>}
@@ -27,26 +19,27 @@ const FormField = ({ id, label, required, children, helper }) => (
 );
 
 const SelectField = ({ id, name, value, onChange, disabled, options, placeholder, testId }) => (
-  <Select
-    value={value || undefined}
-    onValueChange={(next) => onChange({ target: { name, value: next, type: 'select-one' } })}
-    disabled={disabled}
-  >
-    <SelectTrigger id={id} data-testid={testId}>
-      <SelectValue placeholder={placeholder} />
-    </SelectTrigger>
-    <SelectContent>
+  <div className="relative">
+    <select
+      id={id}
+      name={name}
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+      data-testid={testId}
+      className="flex h-9 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-9 text-sm shadow-sm ring-offset-background focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+    >
+      <option value="" disabled>{placeholder}</option>
       {options.map((opt) => {
         const optValue = typeof opt === 'string' ? opt : opt.value;
         const optLabel = typeof opt === 'string' ? opt : opt.label;
         return (
-          <SelectItem key={optValue} value={optValue}>
-            {optLabel}
-          </SelectItem>
+          <option key={optValue} value={optValue}>{optLabel}</option>
         );
       })}
-    </SelectContent>
-  </Select>
+    </select>
+    <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+  </div>
 );
 
 const SuccessState = ({ onReset }) => (
@@ -126,7 +119,7 @@ export const ContactForm = ({
         {isSuccess ? (
           <SuccessState onReset={onReset} />
         ) : (
-          <form onSubmit={handleSubmit} data-testid="contact-form" noValidate>
+          <form onSubmit={handleSubmit} data-testid="contact-form" aria-busy={isSubmitting}>
             <div className="mb-6">
               <h2 className="text-2xl font-semibold mb-2">Request Your AI Strategy Call</h2>
               <p className="text-sm text-muted-foreground">
@@ -275,9 +268,9 @@ export const ContactForm = ({
                   htmlFor="consent"
                   className="text-xs text-muted-foreground leading-relaxed cursor-pointer"
                 >
-                  I agree to Drag AI processing the information above to respond to my enquiry, as
-                  described in the{' '}
-                  <a href="/privacy" className="text-[hsl(var(--accent-purple))] hover:brightness-110">
+                  <span>I agree to Drag AI processing the information above to respond to my enquiry, as
+                    described in the </span>
+                  <a href="/privacy" className="font-medium text-[hsl(var(--accent-purple))] underline underline-offset-2 hover:brightness-110">
                     Privacy Policy
                   </a>
                   .
@@ -287,8 +280,8 @@ export const ContactForm = ({
               <SubmitButton isSubmitting={isSubmitting} />
 
               <p className="text-xs text-muted-foreground text-center">
-                Prefer email? Write to{' '}
-                <a href={`mailto:${PUBLIC_EMAIL}`} className="text-[hsl(var(--accent-purple))] hover:brightness-110">
+                <span>Prefer email? Write to </span>
+                <a href={`mailto:${PUBLIC_EMAIL}`} className="font-medium text-[hsl(var(--accent-purple))] underline underline-offset-2 hover:brightness-110">
                   {PUBLIC_EMAIL}
                 </a>
                 .

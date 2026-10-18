@@ -307,7 +307,7 @@ const Careers = () => {
                 Open Positions
               </h2>
               <p className="text-muted-foreground">
-                {openPositions.length} live roles &mdash; click Apply Now to submit your profile.
+                <span>{`${openPositions.length} live roles — click Apply Now to submit your profile.`}</span>
               </p>
             </div>
             <Badge
@@ -509,8 +509,8 @@ const Careers = () => {
                     htmlFor="careers-consent"
                     className="text-xs text-muted-foreground leading-relaxed cursor-pointer"
                   >
-                    I agree to Drag AI processing the information above in line with the{' '}
-                    <Link to="/privacy" className="text-[hsl(var(--accent-purple))] hover:brightness-110">
+                    <span>I agree to Drag AI processing the information above in line with the </span>
+                    <Link to="/privacy" className="text-[hsl(var(--accent-purple))] underline underline-offset-2 hover:brightness-110">
                       Privacy Policy
                     </Link>
                     .
@@ -527,10 +527,10 @@ const Careers = () => {
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  Prefer email? Write to{' '}
+                  <span>Prefer email? Write to </span>
                   <a
                     href="mailto:info@drag-ai.com"
-                    className="text-[hsl(var(--accent-purple))] hover:brightness-110"
+                    className="text-[hsl(var(--accent-purple))] underline underline-offset-2 hover:brightness-110"
                   >
                     info@drag-ai.com
                   </a>

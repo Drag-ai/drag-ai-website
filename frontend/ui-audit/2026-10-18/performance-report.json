@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-10-18T18:27:05.976Z",
+  "baseUrl": "http://127.0.0.1:8788",
+  "type": "Local Chromium lab measurements; not field/RUM data.",
+  "bundleGzipKiB": {
+    "js": 261.7,
+    "css": 11.81
+  },
+  "results": [
+    {
+      "route": "/",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "lcpMs": 1260,
+      "lcpElementSize": 159360,
+      "cls": 0.0242,
+      "ttfbMs": 29,
+      "domContentLoadedMs": 919,
+      "loadMs": 1376,
+      "sameOriginResourceTransferBytes": 280673,
+      "sameOriginRequests": 2
+    },
+    {
+      "route": "/",
+      "viewport": "mobile",
+      "viewportWidth": 390,
+      "lcpMs": 1048,
+      "lcpElementSize": 58100,
+      "cls": 0.0143,
+      "ttfbMs": 13,
+      "domContentLoadedMs": 745,
+      "loadMs": 1037,
+      "sameOriginResourceTransferBytes": 280673,
+      "sameOriginRequests": 2
+    },
+    {
+      "route": "/products",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "lcpMs": 656,
+      "lcpElementSize": 118580,
+      "cls": 0.0004,
+      "ttfbMs": 8,
+      "domContentLoadedMs": 735,
+      "loadMs": 1177,
+      "sameOriginResourceTransferBytes": 281012,
+      "sameOriginRequests": 4
+    },
+    {
+      "route": "/products",
+      "viewport": "mobile",
+      "viewportWidth": 390,
+      "lcpMs": 640,
+      "lcpElementSize": 44625,
+      "cls": 0,
+      "ttfbMs": 11,
+      "domContentLoadedMs": 751,
+      "loadMs": 1122,
+      "sameOriginResourceTransferBytes": 281012,
+      "sameOriginRequests": 4
+    },
+    {
+      "route": "/contact",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "lcpMs": 980,
+      "lcpElementSize": 61440,
+      "cls": 0.0473,
+      "ttfbMs": 11,
+      "domContentLoadedMs": 714,
+      "loadMs": 1002,
+      "sameOriginResourceTransferBytes": 280673,
+      "sameOriginRequests": 2
+    },
+    {
+      "route": "/contact",
+      "viewport": "mobile",
+      "viewportWidth": 390,
+      "lcpMs": 1040,
+      "lcpElementSize": 44143,
+      "cls": 0.017,
+      "ttfbMs": 16,
+      "domContentLoadedMs": 747,
+      "loadMs": 1031,
+      "sameOriginResourceTransferBytes": 280673,
+      "sameOriginRequests": 2
+    }
+  ]
+}

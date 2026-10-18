@@ -20,12 +20,13 @@
     --primary-foreground: 210 40% 98%;
 
     /* Purple action */
-    --accent-purple: 258 90% 66%; /* #8B5CF6 */
+    --accent-purple: 258 90% 56%; /* #6A33EB; AA contrast on white */
     --accent-purple-foreground: 210 40% 98%;
 
     /* Pink accent */
     --accent-pink: 330 81% 60%; /* #EC4899 */
     --accent-pink-foreground: 210 40% 98%;
+    --accent-pink-contrast: 330 81% 45%; /* #D01673; AA text contrast on light surfaces */
 
     /* UI */
     --secondary: 210 40% 96%;
@@ -36,7 +37,7 @@
     --accent-foreground: 222 47% 11%;
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 258 90% 66%;
+    --ring: 258 90% 56%;
 
     /* States */
     --destructive: 0 84% 60%;
@@ -85,7 +86,7 @@
 }
 
 ::selection {
-  background: rgba(139, 92, 246, 0.22);
+  background: rgba(106, 51, 235, 0.18);
 }
 
 /* Reduced motion */

@@ -52,8 +52,9 @@ const postForm = async (formData) => {
  * Encapsulates the lead-capture form's local state, validation, and submission.
  * Used by both the homepage lead form and the dedicated Contact page.
  */
-export const useContactForm = ({ onSuccess, onError } = {}) => {
-  const [formData, setFormData] = useState(INITIAL_FORM);
+export const useContactForm = ({ onSuccess, onError, initialAutomation = '' } = {}) => {
+  const initialFormData = { ...INITIAL_FORM, automation: initialAutomation };
+  const [formData, setFormData] = useState(() => initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -66,7 +67,7 @@ export const useContactForm = ({ onSuccess, onError } = {}) => {
   };
 
   const reset = () => {
-    setFormData(INITIAL_FORM);
+    setFormData(initialFormData);
     setIsSuccess(false);
   };
 
@@ -83,7 +84,7 @@ export const useContactForm = ({ onSuccess, onError } = {}) => {
       const { ok } = await postForm(formData);
       if (ok) {
         setIsSuccess(true);
-        setFormData(INITIAL_FORM);
+        setFormData(initialFormData);
         onSuccess?.();
       } else {
         onError?.('submission_failed');
