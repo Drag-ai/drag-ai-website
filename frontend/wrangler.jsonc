@@ -1,6 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "drag-ai-website-local",
+  "name": "drag-ai-website",
   "pages_build_output_dir": "./build",
-  "compatibility_date": "2026-10-18"
+  "compatibility_date": "2026-10-18",
+  "d1_databases": [
+    {
+      "binding": "DEMO_DB",
+      "database_name": "drag-ai-demo-production",
+      "database_id": "90a384a2-4a2b-4bfd-8727-a72708120c83"
+    }
+  ]
 }
