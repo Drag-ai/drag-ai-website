@@ -67,7 +67,7 @@ For local development, Drag Chat can run as a separate FastAPI service. Start it
 REACT_APP_CHAT_DEMO_URL=http://localhost:3002/
 ```
 
-The deployed chat demo is served from the same Cloudflare Pages site at `/chat-demo/`; it does not need a separate production host. The voice sample on `/products` is scripted, and the gated live demo requests a real outbound call to the phone number configured by the site owner.
+The deployed chat demo is served from the same Cloudflare Pages site at `/chat-demo/`; it does not need a separate production host. The voice sample on `/products` is scripted. The private voice workspace at `/voice-demo` supports protected, manually started calls to an authorized number, contact CSV import in the browser, saved playbooks, and call history. See [the live voice setup guide](frontend/CLOUDFLARE_LIVE_VOICE_SETUP.md) for local Pages preview and deployment requirements.
 
 ### Backend Setup
 

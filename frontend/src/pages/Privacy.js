@@ -73,6 +73,7 @@ export default function Privacy() {
                   <ul className="list-disc pl-6 space-y-2 text-foreground/90">
                     <li>Name, work email, company name, role, and country when you fill in our contact or discovery-call form.</li>
                     <li>Project information, requirements, and context you share in messages with us.</li>
+                    <li>For the private live voice workspace, the business context and call playbooks you save, the phone number selected for each call, call status, any outcome or notes you enter, and a text transcript. CSV contact files are read in your browser and are not uploaded as a list. Do not include confidential or sensitive information.</li>
                     <li>Any additional information you choose to provide via email.</li>
                   </ul>
 
@@ -104,6 +105,7 @@ export default function Privacy() {
                   </p>
                   <ul className="list-disc pl-6 space-y-2 text-foreground/90 mt-3">
                     <li>Hosting and infrastructure providers.</li>
+                    <li>Cloudflare for hosting and temporary demo data, Twilio for live calls, and OpenAI for real-time AI conversation processing.</li>
                     <li>Form submission and email delivery providers (e.g., Web3Forms) for handling enquiries.</li>
                     <li>Analytics providers, where used.</li>
                     <li>Professional advisors (legal, accounting) where strictly necessary.</li>
@@ -125,6 +127,9 @@ export default function Privacy() {
                   <h2 className="text-2xl font-semibold mb-4">7. Data Retention</h2>
                   <p className="text-foreground/90 leading-relaxed">
                     We retain personal data only for as long as necessary for the purposes set out in this policy, to comply with legal obligations, resolve disputes, and enforce our agreements. Enquiry data is typically kept for up to 24 months unless required longer.
+                  </p>
+                  <p className="text-foreground/90 leading-relaxed mt-4">
+                    Saved workspace settings remain until they are overwritten. Call records, notes, phone numbers, and transcript text are retained for up to 30 days, then removed during routine cleanup; you can also clear call history from the workspace. The temporary connection details for an active call expire after one hour. Drag AI does not record call audio. Twilio and OpenAI process call data to provide the live service under their own service terms.
                   </p>
                 </section>
 

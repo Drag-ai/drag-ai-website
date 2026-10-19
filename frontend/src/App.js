@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Products from './pages/Products';
+import VoiceProduct from './pages/VoiceProduct';
+import ChatProduct from './pages/ChatProduct';
+import VoiceDemo from './pages/VoiceDemo';
 import AIAgents from './pages/services/AIAgents';
 import RAGSystems from './pages/services/RAGSystems';
 import DocumentAI from './pages/services/DocumentAI';
@@ -53,24 +56,32 @@ import FinanceAI from './pages/industries/FinanceAI';
 
 import './App.css';
 
-function App() {
+function AppLayout() {
+  const location = useLocation();
+  const isVoiceWorkspace = location.pathname.replace(/\/+$/, '') === '/voice-demo';
+
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <a
-          href="#main-content"
-          className="skip-link rounded-md bg-background px-4 py-3 font-medium text-foreground shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-        >
-          Skip to main content
-        </a>
-        <Navbar />
+      <div className={`flex flex-col min-h-screen ${isVoiceWorkspace ? 'voice-workspace-shell' : ''}`}>
+        {!isVoiceWorkspace && (
+          <>
+            <a
+              href="#main-content"
+              className="skip-link rounded-md bg-background px-4 py-3 font-medium text-foreground shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              Skip to main content
+            </a>
+            <Navbar />
+          </>
+        )}
         <main id="main-content" tabIndex="-1" className="flex-1 focus:outline-none">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/voice" element={<VoiceProduct />} />
+            <Route path="/products/chat" element={<ChatProduct />} />
+            <Route path="/voice-demo" element={<VoiceDemo />} />
             <Route path="/services/ai-agents" element={<AIAgents />} />
             <Route path="/services/rag-systems" element={<RAGSystems />} />
             <Route path="/services/document-ai" element={<DocumentAI />} />
@@ -116,9 +127,17 @@ function App() {
             <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
-        <Footer />
+        {!isVoiceWorkspace && <Footer />}
         <Toaster position="top-right" richColors />
       </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppLayout />
     </Router>
   );
 }

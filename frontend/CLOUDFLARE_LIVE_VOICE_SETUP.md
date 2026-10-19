@@ -1,61 +1,69 @@
-# Live Twilio phone-call demo on Cloudflare Pages
+# Drag Voice private calling workspace
 
-This demo uses the Twilio Programmable Voice credentials already present in `ai-real-estate-calling-demo/.env`. It does not use Elastic SIP Trunking. The website's Pages Function starts a Twilio call to one configured showcase phone. Twilio fetches TwiML from the same deployed website, then opens a bidirectional Media Stream to a Cloudflare Pages Function. That Function bridges Twilio audio to an OpenAI Realtime session using a short-lived OpenAI client secret.
+The website runs a private, general-purpose calling workspace at `/voice-demo`. An access code protects saved playbooks and call records. A presenter can call one selected, authorized E.164 number at a time, import a CSV into the browser-only queue, review live and saved transcript text, and record a call outcome or notes. Importing contacts never starts calls automatically.
 
-The call destination is fixed in server-side settings; the browser cannot choose a phone number. The Twilio callback and media-stream endpoints verify Twilio signatures. Calls are not recorded or stored. Each call has a five-minute maximum and attempts count toward a daily cap of five by default (configurable up to twenty).
+The Pages Functions create an outbound Twilio Programmable Voice call. Twilio requests TwiML from the same website, then opens a bidirectional Media Stream to a Cloudflare Pages Function. That Function bridges the audio to an OpenAI Realtime session using a short-lived OpenAI client secret. The call has a five-minute maximum and the default limit is five attempts per UTC day (configurable up to twenty).
 
-## Cloudflare requirements
+## Cloudflare production setup
 
-- The Pages project must use `frontend` as its root, `yarn build` as its build command, and `build` as its output directory.
-- Bind a Cloudflare D1 database as `DEMO_DB` and apply `migrations/0001_demo_usage.sql`.
-- Deploy the new Pages Functions in `functions/api/` with the site. The `/api/*` route is already enabled in `public/_routes.json`.
-- Configure the Twilio and OpenAI settings below as Pages production variables and secrets. A local `.env` file is not read by the deployed Pages project.
+- The Pages project root is `frontend`, the build command is `yarn build`, and the output directory is `build`.
+- Bind a Cloudflare D1 database as `DEMO_DB` in the Pages project.
+- Apply migrations `0001_demo_usage.sql`, `0002_voice_demo_workspace.sql`, and `0003_voice_private_workspace.sql` to the production database before deploying these Functions.
+- Deploy the Pages Functions under `functions/api/` with the site. The `/api/*` route is already enabled in `public/_routes.json`.
+- Configure the Twilio and OpenAI settings below as Pages production variables and secrets. A local `.env` file is not read by Cloudflare Pages.
 
-This setup uses Twilio Programmable Voice REST API and bidirectional Media Streams. It does not require a Twilio SIP trunk, a locally running FastAPI app, or ngrok. The call audio is 8 kHz G.711 μ-law, which the bridge passes to OpenAI Realtime.
+This uses Twilio Programmable Voice and bidirectional Media Streams. It does not use the FastAPI calling app or an Elastic SIP trunk. Twilio audio is 8 kHz G.711 mu-law. No call audio is recorded by Drag AI.
 
-## Settings from the existing `.env`
+### Required settings
 
-Copy only the relevant values from `ai-real-estate-calling-demo/.env` into Cloudflare Pages **Settings > Variables and Secrets**. Do not add secret values to source code or commit them.
+Copy the relevant values from `ai-real-estate-calling-demo/.env` into Cloudflare Pages **Settings > Variables and Secrets**. Keep secrets out of the repository.
 
-| Cloudflare name | Value from `.env` | Type |
+| Cloudflare name | Value source | Type |
 | --- | --- | --- |
 | `OPENAI_API_KEY` | `OPENAI_API_KEY` | Secret |
-| `OPENAI_REALTIME_MODEL` | `OPENAI_REALTIME_MODEL` | Variable |
+| `OPENAI_REALTIME_MODEL` | `OPENAI_REALTIME_MODEL` | Variable, optional |
 | `OPENAI_VOICE` | `OPENAI_VOICE` | Variable, optional |
 | `TWILIO_ACCOUNT_SID` | `TWILIO_ACCOUNT_SID` | Secret |
 | `TWILIO_AUTH_TOKEN` | `TWILIO_AUTH_TOKEN` | Secret |
 | `TWILIO_VOICE_NUMBER` | `TWILIO_VOICE_NUMBER` | Secret or variable |
-| `VOICE_DEMO_DESTINATION` | `YASIR_WHATSAPP_NUMBER` | Secret |
+| `VOICE_DEMO_ACCESS_CODE` | Create a temporary code | Secret |
+| `VOICE_DEMO_ACCESS_EXPIRES_AT` | Set an expiry in UTC ISO 8601 | Variable |
+| `VOICE_DEMO_DAILY_CALL_LIMIT` | Optional; default 5, maximum 20 | Variable |
 
-The code also accepts `YASIR_WHATSAPP_NUMBER` directly when `VOICE_DEMO_DESTINATION` is unset, and removes its `whatsapp:` prefix before placing the voice call. Set `VOICE_DEMO_DESTINATION` explicitly if the showcase phone should be different.
+The web voice workspace does not use `VOICE_DEMO_DESTINATION`; the presenter chooses a number in the private workspace. `TWILIO_VOICE_NUMBER` must be voice-capable or a verified Caller ID. The destination must be reachable by voice, and the Twilio account must allow calls to its country. A Twilio trial account blocks the `<Stream>` verb used for live AI audio, and trial accounts restrict calls to verified numbers. Upgrade Twilio before using the live assistant.
 
-These settings from the source `.env` are not used by the website voice demo: `PUBLIC_URL`, `TWILIO_WHATSAPP_FROM`, `ENABLE_WHATSAPP`, `NGROK_AUTH_TOKEN`, `DASHBOARD_USERNAME`, and `DASHBOARD_PASSWORD`. In particular, `PUBLIC_URL` points to ngrok in the calling app; the deployed Pages Functions build Twilio callback URLs from the actual website request, so ngrok is not used.
+## Local preview and real-call callbacks
 
-Add these demo-only settings in Cloudflare:
+The React development server on port 3000 does not run Pages Functions or D1. Use the local Pages preview instead:
 
-| Name | Type | Purpose |
-| --- | --- | --- |
-| `VOICE_DEMO_ACCESS_CODE` | Secret | Temporary code shared only with showcase attendees |
-| `VOICE_DEMO_ACCESS_EXPIRES_AT` | Variable | Expiry in UTC ISO 8601, for example `2026-10-31T23:59:00Z` |
-| `VOICE_DEMO_DESTINATION` | Secret, optional if `YASIR_WHATSAPP_NUMBER` is set | One E.164 destination, such as `+971...` |
-| `VOICE_DEMO_DAILY_CALL_LIMIT` | Variable, optional | Calls per UTC day; default 5, maximum 20 |
-| `CHAT_DEMO_DAILY_MESSAGE_LIMIT` | Variable, optional | Chat messages per UTC day; default 120, maximum 500 |
+```powershell
+cd frontend
+yarn install
+yarn db:migrate:local
+yarn build
+yarn pages:dev
+```
 
-Use a Twilio voice-capable number or a verified Caller ID for `TWILIO_VOICE_NUMBER`. The destination must be reachable by voice, and the Twilio account must allow outbound calls to its country. A Twilio Voice trial account blocks the `<Stream>` verb used by this demo, so upgrade the account before testing live AI audio. Trial accounts also restrict calls to verified numbers and may play a trial notice.
+Set the local provider variables in `frontend/.dev.vars`. That file is ignored by Git. It needs the same OpenAI and Twilio settings plus a temporary `VOICE_DEMO_ACCESS_CODE` and a future `VOICE_DEMO_ACCESS_EXPIRES_AT`. Do not paste credentials into browser code or commit `.dev.vars`.
 
-## How to launch the call
+Twilio must reach the local Pages Functions over the internet for its TwiML, status, and media-stream callbacks. In a second terminal, create a temporary Cloudflare Quick Tunnel to port 8788:
 
-1. Apply the D1 migration and add the variables and secrets above to the Cloudflare Pages production environment.
-2. Redeploy the Pages project.
-3. Open the deployed Drag AI website, go to **Products > Drag Voice**, enter the temporary access code, and start the call. Use **End call** on the page to hang up; calls also end automatically after five minutes.
-4. Go to **Products > Drag Chat** and send a test message. The demo allows six messages per conversation.
-5. Twilio's REST API acceptance means the call was queued; it does not mean the phone answered. Check Twilio call logs if the configured phone does not ring.
+```powershell
+cloudflared tunnel --url http://localhost:8788
+```
 
-Do not automatically retry after a timeout or unclear result. A new request creates another phone call. Rotate the access code and expiry for each showcase window.
+Open the `https://...trycloudflare.com/voice-demo` URL printed by the tunnel, not the React port 3000 or `localhost`. Keep both the Pages preview and tunnel running during the call. The temporary tunnel is for development and demonstrations; use the deployed Pages website for a stable public demo URL.
 
-## Costs and data handling
+## Use the workspace
 
-The call consumes Twilio outbound minutes and OpenAI Realtime usage. Low-volume Pages Functions and D1 use may fit Cloudflare's free quotas, but Cloudflare, Twilio, and OpenAI usage are billed under their respective account limits and current pricing. The function does not enable call recording, persist audio, or save call transcripts.
+1. Open `/voice-demo` on the deployed Pages site or the local tunnel and unlock it with the temporary access code.
+2. Select a general-purpose template, enter business facts and playbook guidance, then choose **Save setup** to keep the settings in D1.
+3. Type one E.164 number or import a CSV with a `phone`, `mobile`, `telephone`, `destination`, or `number` column. The CSV is parsed in the browser and is not uploaded. The queue is limited to 50 unique entries.
+4. Select a number, confirm you are authorized to call it, then explicitly choose **Start call to selected number**. The queue does not auto-dial or run a campaign.
+5. Watch the live transcript, use **End live call** to hang up, then review the call history. Outcomes and notes can be saved per call. Marking a record **Do not call** blocks further calls to that number while the record remains in history.
+6. Call records, notes, destination numbers, and transcripts are retained for up to 30 days. Use the history trash button to delete history sooner; this also removes Do not call markers. Saved workspace settings remain until overwritten.
+
+The access code is shared by the private workspace and should only be given to presenters. Rotate the code and its expiry after each showcase window. Calls consume Twilio outbound minutes and OpenAI Realtime usage; Cloudflare Pages Functions and D1 use may fit free quotas at low volume, subject to current account limits.
 
 ## Official references
 
@@ -67,7 +75,3 @@ The call consumes Twilio outbound minutes and OpenAI Realtime usage. Low-volume 
 - [Cloudflare Workers WebSockets](https://developers.cloudflare.com/workers/runtime-apis/websockets/)
 - [Cloudflare Pages Functions pricing](https://developers.cloudflare.com/pages/functions/pricing/)
 - [Cloudflare D1 pricing](https://developers.cloudflare.com/d1/platform/pricing/)
-
-## Local preview
-
-The React development server does not run Pages Functions or D1. The real phone-call demo is intended to run on the deployed Cloudflare Pages site after the Twilio and OpenAI settings, D1 binding, and temporary access code are configured.
