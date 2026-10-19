@@ -207,7 +207,7 @@ export async function onRequestPost({ request, env }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: env.OPENAI_CHAT_MODEL || 'gpt-5.6-luna',
+        model: env.OPENAI_CHAT_MODEL || 'gpt-6-luna',
         instructions,
         input,
         max_output_tokens: 220,
